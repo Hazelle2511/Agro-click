@@ -5,6 +5,9 @@
     "test": "echo \"This template does not include a test runner by default.\" && exit 1"
   },
   "devDependencies": {
-    "snowpack": "^3.0.1"
+    "autoprefixer": "^9.8.6",
+    "postcss": "^7.0.35",
+    "snowpack": "^3.0.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2"
   }
 }
