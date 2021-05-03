@@ -6,6 +6,7 @@ module.exports = {
     src: '/dist',
   },
   plugins: [
+    "@snowpack/plugin-postcss"
     /* ... */
   ],
   routes: [
@@ -25,4 +26,11 @@ module.exports = {
   buildOptions: {
     /* ... */
   },
+  
+
+// {
+//   "extends": "@snowpack/app-scripts-react",
+//   "scripts": { "build:css": "postcss" },
+//   "plugins": []
+// }
 };
