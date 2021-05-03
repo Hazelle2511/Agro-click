@@ -5,7 +5,7 @@ module.exports = {
     public: '/',
     src: '/dist',
   },
-    plugins: ['@snowpack/plugin-react-refresh'],
+    plugins: ['@snowpack/plugin-react-refresh', '@snowpack/plugin-postcss'],
 
   routes: [
     /* Enable an SPA Fallback in development: */
@@ -24,4 +24,11 @@ module.exports = {
   buildOptions: {
     /* ... */
   },
+  
+
+// {
+//   "extends": "@snowpack/app-scripts-react",
+//   "scripts": { "build:css": "postcss" },
+//   "plugins": []
+// }
 };
