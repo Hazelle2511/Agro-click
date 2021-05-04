@@ -1645,6 +1645,11 @@
   dependencies:
     "import-from" "^3.0.0"
 
+"indent-string@^4.0.0", "indent-string@^5.0.0":
+  "integrity" "sha512-m6FAo/spmsW2Ab2fU35JTYwtOKa2yAwXSwgjSv1TJzh4Mh7mC3lzAOVLBprb72XsTrgkEIsl7YrFNAiDiRhIGg=="
+  "resolved" "https://registry.npmjs.org/indent-string/-/indent-string-5.0.0.tgz"
+  "version" "5.0.0"
+
 "indexes-of@^1.0.1":
   "integrity" "sha1-8w9xbI4r00bHtn0985FVZqfAVgc="
   "resolved" "https://registry.npmjs.org/indexes-of/-/indexes-of-1.0.1.tgz"
