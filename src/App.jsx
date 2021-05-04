@@ -2,7 +2,7 @@
 import React from 'react';
 import './App.css'
 // import Accueil from "./Accueil"
-import Login from './Component/Login';
+import Login from "./Components/Login";
 import Navbar from "./Components/Navbar";
 import Accueil from "./Components/Accueil";
 
