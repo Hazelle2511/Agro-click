@@ -1,7 +1,8 @@
-
+import './styles/tailwind.css';
 import React from "react";
 import ReactDOM from "react-dom";
 import App from './App';
+import Accueil from './Components/Accueil';
 import './index.css';
 import {BrowserRouter} from 'react-router-dom';
 
