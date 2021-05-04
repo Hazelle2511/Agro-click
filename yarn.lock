@@ -2130,6 +2130,11 @@
   "resolved" "https://registry.npmjs.org/nanoid/-/nanoid-3.1.22.tgz"
   "version" "3.1.22"
 
+"node-bin-setup@^1.0.0":
+  "integrity" "sha512-uPIxXNis1CRbv1DwqAxkgBk5NFV3s7cMN/Gf556jSw6jBvV7ca4F9lRL/8cALcZecRibeqU+5dFYqFFmzv5a0Q=="
+  "resolved" "https://registry.npmjs.org/node-bin-setup/-/node-bin-setup-1.0.6.tgz"
+  "version" "1.0.6"
+
 "node-emoji@^1.8.1":
   "integrity" "sha512-Yt3384If5H6BYGVHiHwTL+99OzJKHhgp82S8/dktEK73T26BazdgZ4JZh92xSVtGNJvz9UbXdNAc5hcrXV42vw=="
   "resolved" "https://registry.npmjs.org/node-emoji/-/node-emoji-1.10.0.tgz"
@@ -2157,6 +2162,13 @@
   "integrity" "sha512-zR6HoT6LrLCRBwukmrVbHv0EpEQjksO6GmFcZQQuCAy139BEsoVKPYnf3jongYW83fAa1torLGYwxxky/p28sg=="
   "resolved" "https://registry.npmjs.org/node-releases/-/node-releases-1.1.71.tgz"
   "version" "1.1.71"
+
+"node@^12.12.0":
+  "integrity" "sha512-O6BktMOYe3MwF7n83L4Nc6/tvlOCYsDntQQegqWUPcH779oQu1krcWPMREUPm8FKSWK7c9LK4Yldk8h3FnSqaw=="
+  "resolved" "https://registry.npmjs.org/node/-/node-12.12.0.tgz"
+  "version" "12.12.0"
+  dependencies:
+    "node-bin-setup" "^1.0.0"
 
 "nopt@^5.0.0":
   "integrity" "sha512-Tbj67rffqceeLpcRXrT7vKAN8CwfPeIBgM7E6iBkmKLV7bEMwpGgYLGv0jACUsECaa/vuxP0IjEont6umdMgtQ=="
