@@ -13,7 +13,7 @@ class Accueil extends Component {
       <div className="bg-white h-screen flex flex-col justify-center items-center">
         <img src={imageOne} alt="logo"/>
 
-        <Link className="bg-yellow-500 py-6 px-10 rounded-full
+        <Link  to="/" className="bg-yellow-500 py-6 px-10 rounded-full
         text-3xl hover:bg-green-400 transition duration-300 ease-in-out flex items-center animate-bounce">
         Commande
 
