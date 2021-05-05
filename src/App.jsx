@@ -2,7 +2,7 @@
 import React from 'react';
 import './App.css'
 // import Accueil from "./Accueil"
-import Login from "./Components/Login";
+import Login from "./Components/Login.jsx";
 import Navbar from "./Components/Navbar";
 import Accueil from "./pages";
 // import Signup from "./pages/signup.jsx";
@@ -24,7 +24,7 @@ export default () => {
            <Switch>
                <Route path="/" exact component = {Accueil} />
                <Route path="/signup" component = {Signup} />
-               <Route path="/login" component = {Login} />
+               <Route path="/Login" component = {Login} />
            </Switch>
 
         
