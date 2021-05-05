@@ -10,6 +10,7 @@ import {Switch, Route} from "react-router-dom";
 import Signup from "./pages/signup.jsx";
 
 
+
 export default () => {
    
     return(
@@ -23,6 +24,7 @@ export default () => {
            <Switch>
                <Route path="/" exact component = {Accueil} />
                <Route path="/signup" component = {Signup} />
+               <Route path="/login" component = {Login} />
            </Switch>
 
         
