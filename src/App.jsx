@@ -5,8 +5,8 @@ import './App.css'
 import Login from "./Components/Login";
 import Navbar from "./Components/Navbar";
 import Accueil from "./pages";
-// import Signup from "./pages/signup.jsx";
-import {Switch, Route} from "react-router-dom";
+import Contact from "./pages/contact.jsx";
+import { Switch, Route} from "react-router-dom";
 import Signup from "./pages/signup.jsx";
 
 
@@ -19,13 +19,14 @@ export default () => {
             {/* {
            <Accueil/> */} 
            <Navbar />
-          
-
+        
            <Switch>
                <Route path="/" exact component = {Accueil} />
                <Route path="/signup" component = {Signup} />
                <Route path="/login" component = {Login} />
+               <Route path="/contact" component = {Contact} />
            </Switch>
+        
 
         
 
