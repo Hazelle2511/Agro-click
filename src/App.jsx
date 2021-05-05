@@ -4,10 +4,11 @@ import './App.css'
 // import Accueil from "./Accueil"
 import Login from "./Components/Login";
 import Navbar from "./Components/Navbar";
-import Accueil from "./Components/Accueil";
-// import Login from "./Components/Login";
+import Accueil from "./pages";
 // import Signup from "./pages/signup.jsx";
 import {Switch, Route} from "react-router-dom";
+import Signup from "./pages/signup.jsx";
+
 
 
 export default () => {
@@ -15,15 +16,16 @@ export default () => {
     return(
         <div className = "App">
        
-            {/* <div class="bg-red-100 text-red-500 p-5">Tailwind Trial</div>
-           <Accueil/> */}
+            {/* {
+           <Accueil/> */} 
            <Navbar />
-           <Accueil />
-           {/* <Login /> */}
+          
 
-           {/* <Switch>
+           <Switch>
+               <Route path="/" exact component = {Accueil} />
                <Route path="/signup" component = {Signup} />
-           </Switch> */}
+               <Route path="/login" component = {Login} />
+           </Switch>
 
         
 

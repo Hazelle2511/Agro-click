@@ -1,10 +1,8 @@
 import React from 'react'
 
-const Signup = () => {
+function Signup () {
     return (
-        <div>
-            <h1>hello</h1>
-        </div>
+        <div class="bg-red-100 text-red-500 p-5">Tailwind Trial</div>
     )
 }
 
