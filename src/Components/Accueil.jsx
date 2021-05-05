@@ -26,18 +26,19 @@ class Accueil extends Component {
      </Link>
         
   </div>
-   <video width="100%" height="100%" autoPlay loop  className="absolute z-10 w-auto min-w-full min-h-full max-w-none opacity-80 ">
-     <source src={videoo} alt="video" type="video/mp4" title=""></source>
+  {/* w-auto */}
+   <video width="100%" height="100%" autoPlay loop  className="absolute z-10  min-w-full min-h-full max-w-none opacity-80 ">
+     <source src={videoo} alt="video" type="video/mp4" ></source>
    </video>
 
 </header>
 <div className="container my-12 mx-auto px-4 md:px-12">
 <div className="flex flex-wrap -mx-1 lg:-mx-4">
 <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-<div class="overflow-hidden rounded-lg shadow-lg">
+<div className="overflow-hidden rounded-lg shadow-lg">
 
-      <Link to="">
-            <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
+      <Link to="/">
+            <img alt="Placeholder" className="block h-auto w-full" src="https://picsum.photos/600/400/?random">
             </img>
       </Link>   
       <div className="flex items-center justify-between leading-tight p-2 md:p-4">
@@ -52,11 +53,11 @@ class Accueil extends Component {
       </div>
 
       <div className="flex items-center justify-between leading-none p-2 md:p-4">
-      <Link className="flex items-center no-underline hover:underline text-black" href="#">
+      <Link to="/" className="flex items-center no-underline hover:underline text-black" href="#">
         <img alt="Placeholder" className="block rounded-full" src="https://picsum.photos/32/32/?random"></img>
         <p className="ml-2 text-sm">Le fermier du sud</p>
       </Link>
-      <Link className="no-underline text-grey-darker hover:text-red-dark" href="#">
+      <Link to="/" className="no-underline text-grey-darker hover:text-red-dark" href="#">
         <div className="hidden">Like</div>
         <div className="fa fa-heart"></div>
       </Link>
