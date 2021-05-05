@@ -4,6 +4,7 @@ import './App.css'
 // import Accueil from "./Accueil"
 import Navbar from "./Components/Navbar";
 import Accueil from "./Components/Accueil";
+// import Login from "./Components/Login";
 // import Signup from "./pages/signup.jsx";
 import {Switch, Route} from "react-router-dom";
 
@@ -17,6 +18,7 @@ export default () => {
            <Accueil/> */}
            <Navbar />
            <Accueil />
+           {/* <Login /> */}
 
            {/* <Switch>
                <Route path="/signup" component = {Signup} />
