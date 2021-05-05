@@ -1,10 +1,13 @@
 {
   "scripts": {
+    "main": "index",
     "start": "snowpack dev",
     "build": "snowpack build",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1"
   },
   "devDependencies": {
+    "@iconify-icons/heroicons-outline": "^1.1.2",
+    "@iconify/react": "^1.1.4",
     "@snowpack/plugin-postcss": "^1.2.2",
     "@snowpack/plugin-react-refresh": "^2.5.0",
     "@testing-library/jest-dom": "^5.12.0",
@@ -20,8 +23,11 @@
     "@babel/plugin-syntax-jsx": "^7.12.13",
     "@craco/craco": "^6.1.2",
     "@headlessui/react": "^1.1.1",
-    "@heroicons/react": "^1.0.1",
+    "@icon/heroicons-outline": "*",
+    "heroicons-react": "^1.4.0",
     "history": "^4.10.1",
+    "indent-string": "^5.0.0",
+    "node": "^12.12.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router": "^5.2.0",
