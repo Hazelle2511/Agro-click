@@ -2,7 +2,7 @@
 import React from 'react';
 import './App.css'
 // import Accueil from "./Accueil"
-import Login from "./Components/Login";
+import Login from "./Components/Login.jsx";
 import Navbar from "./Components/Navbar";
 import Accueil from "./pages";
 import Contact from "./pages/contact.jsx";
