@@ -28,12 +28,12 @@ class Login extends Component {
               <form className="mt-6" action="#" method="POST">
                 <div>
                   <label className="block text-gray-700">E-mail</label>
-                  <input type="email" name="" id="" placeholder="E-mail" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required></input>
+                  <input type="email" name="" id="" placeholder="E-mail" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-yellow-500 focus:bg-white focus:outline-none" autofocus autocomplete required></input>
                 </div>
         
                 <div className="mt-4">
                   <label className="block text-gray-700">Mot de passe</label>
-                  <input type="password" name="" id="" placeholder="Mot de passe" minlength="6" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
+                  <input type="password" name="" id="" placeholder="Mot de passe" minlength="6" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-yellow-500
                         focus:bg-white focus:outline-none" required></input>
                 </div>
         
@@ -47,7 +47,7 @@ class Login extends Component {
         
               <hr className="my-6 border-gray-300 w-full"></hr>
         
-              <button type="button" className="w-full block bg-white hover:bg-yellow-400 focus:bg-yellow-400 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300">
+              <button type="button" className="w-full block bg-white hover:bg-yellow-400 focus:bg-yellow-400 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-yellow-500">
                     <div className="flex items-center justify-center">
                     <span className="ml-4">
                     Se connecter avec Google</span>
