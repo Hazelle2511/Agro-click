@@ -8,6 +8,7 @@ import Accueil from "./pages";
 // import Signup from "./pages/signup.jsx";
 import {Switch, Route} from "react-router-dom";
 import Signup from "./pages/signup.jsx";
+import Searchbar from './Components/Searchbar';
 
 
 
@@ -19,6 +20,7 @@ export default () => {
             {/* {
            <Accueil/> */} 
            <Navbar />
+           {/* <Searchbar /> */}
           
 
            <Switch>
