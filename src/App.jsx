@@ -24,7 +24,8 @@ export default () => {
             window.innerWidth > 768 && isOpen ? setIsOpen(false): null;
             console.log('resize')
         }
-    })
+    });
+    // window.addEventListener('resize', hideMenu)
 
     return(
         <div className = "App">
@@ -32,13 +33,7 @@ export default () => {
             {/* {
            <Accueil/> */} 
            <Navbar />
-<<<<<<< HEAD
-        
-=======
-           {/* <Searchbar /> */}
-          
-
->>>>>>> dev
+          {/* <Searchbar /> */}
            <Switch>
                <Route path="/" exact component = {Accueil} />
                <Route path="/signup" component = {Signup} />
