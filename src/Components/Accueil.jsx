@@ -14,6 +14,7 @@ class Accueil extends Component {
 
 
 <div>
+  
 <header className="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
   <div className="relative z-30 p-5 lg:text-7xl md:text-5xl sm:text-3xl text-2xl font-block mb-14 flex flex-col justify-center items-center mb-14">
     Le goût et la qualité des producteurs à porté de click !
