@@ -1,5 +1,5 @@
 // import React, {Component,useState, useEffect} from 'react';
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css'
 // import Accueil from "./Accueil"
 import Login from "./Components/Login.jsx";
@@ -12,7 +12,19 @@ import Signup from "./pages/signup.jsx";
 
 
 export default () => {
-   
+    const [isOpen, setIsOpen] = useState(false) ;
+    
+    const toggle = () => {
+        setIsOpen(!isOpen)
+    };
+
+    useEffect(() => {
+        const hideMenu = () => {
+            window.innerWidth > 768 && isOpen ? setIsOpen(false): null;
+            console.log('resize')
+        }
+    })
+
     return(
         <div className = "App">
        
