@@ -8,12 +8,12 @@ return(
     <>
     <div className="antialised bg-contactImg bg-contain">
         
-        <div className="flex w-full min-h-screen justify-center items-center">
+        <div className="flex w-full min-h-screen text-center justify-center items-center">
             
            <div className=" flex  flex-col mspace-y-6 bg-gray-50 w-full max-w-4xl p-8 rounded-xl shadow-lg">
                 <div className="flex flex-col justify-between space-y-8 ">
                     <div>
-                        <h1 className=" text-4xl lg:text-5xl font-bold leading-tight">
+                        <h1 className=" text-4xl lg:text-5xl font-bold   leading-tight">
                        
                         Parlons de tout!
  
@@ -56,7 +56,7 @@ return(
                                 <textarea type="text"
                                 rows="4" placeholder=""  className=" w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"/>
                             </div>
-                            <button className=" bg-green-700 uppercase text-sm font-bold tracking-wide text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline ">Envoyer</button>
+                            <button className="uppercase text-sm font-bold tracking-wide text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline  bg-yellow-500 ">Envoyer</button>
                    
                         </form>
                     </div>

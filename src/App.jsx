@@ -1,7 +1,7 @@
 // import React, {Component,useState, useEffect} from 'react';
 import React, {useState, useEffect} from 'react';
 import './App.css'
-// import Accueil from "./Accueil"
+import Dropdown from "./Components/Dropdown"
 import Login from "./Components/Login.jsx";
 import Navbar from "./Components/Navbar";
 import Accueil from "./pages";
@@ -9,6 +9,7 @@ import Contact from "./pages/contact.jsx";
 import { Switch, Route} from "react-router-dom";
 import Signup from "./pages/signup.jsx";
 import Searchbar from './Components/Searchbar';
+
 
 
 
@@ -24,15 +25,20 @@ export default () => {
             window.innerWidth > 768 && isOpen ? setIsOpen(false): null;
             console.log('resize')
         }
-    });
-    // window.addEventListener('resize', hideMenu)
+    
+    window.addEventListener('resize', hideMenu);
 
+    return() => {
+        window.removeEventListener('resize', hideMenu);
+    }
+})
     return(
-        <div className = "App">
+        <>
        
             {/* {
            <Accueil/> */} 
-           <Navbar />
+           <Navbar toggle={toggle} />
+           <Dropdown toggle={toggle} isOpen={isOpen}/>
           {/* <Searchbar /> */}
            <Switch>
                <Route path="/" exact component = {Accueil} />
@@ -48,6 +54,6 @@ export default () => {
 
            
 
-        </div>
+        </>
     )
 }

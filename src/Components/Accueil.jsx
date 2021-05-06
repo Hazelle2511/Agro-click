@@ -16,7 +16,7 @@ class Accueil extends Component {
 <div>
   
 <header className="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
-  <div className="relative z-30 p-5 lg:text-7xl md:text-5xl sm:text-3xl text-2xl font-block mb-14 flex flex-col justify-center items-center mb-14">
+  <div className="relative z-30 p-5 lg:text-7xl md:text-5xl sm:text-3xl text-2xl font-block mb-14 flex flex-col justify-center items-center mb-14 text-center">
     Le goût et la qualité des producteurs à porté de click !
 
     <Link  to="/" className="py-6 px-10 bg-yellow-500 rounded-full
@@ -28,7 +28,7 @@ class Accueil extends Component {
         
   </div>
   {/* w-auto */}
-   <video width="100%" height="100%" autoPlay loop  className="absolute z-10  min-w-full min-h-full max-w-none opacity-80 ">
+   <video width="100%" height="100%" autoPlay loop  className="absolute z-10    min-w-full min-h-full max-w-none opacity-80 ">
      <source src={videoo} alt="video" type="video/mp4" ></source>
    </video>
 
