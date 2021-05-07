@@ -9,6 +9,7 @@ import Contact from "./pages/contact.jsx";
 import { Switch, Route} from "react-router-dom";
 import Signup from "./pages/signup.jsx";
 import Searchbar from './Components/Searchbar';
+import Panier from './Components/ShoppingCard';
 
 
 
@@ -45,6 +46,8 @@ export default () => {
                <Route path="/signup" component = {Signup} />
                <Route path="/login" component = {Login} />
                <Route path="/contact" component = {Contact} />
+               <Route path="/panier" component = {Panier} />
+
            </Switch>
         
 
