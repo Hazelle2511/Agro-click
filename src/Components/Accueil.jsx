@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 // import imageOne from '../images/Agro-click.png';
 import videoo from '../images/pexels-zen-chung-5527769.mp4';
+import agri from '../images/soil-386749_1920.jpg';
+import footer from '../Components/Footer';
+import Footer from '../Components/Footer';
 
 
 class Accueil extends Component {
@@ -15,7 +18,7 @@ class Accueil extends Component {
 
 <div>
   
-<header className="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
+<header className="relative flex items-center justify-center h-screen overflow-hidden">
   <div className="relative z-30 p-5 lg:text-7xl md:text-5xl sm:text-3xl text-2xl font-block mb-14 flex flex-col justify-center items-center mb-14 text-center">
     Le goût et la qualité des producteurs à porté de click !
 
@@ -34,7 +37,53 @@ class Accueil extends Component {
 
 </header>
 
+<main>
+<div className="bg-green-600">
+  <div className="max-w-6xl mx-auto px-8 py-16">
+    <div className="relative">
+      <div className="relative lg:flex rounded-lg shadow-2xl overflow-hidden">
+        <div class="h-56 lg:h-auto lg:w-5/12 relative flex items-center justify-center">
+          <img className="absolute h-full w-full object-cover" src={agri} alt="" />
+        </div>
+        <div className="relative lg:w-7/12 bg-white">
+          <svg className="absolute h-full text-white w-24 -ml-12" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <polygon points="50,0 100,0 50,100 0,100"/>
+        </svg>
+          <div className="relative py-12 lg:py-24 px-8 lg:px-16 text-gray-700 leading-relaxed">
+            <p>
+              <strong className="text-gray-900 font-medium">Agro-click</strong> séléctionne les meilleurs producteurs de la région. Nous garantissons des produits de qualité blablablablabla. Avec Agro-click, choisissez le producteur le plus prêt de chez vous, sélectionnez les produits qui vous font envies et faite vous livrer directement chez vous.  &mdash;
+            </p>
+            <p className="mt-6">
+              <Link href="#" className="font-medium text-yellow-500 hover:text-yellow-400">Pour en savoir plus &rarr;</Link>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="absolute inset-y-0 left-0 lg:flex lg:items-center">
+        <button className="mt-24 lg:mt-0 -ml-6 h-12 w-12 rounded-full bg-white p-3 shadow-lg">
+        <svg className="h-full w-full text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M5.41 11H21a1 1 0 0 1 0 2H5.41l5.3 5.3a1 1 0 0 1-1.42 1.4l-7-7a1 1 0 0 1 0-1.4l7-7a1 1 0 0 1 1.42 1.4L5.4 11z"/>
+        </svg>
+      </button>
+      </div>
+      <div class="absolute inset-y-0 right-0 lg:flex lg:items-center">
+        <button className="mt-24 lg:mt-0 -mr-6 h-12 w-12 rounded-full bg-white p-3 shadow-lg">
+        <svg className="h-full w-full text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z"/>
+        </svg>
+      </button>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+
+
+
 <div className="container my-12 mx-auto px-4 md:px-12">
+    <div className="tracking-widest uppercase mb-8 mt-8 text-5xl text-yellow-500">
+    La sélection des producteurs
+</div>
 <div className="flex flex-wrap -mx-1 lg:-mx-4">
 
 <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
@@ -60,10 +109,8 @@ class Accueil extends Component {
         <img alt="Placeholder" className="block rounded-full" src="https://picsum.photos/32/32/?random"></img>
         <p className="ml-2 text-sm">Le fermier du sud</p>
       </Link>
-      <Link to="/" className="no-underline text-grey-darker hover:text-red-dark" href="#">
-        <div className="hidden">Like</div>
-        <div className="fa fa-heart"></div>
-      </Link>
+      
+      
 
       </div>
 </article>
@@ -96,10 +143,7 @@ class Accueil extends Component {
                             Le clos
                         </p>
                     </Link>
-                    <Link className="no-underline text-grey-darker hover:text-red-dark" href="#">
-                        <span className="hidden">Like</span>
-                        <i className="fa fa-heart"></i>
-                    </Link>
+                    
                 </footer>
 
             </article>
@@ -107,7 +151,6 @@ class Accueil extends Component {
 
         </div>
         
-
         
         <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
 
@@ -136,10 +179,7 @@ class Accueil extends Component {
                             Richard Gers
                         </p>
                     </Link>
-                    <Link className="no-underline text-grey-darker hover:text-red-dark" href="#">
-                        <span className="hidden">Like</span>
-                        <i className="fa fa-heart"></i>
-                    </Link>
+                    
                 </footer>
 
             </article>
@@ -176,10 +216,7 @@ class Accueil extends Component {
                             Le poulailler
                         </p>
                     </Link>
-                    <Link className="no-underline text-grey-darker hover:text-red-dark" href="#">
-                        <span className="hidden">Like</span>
-                        <i className="fa fa-heart"></i>
-                    </Link>
+                    
                 </footer>
 
             </article>
@@ -214,10 +251,7 @@ class Accueil extends Component {
                             Riset du chemin
                         </p>
                     </Link>
-                    <Link className="no-underline text-grey-darker hover:text-red-dark" href="#">
-                        <span className="hidden">Like</span>
-                        <i className="fa fa-heart"></i>
-                    </Link>
+                    
                 </footer>
 
             </article>
@@ -252,10 +286,7 @@ class Accueil extends Component {
                             Lieu dit du chateau
                         </p>
                     </Link>
-                    <Link className="no-underline text-grey-darker hover:text-red-dark" href="#">
-                        <span className="hidden">Like</span>
-                        <i className="fa fa-heart"></i>
-                    </Link>
+                    
                 </footer>
 
             </article>
@@ -266,7 +297,9 @@ class Accueil extends Component {
 
     </div>
 </div>
+<Footer />
 </div>
+
 
 
 
