@@ -46,7 +46,7 @@ export default () => {
                <Route path="/signup" component = {Signup} />
                <Route path="/login" component = {Login} />
                <Route path="/contact" component = {Contact} />
-               <Route path="/panier" component = {Panier} />
+               <Route path="/ShoppingCard" component = {Panier} />
 
            </Switch>
         
