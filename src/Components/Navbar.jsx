@@ -32,6 +32,7 @@ function Navbar({toggle}) {
                 <Link className="p-4" to="/Login">Se connecter</Link>
                 <Link className="p-4" to="/contact">Contact</Link>
                 <Link className="p-4" to="/signup">Sign up</Link>
+                
 
             </div>
         </nav>
