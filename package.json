@@ -35,4 +35,5 @@
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "web-vitals": "^1.1.1"
   }
+  
 }
