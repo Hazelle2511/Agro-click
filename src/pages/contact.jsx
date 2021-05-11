@@ -19,26 +19,22 @@ export default class Contact extends Component {
     
     handleSubmit(event) {
      
-        event.preventDefault();
-    }
+        // event.preventDefault();
+   
     
-
-    var formdata = new FormData();
-    formdata.append("name", "lulu");
-    formdata.append("email", "a@gmail.com");
-    formdata.append("msg", "salut");
+    
+    var body = new FormData(document.querySelector('form'));
     
     var requestOptions = {
       method: 'POST',
-      body: formdata,
-      redirect: 'follow'
+      body,
     };
     
-    fetch("https://script.google.com/macros/s/AKfycbwmpHrE8Vp3x5CZW2MuFXlck2GEYhzvj7dIGvkjbKdMJkB8X2qK8ekIcPnY3A-dY0fUkA/exec", requestOptions)
+    fetch("https://script.google.com/macros/s/AKfycbyt0Qg_e1YXZn62mNU_r2K_YQwf6HszFWPY6mhW4DVp-B120eilEVYeJujPLtetDE-fnw/exec", requestOptions)
       .then(response => response.text())
       .then(result => console.log(result))
       .catch(error => console.log('error', error));
-    
+     }
 
 render() {
 return(
@@ -80,19 +76,19 @@ return(
                   
                     </div>
                     <div className="bg-white rounded-xl shadow-lg p-8 text-gray-600">
-                        <form onSubmit={this.handleSubmit} action="" className="flex flex-col space-y-4" id="myFormu">
+                        <form onSubmit={this.handleSubmit} className="flex flex-col space-y-4" id="myFormu">
                             <div>
                                 <label for="" className="uppercase text-sm text-gray-600 font-bold">Votre Nom</label>
-                                <input id="name" value={this.state.name} onChange={this.handleChange} type="text" placeholder="Jane Doe" className=" w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" required/>
+                                <input name="name"  type="text" placeholder="Jane Doe" className=" w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" required/>
                             </div>
                             <div>
                                 <label for="" className="uppercase text-sm text-gray-600 font-bold">Email Address</label>  
-                                <input id="email" value={this.state.email} onChange={this.handleChange} type="email" placeholder="********@*****.**"  className=" w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" required/>
+                                <input name="email" onChange={this.handleChange} type="email" placeholder="********@*****.**"  className=" w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" required/>
                             </div>
                             <div>
                                 <label for="" className="uppercase text-sm text-gray-600 font-bold">Message</label>  
-                                <textarea id="msg" value={this.state.msg} onChange={this.handleChange} type="text"
-                                rows="4" placeholder=""  className=" w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" required/>
+                                <textarea name="msg" onChange={this.handleChange} type="text"
+                                rows="4" placeholder="Message"  className=" w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" required/>
                             </div>
                             <button type="submit" className="uppercase text-sm font-bold tracking-wide text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline  bg-yellow-500 ">Envoyer</button>
                    
@@ -114,4 +110,4 @@ return(
 )
 
     
-}}}
+}}
