@@ -23,11 +23,11 @@ export default class Contact extends Component {
    
     
     
-    var body = new FormData(document.querySelector('form'));
+    var formdata = new FormData(document.querySelector('form'));
     
     var requestOptions = {
       method: 'POST',
-      body,
+      body: formdata,
     };
     
     fetch("https://script.google.com/macros/s/AKfycbyt0Qg_e1YXZn62mNU_r2K_YQwf6HszFWPY6mhW4DVp-B120eilEVYeJujPLtetDE-fnw/exec", requestOptions)
@@ -53,7 +53,7 @@ return(
  
                         </h1>
                         <p className="text-gray-700 mt-8 ">
-                        Des formes de haine? Envoyez-nous plutôt un e-mail.
+                        Besoin d'aide ? Envoyez-nous un e-mail.
                         </p>
                     </div>
                     
@@ -78,15 +78,15 @@ return(
                     <div className="bg-white rounded-xl shadow-lg p-8 text-gray-600">
                         <form onSubmit={this.handleSubmit} className="flex flex-col space-y-4" id="myFormu">
                             <div>
-                                <label for="" className="uppercase text-sm text-gray-600 font-bold">Votre Nom</label>
-                                <input name="name"  type="text" placeholder="Jane Doe" className=" w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" required/>
+                                <label htmlFor="POST_name" className="uppercase text-sm text-gray-600 font-bold">Votre Nom</label>
+                                <input name="name" onChange={this.handleChange} type="text" placeholder="Jane Doe" className=" w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" required/>
                             </div>
                             <div>
-                                <label for="" className="uppercase text-sm text-gray-600 font-bold">Email Address</label>  
-                                <input name="email" onChange={this.handleChange} type="email" placeholder="********@*****.**"  className=" w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" required/>
+                                <label htmlFor="POST_email" className="uppercase text-sm text-gray-600 font-bold">Email Address</label>  
+                                <input name="email"  type="email" placeholder="********@*****.**"  className=" w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" required/>
                             </div>
                             <div>
-                                <label for="" className="uppercase text-sm text-gray-600 font-bold">Message</label>  
+                                <label htmlFor="POST_msg" className="uppercase text-sm text-gray-600 font-bold">Message</label>  
                                 <textarea name="msg" onChange={this.handleChange} type="text"
                                 rows="4" placeholder="Message"  className=" w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" required/>
                             </div>
