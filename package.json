@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "main": "index",
+    
     "start": "snowpack dev",
     "build": "snowpack build",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1"
@@ -36,4 +36,5 @@
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "web-vitals": "^1.1.1"
   }
+  
 }

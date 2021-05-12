@@ -5,7 +5,7 @@ import Dropdown from "./Components/Dropdown"
 import Login from "./Components/Login.jsx";
 import Navbar from "./Components/Navbar";
 import Accueil from "./pages";
-import Contact from "./pages/contact.jsx";
+import Contact from './pages/contact.jsx';
 import { Switch, Route} from "react-router-dom";
 import Signup from "./pages/signup.jsx";
 import Searchbar from './Components/Searchbar';

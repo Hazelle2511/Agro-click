@@ -1,11 +1,45 @@
-// import emailjs from "emailjs.com";
-import React from 'react';
+import React, { Component } from 'react';
 
+export default class Contact extends Component {
 
-export default function Contact() {
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: "",
+            email: "",
+            msg: ""
+        };
+        this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({value: event.target.value});
+      }
+    
+    handleSubmit(event) {
+     
+        // event.preventDefault();
+   
+    
+    
+    var body = new FormData(document.querySelector('form'));
+    
+    var requestOptions = {
+      method: 'POST',
+      body,
+    };
+    
+    fetch("https://script.google.com/macros/s/AKfycbyt0Qg_e1YXZn62mNU_r2K_YQwf6HszFWPY6mhW4DVp-B120eilEVYeJujPLtetDE-fnw/exec", requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
+     }
+
+render() {
 return(
     // md:flex-row md:space-x-6 md:space-y-0
-    <>
+
     <div className="antialised bg-contactImg bg-contain">
         
         <div className="flex w-full min-h-screen text-center justify-center items-center">
@@ -42,21 +76,21 @@ return(
                   
                     </div>
                     <div className="bg-white rounded-xl shadow-lg p-8 text-gray-600">
-                        <form action="" className="flex flex-col space-y-4">
+                        <form onSubmit={this.handleSubmit} className="flex flex-col space-y-4" id="myFormu">
                             <div>
                                 <label for="" className="uppercase text-sm text-gray-600 font-bold">Votre Nom</label>
-                                <input type="text" placeholder="Jane Doe" className=" w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"/>
+                                <input name="name"  type="text" placeholder="Jane Doe" className=" w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" required/>
                             </div>
                             <div>
                                 <label for="" className="uppercase text-sm text-gray-600 font-bold">Email Address</label>  
-                                <input type="email" placeholder="********@*****.**"  className=" w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"/>
+                                <input name="email" onChange={this.handleChange} type="email" placeholder="********@*****.**"  className=" w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" required/>
                             </div>
                             <div>
                                 <label for="" className="uppercase text-sm text-gray-600 font-bold">Message</label>  
-                                <textarea type="text"
-                                rows="4" placeholder=""  className=" w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"/>
+                                <textarea name="msg" onChange={this.handleChange} type="text"
+                                rows="4" placeholder="Message"  className=" w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" required/>
                             </div>
-                            <button className="uppercase text-sm font-bold tracking-wide text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline  bg-yellow-500 ">Envoyer</button>
+                            <button type="submit" className="uppercase text-sm font-bold tracking-wide text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline  bg-yellow-500 ">Envoyer</button>
                    
                         </form>
                     </div>
@@ -64,12 +98,16 @@ return(
             </div>
            
         </div>
+        
     </div>
 
-    </>
+    
+    
+
+    
 
     
 )
 
     
-}
+}}
