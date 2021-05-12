@@ -23,6 +23,7 @@
     "@icon/heroicons-outline": "*",
     "@tailwindcss/postcss7-compat": "^2.1.2",
     "autoprefixer": "^9",
+    "firebase": "^8.5.0",
     "heroicons-react": "^1.4.0",
     "history": "^4.10.1",
     "indent-string": "^5.0.0",
