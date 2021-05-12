@@ -12,7 +12,7 @@ class Login extends Component {
         <section className="flex flex-col md:flex-row h-screen items-center">
         
           <div className="bg-indigo-600 hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen">
-            <img src={Panier} alt="panier" class="w-full h-full object-cover"></img>
+            <img src={Panier} alt="panier" className="w-full h-full object-cover"></img>
           </div>
         
           <div className="bg-white w-full md:max-w-md lg:max-w-full md:mx-auto md:mx-0 md:w-1/2 xl:w-1/3 h-screen px-6 lg:px-16 xl:px-12
@@ -54,7 +54,7 @@ class Login extends Component {
                     </div>
                   </button>
         <br/> 
-              <p className="mt-8">Besoin d'un compte ? <Link href="#" class="text-yellow-500 hover:text-yellow-400 font-semibold">Créer un compte</Link>
+              <p className="mt-8">Besoin d'un compte ? <Link href="#" className="text-yellow-500 hover:text-yellow-400 font-semibold">Créer un compte</Link>
               </p>
               <div className="flex items-center justify-center">
               <img className="w-52 h-52" src={Logo} alt="logo"></img>

@@ -42,7 +42,7 @@ class Accueil extends Component {
   <div className="max-w-6xl mx-auto px-8 py-16">
     <div className="relative">
       <div className="relative lg:flex rounded-lg shadow-2xl overflow-hidden">
-        <div class="h-56 lg:h-auto lg:w-5/12 relative flex items-center justify-center">
+        <div className="h-56 lg:h-auto lg:w-5/12 relative flex items-center justify-center">
           <img className="absolute h-full w-full object-cover" src={agri} alt="" />
         </div>
         <div className="relative lg:w-7/12 bg-white">
@@ -59,14 +59,14 @@ class Accueil extends Component {
           </div>
         </div>
       </div>
-      <div class="absolute inset-y-0 left-0 lg:flex lg:items-center">
+      <div className="absolute inset-y-0 left-0 lg:flex lg:items-center">
         <button className="mt-24 lg:mt-0 -ml-6 h-12 w-12 rounded-full bg-white p-3 shadow-lg">
         <svg className="h-full w-full text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
           <path d="M5.41 11H21a1 1 0 0 1 0 2H5.41l5.3 5.3a1 1 0 0 1-1.42 1.4l-7-7a1 1 0 0 1 0-1.4l7-7a1 1 0 0 1 1.42 1.4L5.4 11z"/>
         </svg>
       </button>
       </div>
-      <div class="absolute inset-y-0 right-0 lg:flex lg:items-center">
+      <div className="absolute inset-y-0 right-0 lg:flex lg:items-center">
         <button className="mt-24 lg:mt-0 -mr-6 h-12 w-12 rounded-full bg-white p-3 shadow-lg">
         <svg className="h-full w-full text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
           <path d="M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z"/>
@@ -138,7 +138,7 @@ class Accueil extends Component {
 
                 <footer className="flex items-center justify-between leading-none p-2 md:p-4">
                     <Link className="flex items-center no-underline hover:underline text-black" href="#">
-                        <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random"></img>
+                        <img alt="Placeholder" className="block rounded-full" src="https://picsum.photos/32/32/?random"></img>
                         <p className="ml-2 text-sm">
                             Le clos
                         </p>
@@ -195,7 +195,7 @@ class Accueil extends Component {
             <article className="overflow-hidden rounded-lg shadow-lg">
 
                 <Link href="#">
-                    <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random"></img>
+                    <img alt="Placeholder" className="block h-auto w-full" src="https://picsum.photos/600/400/?random"></img>
                 </Link>
 
                 <header className="flex items-center justify-between leading-tight p-2 md:p-4">
@@ -230,7 +230,7 @@ class Accueil extends Component {
             <article className="overflow-hidden rounded-lg shadow-lg">
 
                 <Link href="#">
-                    <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random"></img>
+                    <img alt="Placeholder" className="block h-auto w-full" src="https://picsum.photos/600/400/?random"></img>
                 </Link>
 
                 <header className="flex items-center justify-between leading-tight p-2 md:p-4">
@@ -265,7 +265,7 @@ class Accueil extends Component {
             <article className="overflow-hidden rounded-lg shadow-lg">
 
                 <Link href="#">
-                    <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random"></img>
+                    <img alt="Placeholder" className="block h-auto w-full" src="https://picsum.photos/600/400/?random"></img>
                 </Link>
 
                 <header className="flex items-center justify-between leading-tight p-2 md:p-4">
