@@ -1,12 +1,62 @@
-import React, {Component} from 'react';
+import React, {Component, useState, useContext} from 'react';
 import { Link } from 'react-router-dom';
 // import {Link} from 'react-router-dom';
 import Logo from '../images/Agro-click.png';
 import Contactbg from '../images/mill.gif';
+import {FirebaseContext} from '../Components/firebase';
 
-class Signup extends Component {
 
-  render() {
+
+
+const Signup = (props) => {
+
+   const firebase = useContext(FirebaseContext);
+   console.log(firebase);
+
+    
+    const data = {
+        fName: '',
+        lName: '',
+        email: '',
+        password: '',
+        cPassword: ''
+    }
+
+    const [loginData, setLoginData] = useState(data);
+    const [error, setError] = useState('')
+
+    const handleChange = e => {
+        setLoginData({...loginData, [e.target.name]: e.target.value});
+
+    }
+
+    const handleSubmit = e => {
+        e.preventDefault();
+        const {email, password} = loginData;
+    
+        firebase.signupUser(email, password )
+        .then(user => {
+            setLoginData({...data});
+            props.history.push('/');
+        })
+
+        .catch(error => {
+        setError(error);
+        setLoginData({...data});
+        })
+    }
+
+    const {fName, lName, email, password, cPassword} = loginData;
+    
+   const btn = fName == '' || lName == '' || email == '' || password == '' || password !== cPassword
+
+    ? <button className="block w-full max-w-xs mx-auto bg-yellow-500 hover:bg-yellow-700 focus:bg-yellow-700 text-white rounded-lg px-3 py-3 font-semibold cursor-not-allowed" disabled >Inscription</button> : <button className="block w-full max-w-xs mx-auto bg-yellow-500 hover:bg-yellow-700 focus:bg-yellow-700 text-white rounded-lg px-3 py-3 font-semibold">Inscription</button>
+
+    //gestion des erreurs
+
+    const errorMsg = error !== '' && <span>{error.message}</span>;
+
+  
     return (
       
         // bg-gray-900
@@ -19,50 +69,66 @@ class Signup extends Component {
                 <img src={Contactbg} alt="windmil" className="w-full h-full object-cover"></img>
             </div>
             <div className="w-full md:w-1/2 py-10 px-5 md:px-10">
-                <div className="text-center mb-10">
-                    <h1 className="font-bold text-3xl text-gray-900">REGISTER</h1>
-                    <p>Enter your information to register</p>
+                                <div className="text-center mb-10">
+                                    {errorMsg}
+                    <h1 className="font-bold text-3xl text-gray-900">INSCRIPTION</h1>
+                    <p>Entrez vos informations pour vous enregistrer</p>
                 </div>
-                <div>
-                    <div className="w-1/2 px-3 mb-5">
-                                <label for="" className="text-xs font-semibold px-1">First name</label>
+                <form onSubmit={handleSubmit}>
+                <div className="flex -mx-3">
+                    <div className="w-full px-3 mb-5">
+                                <label  htmlFor="" className="text-xs font-semibold px-1">Prénom</label>
                                 <div className="flex">
                                     <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                    <input type="text" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Jane"/>
+                                    <input onChange={handleChange} value={fName} name='fName' type="text" required className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Jane"/>
                                 </div>
                     </div>
+                    </div>
                     <div className="flex -mx-3">
-                            <div className="w-1/2 px-3 mb-5">
-                                        <label for="" className="text-xs font-semibold px-1">Last name</label>
+                            <div className="w-full px-3 mb-5">
+                                        <label htmlFor="" className="text-xs font-semibold px-1">Nom de famille</label>
                                         <div className="flex">
                                             <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                            <input type="text" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Doe"/>
+                                            <input required name='lName' value={lName} onChange={handleChange} type="text" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Doe"/>
                                         </div>
                             </div>
                     </div>
                     <div className="flex -mx-3">
                         <div className="w-full px-3 mb-5">
-                            <label for="" className="text-xs font-semibold px-1">Email</label>
+                            <label htmlFor="" className="text-xs font-semibold px-1">Email</label>
                             <div className="flex">
                                 <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
-                                <input type="email" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="janedoe@example.com"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="flex -mx-3">
-                        <div className="w-full px-3 mb-12">
-                            <label for="" className="text-xs font-semibold px-1">Password</label>
-                            <div className="flex">
-                                <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
-                                <input type="password" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="************"/>
+                                <input required name='email' value={email} onChange={handleChange} type="email" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="janedoe@example.com"/>
                             </div>
                         </div>
                     </div>
                     <div className="flex -mx-3">
                         <div className="w-full px-3 mb-5">
-                            <button className="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">REGISTER NOW</button>
+                            <label htmlFor="" className="text-xs font-semibold px-1">Mot de passe</label>
+                            <div className="flex">
+                                <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
+                                <input required name='password' value={password} onChange={handleChange} type="password" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="*****"/>
+                            </div>
                         </div>
                     </div>
+                    <div className="flex -mx-3">
+                        <div className="w-full px-3 mb-5">
+                            <label htmlFor="" className="text-xs font-semibold px-1">Confirmation du mot de passe</label>
+                            <div className="flex">
+                                <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
+                                <input required name='cPassword' value={cPassword} onChange={handleChange} type="password" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="*****"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex -mx-3">
+                        <div className="w-full px-3 mb-5">
+                         {btn}
+                            {/* <button className="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold"></button> */}
+                        </div>
+                    </div>
+                </form>
+                <div className="linkContainer">
+                    <Link className="simpleLink" to='/Login'> Déjà inscrit ? Connectez vous.</Link>
                 </div>
             </div>
         </div>
@@ -78,6 +144,6 @@ class Signup extends Component {
 
  
   
-}
+
 
 export default Signup;

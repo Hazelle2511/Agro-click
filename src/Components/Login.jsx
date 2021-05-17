@@ -1,12 +1,43 @@
-import React, {Component} from 'react';
+import React, {Component, useState, useEffect, useContext} from 'react';
 import { Link } from 'react-router-dom';
-// import {Link} from 'react-router-dom';
 import Logo from '../images/Agro-click.png';
 import Panier from '../images/basket-690778_1920.jpg';
+import {FirebaseContext} from '../Components/firebase';
 
-class Login extends Component {
+const Login = (props) => {
 
-  render() {
+  const firebase = useContext(FirebaseContext);
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [btn, setBtn] = useState(false);
+  const [error, setError] = useState('');
+
+  useEffect(()=> {
+    if (password.length > 5 && email !== '') {
+      setBtn(true)
+    } else if (btn) {
+      setBtn(false)
+    }
+  }, [password, email])
+
+
+  const handleSubmit = e =>{
+    e.preventDefault();
+    
+    firebase.loginUser(email, password)
+    .then(user => {
+      setEmail('');
+      setPassword('');
+props.history.push('/');
+    })
+    .catch(error => {
+      setError(error);
+      setEmail('');
+      setPassword('');
+    })
+  }
+  
     return (
         
         <section className="flex flex-col md:flex-row h-screen items-center">
@@ -21,19 +52,19 @@ class Login extends Component {
             <div className="w-full h-100">
 
             
+            {error !== '' && <div className="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4" role="alert"><span className="font-bold">ATTENTION</span><span>Mauvais mot de passe</span></div>}
         
+              <h1 className="text-xl md:text-2xl font-bold leading-tight -mt-8">SE CONNECTER</h1>
         
-              <h1 className="text-xl md:text-2xl font-bold leading-tight -mt-8">Me connecter</h1>
-        
-              <form className="mt-6" action="#" method="POST">
+              <form onSubmit={handleSubmit} className="mt-6" >
                 <div>
                   <label className="block text-gray-700">E-mail</label>
-                  <input type="email" name="" id="" placeholder="E-mail" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-yellow-500 focus:bg-white focus:outline-none" autofocus autocomplete required></input>
+                  <input onChange={e => setEmail(e.target.value)} value={email} type="email" name="email" placeholder="E-mail" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-yellow-500 focus:bg-white focus:outline-none" autofocus autocomplete required></input>
                 </div>
         
                 <div className="mt-4">
                   <label className="block text-gray-700">Mot de passe</label>
-                  <input type="password" name="" id="" placeholder="Mot de passe" minlength="6" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-yellow-500
+                  <input onChange={e => setPassword(e.target.value)} value={password} type="password" name="password" placeholder="Mot de passe" minlength="5" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-yellow-500
                         focus:bg-white focus:outline-none" required></input>
                 </div>
         
@@ -41,8 +72,9 @@ class Login extends Component {
                   <Link href="#" className="text-sm font-semibold text-gray-700 hover:text-yellow-400 focus:text-yellow-400">Mot de passe oublié ?</Link>
                 </div>
         
-                <button type="submit" className="w-full block bg-yellow-500 hover:bg-yellow-400 focus:bg-yellow-400 text-white font-semibold rounded-lg
-                      px-4 py-3 mt-6">Connexion</button>
+                 {btn ? <button className="w-full block bg-yellow-500 hover:bg-yellow-400 focus:bg-yellow-400 text-white font-semibold rounded-lg
+                      px-4 py-3 mt-6">Connexion</button> : <button className="cursor-not-allowed w-full block bg-yellow-500 hover:bg-yellow-400 focus:bg-yellow-400 text-white font-semibold rounded-lg
+                      px-4 py-3 mt-6" disabled >Connexion</button> }
               </form>
         
               <hr className="my-6 border-gray-300 w-full"></hr>
@@ -54,7 +86,7 @@ class Login extends Component {
                     </div>
                   </button>
         <br/> 
-              <p className="mt-8">Besoin d'un compte ? <Link href="#" className="text-yellow-500 hover:text-yellow-400 font-semibold">Créer un compte</Link>
+              <p className="mt-8">Besoin d'un compte ? <Link className="text-yellow-500 hover:text-yellow-400 font-semibold" to='/signup' >Créer un compte</Link>
               </p>
               <div className="flex items-center justify-center">
               <img className="w-52 h-52" src={Logo} alt="logo"></img>
@@ -68,8 +100,6 @@ class Login extends Component {
     )
   }
 
- 
-  
-}
+
 
 export default Login;
