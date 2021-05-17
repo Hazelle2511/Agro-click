@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 // import imageOne from '../images/Agro-click.png';
 import videoo from '../images/pexels-zen-chung-5527769.mp4';
 import agri from '../images/soil-386749_1920.jpg';
-import footer from '../Components/Footer';
 import Footer from '../Components/Footer';
 
 
@@ -54,7 +53,7 @@ class Accueil extends Component {
               <strong className="text-gray-900 font-medium">Agro-click</strong> séléctionne les meilleurs producteurs de la région. Nous garantissons des produits de qualité blablablablabla. Avec Agro-click, choisissez le producteur le plus prêt de chez vous, sélectionnez les produits qui vous font envies et faite vous livrer directement chez vous.  &mdash;
             </p>
             <p className="mt-6">
-              <Link href="#" className="font-medium text-yellow-500 hover:text-yellow-400">Pour en savoir plus &rarr;</Link>
+              <Link to="/"  className="font-medium text-yellow-500 hover:text-yellow-400">Pour en savoir plus &rarr;</Link>
             </p>
           </div>
         </div>
@@ -121,13 +120,13 @@ class Accueil extends Component {
             
             <article className="overflow-hidden rounded-lg shadow-lg">
 
-                <Link href="#">
+                <Link to="/href">
                     <img alt="Placeholder" className="block h-auto w-full" src="https://picsum.photos/600/400/?random"></img>
                 </Link>
 
                 <header className="flex items-center justify-between leading-tight p-2 md:p-4">
                     <h1 className="text-lg">
-                        <Link className="no-underline hover:underline text-black" href="#">
+                        <Link to="/href" className="no-underline hover:underline text-black" href="#">
                             Alsace
                         </Link>
                     </h1>
@@ -157,13 +156,13 @@ class Accueil extends Component {
             
             <article className="overflow-hidden rounded-lg shadow-lg">
 
-                <Link href="#">
+                <Link to="/href">
                     <img alt="Placeholder" className="block h-auto w-full" src="https://picsum.photos/600/400/?random"></img>
                 </Link>
 
                 <header className="flex items-center justify-between leading-tight p-2 md:p-4">
                     <h1 className="text-lg">
-                        <Link className="no-underline hover:underline text-black" href="#">
+                        <Link to="/href" className="no-underline hover:underline text-black" href="#">
                             Auvergne
                         </Link>
                     </h1>
@@ -173,7 +172,7 @@ class Accueil extends Component {
                 </header>
 
                 <footer className="flex items-center justify-between leading-none p-2 md:p-4">
-                    <Link className="flex items-center no-underline hover:underline text-black" href="#">
+                    <Link to="/href" className="flex items-center no-underline hover:underline text-black" href="#">
                         <img alt="Placeholder" className="block rounded-full" src="https://picsum.photos/32/32/?random"></img>
                         <p className="ml-2 text-sm">
                             Richard Gers
@@ -200,7 +199,7 @@ class Accueil extends Component {
 
                 <header className="flex items-center justify-between leading-tight p-2 md:p-4">
                     <h1 className="text-lg">
-                        <Link className="no-underline hover:underline text-black" href="#">
+                        <Link to="/href" className="no-underline hover:underline text-black" href="#">
                             Ile-de-france
                         </Link>
                     </h1>
@@ -210,7 +209,7 @@ class Accueil extends Component {
                 </header>
 
                 <footer className="flex items-center justify-between leading-none p-2 md:p-4">
-                    <Link className="flex items-center no-underline hover:underline text-black" href="#">
+                    <Link to="/href" className="flex items-center no-underline hover:underline text-black" href="#">
                         <img alt="Placeholder" className="block rounded-full" src="https://picsum.photos/32/32/?random"></img>
                         <p className="ml-2 text-sm">
                             Le poulailler
@@ -235,7 +234,7 @@ class Accueil extends Component {
 
                 <header className="flex items-center justify-between leading-tight p-2 md:p-4">
                     <h1 className="text-lg">
-                        <Link className="no-underline hover:underline text-black" href="#">
+                        <Link to="/href" className="no-underline hover:underline text-black" href="#">
                             Haute Normandie
                         </Link>
                     </h1>
@@ -245,7 +244,7 @@ class Accueil extends Component {
                 </header>
 
                 <footer className="flex items-center justify-between leading-none p-2 md:p-4">
-                    <Link className="flex items-center no-underline hover:underline text-black" href="#">
+                    <Link to="/href" className="flex items-center no-underline hover:underline text-black" href="#">
                         <img alt="Placeholder" className="block rounded-full" src="https://picsum.photos/32/32/?random"></img>
                         <p className="ml-2 text-sm">
                             Riset du chemin
@@ -264,13 +263,13 @@ class Accueil extends Component {
         
             <article className="overflow-hidden rounded-lg shadow-lg">
 
-                <Link href="#">
-                    <img alt="Placeholder" className="block h-auto w-full" src="https://picsum.photos/600/400/?random"></img>
+                <Link to="/href" href="#">
+                    <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random"></img>
                 </Link>
 
                 <header className="flex items-center justify-between leading-tight p-2 md:p-4">
                     <h1 className="text-lg">
-                        <Link className="no-underline hover:underline text-black" href="#">
+                        <Link to="/href" className="no-underline hover:underline text-black" href="#">
                             Franche Comté
                         </Link>
                     </h1>
@@ -280,7 +279,7 @@ class Accueil extends Component {
                 </header>
 
                 <footer className="flex items-center justify-between leading-none p-2 md:p-4">
-                    <Link className="flex items-center no-underline hover:underline text-black" href="#">
+                    <Link to="/href" className="flex items-center no-underline hover:underline text-black" href="#">
                         <img alt="Placeholder" className="block rounded-full" src="https://picsum.photos/32/32/?random"></img>
                         <p className="ml-2 text-sm">
                             Lieu dit du chateau

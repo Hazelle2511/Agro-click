@@ -3,10 +3,12 @@ import ReactDOM from "react-dom";
 import App from './App';
 import './index.css';
 import {BrowserRouter} from 'react-router-dom';
+import FirebaseContext from "./ context/firebase";
+import {firebase, FieldValue} from "./lib/firebase";
 import Firebase, {FirebaseContext} from './Components/firebase';
 
 ReactDOM.render(
-<React.StrictMode>
+<FirebaseContext.Provider value={{firebase, FieldValue}}>
 <BrowserRouter>
 <FirebaseContext.Provider value={new Firebase()}>
   <App/>
