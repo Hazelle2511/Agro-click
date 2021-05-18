@@ -23,6 +23,7 @@
     "@craco/craco": "^6.1.2",
     "@headlessui/react": "^1.1.1",
     "@icon/heroicons-outline": "*",
+    "@svg-icons/heroicons-outline": "^1.50.0",
     "@tailwindcss/postcss7-compat": "^2.1.2",
     "autoprefixer": "^9",
     "firebase": "^8.6.1",
