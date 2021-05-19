@@ -59,17 +59,17 @@ props.history.push('/');
               <form onSubmit={handleSubmit} className="mt-6" >
                 <div>
                   <label className="block text-gray-700">E-mail</label>
-                  <input onChange={e => setEmail(e.target.value)} value={email} type="email" name="email" placeholder="E-mail" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-yellow-500 focus:bg-white focus:outline-none" autofocus autocomplete required></input>
+                  <input onChange={e => setEmail(e.target.value)} value={email} type="email" name="email" placeholder="E-mail" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-yellow-500 focus:bg-white focus:outline-none" autoFocus autoComplete="true" required></input>
                 </div>
         
                 <div className="mt-4">
                   <label className="block text-gray-700">Mot de passe</label>
-                  <input onChange={e => setPassword(e.target.value)} value={password} type="password" name="password" placeholder="Mot de passe" minlength="5" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-yellow-500
+                  <input onChange={e => setPassword(e.target.value)} value={password} type="password" name="password" placeholder="Mot de passe" minLength="5" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-yellow-500
                         focus:bg-white focus:outline-none" required></input>
                 </div>
         
                 <div className="text-right mt-2">
-                  <Link href="#" className="text-sm font-semibold text-gray-700 hover:text-yellow-400 focus:text-yellow-400">Mot de passe oublié ?</Link>
+                  <Link to="/" className="text-sm font-semibold text-gray-700 hover:text-yellow-400 focus:text-yellow-400">Mot de passe oublié ?</Link>
                 </div>
         
                  {btn ? <button className="w-full block bg-yellow-500 hover:bg-yellow-400 focus:bg-yellow-400 text-white font-semibold rounded-lg
@@ -86,7 +86,7 @@ props.history.push('/');
                     </div>
                   </button>
         <br/> 
-              <p className="mt-8">Besoin d'un compte ? <Link className="text-yellow-500 hover:text-yellow-400 font-semibold" to='/signup' >Créer un compte</Link>
+              <p className="mt-8">Nouveau chez Agro-Click ? <Link className="text-yellow-500 hover:text-yellow-400 font-semibold" to="/signup" >Créez un compte.</Link>
               </p>
               <div className="flex items-center justify-center">
               <img className="w-52 h-52" src={Logo} alt="logo"></img>

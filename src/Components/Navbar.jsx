@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import Logo from '../images/Agro-click.png';
 // import Searchbar from './Components/Searchbar';
 
+
 function Navbar({toggle}) {
 
     return(
@@ -51,7 +52,8 @@ function Navbar({toggle}) {
             </button></Link>
 
             
-            
+          
+      
         </nav>
           
     )
