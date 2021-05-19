@@ -5,6 +5,8 @@
     "test": "echo \"This template does not include a test runner by default.\" && exit 1"
   },
   "devDependencies": {
+    "@babel/plugin-syntax-jsx": "^7.12.13",
+    "@babel/preset-react": "^7.13.13",
     "@iconify-icons/heroicons-outline": "^1.1.2",
     "@iconify/react": "^1.1.4",
     "@snowpack/plugin-postcss": "^1.2.2",
@@ -19,7 +21,6 @@
     "tailwindcss": "^2.1.2"
   },
   "dependencies": {
-    "@babel/plugin-syntax-jsx": "^7.12.13",
     "@craco/craco": "^6.1.2",
     "@headlessui/react": "^1.1.1",
     "@icon/heroicons-outline": "*",

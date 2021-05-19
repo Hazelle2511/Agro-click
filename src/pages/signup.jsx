@@ -72,7 +72,7 @@ const Signup = (props) => {
                                 <div className="text-center mb-10">
                                     {errorMsg}
                     <h1 className="font-bold text-3xl text-gray-900">INSCRIPTION</h1>
-                    <p>Entrez vos informations pour vous enregistrer</p>
+                    
                 </div>
                 <form onSubmit={handleSubmit}>
                 <div className="flex -mx-3">
@@ -115,7 +115,7 @@ const Signup = (props) => {
                         <div className="w-full px-3 mb-5">
                             <label htmlFor="" className="text-xs font-semibold px-1">Confirmation du mot de passe</label>
                             <div className="flex">
-                                <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
+                                <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-lock-outline text-lg"></i></div>
                                 <input required name='cPassword' value={cPassword} onChange={handleChange} type="password" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="*****"/>
                             </div>
                         </div>
@@ -127,8 +127,8 @@ const Signup = (props) => {
                         </div>
                     </div>
                 </form>
-                <div className="linkContainer">
-                    <Link className="simpleLink" to='/Login'> Déjà inscrit ? Connectez vous.</Link>
+                <div className="linkContainer"> <span> Déjà inscrit ? </span>
+                    <Link className="text-yellow-500 hover:text-yellow-400 font-semibold" to='/Login'>Connectez vous.</Link>
                 </div>
             </div>
         </div>
