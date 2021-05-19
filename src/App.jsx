@@ -10,7 +10,7 @@ import { Switch, Route} from "react-router-dom";
 import Signup from "./pages/signup.jsx";
 import Searchbar from './Components/Searchbar';
 import Panier from './Components/ShoppingCard';
-import GoogleMap from './Components/GoogleMap'
+
 
  
 
@@ -52,7 +52,7 @@ export default () => {
                <Route path="/ShoppingCard" component = {Panier} />
 
            </Switch>
-           <GoogleMap />
+          
         
 
         
