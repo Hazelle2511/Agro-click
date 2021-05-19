@@ -45,7 +45,7 @@ export default () => {
            <Dropdown toggle={toggle} isOpen={isOpen}/>
           {/* <Searchbar /> */}
            <Switch>
-               <Route path="/" exact component = {Accueil} />
+               <Route path="/"  component = {Accueil} />
                <Route path="/signup" component = {Signup} />
                <Route path="/login" component = {Login} />
                <Route path="/contact" component = {Contact} />
