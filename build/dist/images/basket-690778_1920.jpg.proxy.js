@@ -1,1 +1,0 @@
-export default "/dist/images/basket-690778_1920.jpg";
