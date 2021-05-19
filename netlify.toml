@@ -1,7 +1,7 @@
 
   [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/accueil"
    status = 200
    force = false
 
