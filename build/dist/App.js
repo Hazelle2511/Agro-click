@@ -1,14 +1,19 @@
-import React, {useState, useEffect} from "../_snowpack/pkg/react.js";
-import "./App.css.proxy.js";
+import React, {useState, useEffect} from "react";
+import "./App.css";
 import Dropdown from "./Components/Dropdown.js";
 import Login from "./Components/Login.js";
 import Navbar from "./Components/Navbar.js";
 import Accueil from "./pages/index.js";
 import Contact from "./pages/contact.js";
-import {Switch, Route} from "../_snowpack/pkg/react-router-dom.js";
+import {Switch, Route} from "react-router-dom";
 import Signup from "./pages/signup.js";
 import Searchbar from "./Components/Searchbar.js";
 import Panier from "./Components/ShoppingCard.js";
+import GoogleMap from "./Components/GoogleMap.js";
+import {Map, InfoWindow, Marker, GoogleApiWrapper} from "google-maps-react";
+import Logout from "./Components/Logout/index.js";
+import AccessProfil from "./Components/Welcome/accessProfil.js";
+import accessProfil from "./Components/Welcome/accessProfil.js";
 export default () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
@@ -45,5 +50,11 @@ export default () => {
   }), /* @__PURE__ */ React.createElement(Route, {
     path: "/ShoppingCard",
     component: Panier
+  }), /* @__PURE__ */ React.createElement(Route, {
+    path: "/Logout",
+    component: Logout
+  }), /* @__PURE__ */ React.createElement(Route, {
+    path: "/accessProfil",
+    component: accessProfil
   })));
 };

@@ -1,9 +1,9 @@
-import React, {Component} from "../../_snowpack/pkg/react.js";
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from "../../_snowpack/pkg/google-maps-react.js";
+import React, {Component} from "react";
+import {Map, InfoWindow, Marker, GoogleApiWrapper} from "google-maps-react";
 import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng
-} from "../../_snowpack/pkg/react-places-autocomplete.js";
+} from "react-places-autocomplete";
 export class MapContainer extends Component {
   constructor(props) {
     super(props);

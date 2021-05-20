@@ -1,4 +1,4 @@
-import React from "../../_snowpack/pkg/react.js";
+import React from "react";
 function Footer() {
   return /* @__PURE__ */ React.createElement("div", {
     className: "bg-yellow-500"
@@ -10,11 +10,11 @@ function Footer() {
     className: "flex mx-auto text-white text-center"
   }, /* @__PURE__ */ React.createElement("li", {
     className: "p-2 cursor-pointer hover:underline"
-  }, "Terms & Conditions"), /* @__PURE__ */ React.createElement("li", {
+  }, "Termes & Conditions"), /* @__PURE__ */ React.createElement("li", {
     className: "p-2 cursor-pointer hover:underline"
-  }, "Privacy"), /* @__PURE__ */ React.createElement("li", {
+  }, "Politique de confidentialité"), /* @__PURE__ */ React.createElement("li", {
     className: "p-2 cursor-pointer hover:underline"
-  }, "Cookies")), /* @__PURE__ */ React.createElement("ul", {
+  }, "Conditions d'utilisations")), /* @__PURE__ */ React.createElement("ul", {
     className: "flex mx-auto text-white text-center"
   }, /* @__PURE__ */ React.createElement("li", {
     className: "p-2 cursor-pointer"

@@ -1,7 +1,7 @@
-import React, {Component, useState, useEffect, useContext} from "../../_snowpack/pkg/react.js";
-import {Link} from "../../_snowpack/pkg/react-router-dom.js";
-import Logo from "../images/Agro-click.png.proxy.js";
-import Panier from "../images/basket-690778_1920.jpg.proxy.js";
+import React, {Component, useState, useEffect, useContext} from "react";
+import {Link} from "react-router-dom";
+import Logo from "../images/Agro-click.png";
+import Panier from "../images/basket-690778_1920.jpg";
 import {FirebaseContext} from "./firebase/index.js";
 const Login = (props) => {
   const firebase = useContext(FirebaseContext);
@@ -59,8 +59,8 @@ const Login = (props) => {
     name: "email",
     placeholder: "E-mail",
     className: "w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-yellow-500 focus:bg-white focus:outline-none",
-    autofocus: true,
-    autocomplete: true,
+    autoFocus: true,
+    autoComplete: "true",
     required: true
   })), /* @__PURE__ */ React.createElement("div", {
     className: "mt-4"
@@ -72,13 +72,13 @@ const Login = (props) => {
     type: "password",
     name: "password",
     placeholder: "Mot de passe",
-    minlength: "5",
+    minLength: "5",
     className: "w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-yellow-500\n                        focus:bg-white focus:outline-none",
     required: true
   })), /* @__PURE__ */ React.createElement("div", {
     className: "text-right mt-2"
   }, /* @__PURE__ */ React.createElement(Link, {
-    href: "#",
+    to: "/",
     className: "text-sm font-semibold text-gray-700 hover:text-yellow-400 focus:text-yellow-400"
   }, "Mot de passe oublié ?")), btn ? /* @__PURE__ */ React.createElement("button", {
     className: "w-full block bg-yellow-500 hover:bg-yellow-400 focus:bg-yellow-400 text-white font-semibold rounded-lg\n                      px-4 py-3 mt-6"
@@ -96,10 +96,10 @@ const Login = (props) => {
     className: "ml-4"
   }, "Se connecter avec Google"))), /* @__PURE__ */ React.createElement("br", null), /* @__PURE__ */ React.createElement("p", {
     className: "mt-8"
-  }, "Besoin d'un compte ? ", /* @__PURE__ */ React.createElement(Link, {
+  }, "Nouveau chez Agro-Click ? ", /* @__PURE__ */ React.createElement(Link, {
     className: "text-yellow-500 hover:text-yellow-400 font-semibold",
     to: "/signup"
-  }, "Créer un compte")), /* @__PURE__ */ React.createElement("div", {
+  }, "Créez un compte.")), /* @__PURE__ */ React.createElement("div", {
     className: "flex items-center justify-center"
   }, /* @__PURE__ */ React.createElement("img", {
     className: "w-52 h-52",

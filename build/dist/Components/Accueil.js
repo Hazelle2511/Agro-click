@@ -1,7 +1,7 @@
-import React, {Component} from "../../_snowpack/pkg/react.js";
-import {Link} from "../../_snowpack/pkg/react-router-dom.js";
-import videoo from "../images/pexels-zen-chung-5527769.mp4.proxy.js";
-import agri from "../images/soil-386749_1920.jpg.proxy.js";
+import React, {Component} from "react";
+import {Link} from "react-router-dom";
+import videoo from "../images/pexels-zen-chung-5527769.mp4";
+import agri from "../images/soil-386749_1920.jpg";
 import GoogleMap from "./GoogleMap.js";
 import Footer from "./Footer.js";
 class Accueil extends Component {
@@ -10,9 +10,9 @@ class Accueil extends Component {
       className: "relative flex items-center justify-center h-screen overflow-hidden"
     }, /* @__PURE__ */ React.createElement("div", {
       className: "relative z-30 p-5 lg:text-7xl md:text-5xl sm:text-3xl text-2xl font-block mb-14 flex flex-col justify-center items-center mb-14 text-center"
-    }, "Le goût et la qualité des producteurs à porté de click !", /* @__PURE__ */ React.createElement(Link, {
+    }, "Le goût et la qualité des producteurs directement chez vous", /* @__PURE__ */ React.createElement(Link, {
       to: "/",
-      className: "py-6 px-10 bg-yellow-500 rounded-full\n        text-3xl hover:bg-green-400 transition duration-300 ease-in-out flex items-center animate-bounce mt-10"
+      className: "py-6 px-10 bg-yellow-500 rounded-full\n        text-3xl hover:bg-green-800 transition duration-300 ease-in-out flex items-center animate-bounce mt-10 text-white"
     }, "Commander", /* @__PURE__ */ React.createElement("svg", {
       className: "w-6 h-6 ml-4",
       fill: "none",
@@ -35,7 +35,7 @@ class Accueil extends Component {
       alt: "video",
       type: "video/mp4"
     }))), /* @__PURE__ */ React.createElement("main", null, /* @__PURE__ */ React.createElement("div", {
-      className: "bg-green-600"
+      className: ""
     }, /* @__PURE__ */ React.createElement("div", {
       className: "max-w-6xl mx-auto px-8 py-16"
     }, /* @__PURE__ */ React.createElement("div", {
@@ -66,27 +66,7 @@ class Accueil extends Component {
     }, /* @__PURE__ */ React.createElement(Link, {
       to: "/",
       className: "font-medium text-yellow-500 hover:text-yellow-400"
-    }, "Pour en savoir plus →"))))), /* @__PURE__ */ React.createElement("div", {
-      className: "absolute inset-y-0 left-0 lg:flex lg:items-center"
-    }, /* @__PURE__ */ React.createElement("button", {
-      className: "mt-24 lg:mt-0 -ml-6 h-12 w-12 rounded-full bg-white p-3 shadow-lg"
-    }, /* @__PURE__ */ React.createElement("svg", {
-      className: "h-full w-full text-yellow-500",
-      fill: "currentColor",
-      viewBox: "0 0 24 24"
-    }, /* @__PURE__ */ React.createElement("path", {
-      d: "M5.41 11H21a1 1 0 0 1 0 2H5.41l5.3 5.3a1 1 0 0 1-1.42 1.4l-7-7a1 1 0 0 1 0-1.4l7-7a1 1 0 0 1 1.42 1.4L5.4 11z"
-    })))), /* @__PURE__ */ React.createElement("div", {
-      className: "absolute inset-y-0 right-0 lg:flex lg:items-center"
-    }, /* @__PURE__ */ React.createElement("button", {
-      className: "mt-24 lg:mt-0 -mr-6 h-12 w-12 rounded-full bg-white p-3 shadow-lg"
-    }, /* @__PURE__ */ React.createElement("svg", {
-      className: "h-full w-full text-yellow-500",
-      fill: "currentColor",
-      viewBox: "0 0 24 24"
-    }, /* @__PURE__ */ React.createElement("path", {
-      d: "M18.59 13H3a1 1 0 0 1 0-2h15.59l-5.3-5.3a1 1 0 1 1 1.42-1.4l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.42-1.4l5.3-5.3z"
-    })))))))), /* @__PURE__ */ React.createElement("div", {
+    }, "Pour en savoir plus →"))))))))), /* @__PURE__ */ React.createElement("div", {
       className: "container my-12 mx-auto px-4 md:px-12"
     }, /* @__PURE__ */ React.createElement("div", {
       className: "tracking-widest uppercase mb-8 mt-8 text-5xl text-yellow-500"
@@ -115,8 +95,7 @@ class Accueil extends Component {
       className: "flex items-center justify-between leading-none p-2 md:p-4"
     }, /* @__PURE__ */ React.createElement(Link, {
       to: "/",
-      className: "flex items-center no-underline hover:underline text-black",
-      href: "#"
+      className: "flex items-center no-underline hover:underline text-black"
     }, /* @__PURE__ */ React.createElement("img", {
       alt: "Placeholder",
       className: "block rounded-full",
@@ -128,7 +107,7 @@ class Accueil extends Component {
     }, /* @__PURE__ */ React.createElement("article", {
       className: "overflow-hidden rounded-lg shadow-lg"
     }, /* @__PURE__ */ React.createElement(Link, {
-      to: "/href"
+      to: "/"
     }, /* @__PURE__ */ React.createElement("img", {
       alt: "Placeholder",
       className: "block h-auto w-full",
@@ -138,16 +117,15 @@ class Accueil extends Component {
     }, /* @__PURE__ */ React.createElement("h1", {
       className: "text-lg"
     }, /* @__PURE__ */ React.createElement(Link, {
-      to: "/href",
-      className: "no-underline hover:underline text-black",
-      href: "#"
+      to: "/",
+      className: "no-underline hover:underline text-black"
     }, "Alsace")), /* @__PURE__ */ React.createElement("p", {
       className: "text-grey-darker text-sm"
     }, "Strasbourg")), /* @__PURE__ */ React.createElement("footer", {
       className: "flex items-center justify-between leading-none p-2 md:p-4"
     }, /* @__PURE__ */ React.createElement(Link, {
-      className: "flex items-center no-underline hover:underline text-black",
-      href: "#"
+      to: "/",
+      className: "flex items-center no-underline hover:underline text-black"
     }, /* @__PURE__ */ React.createElement("img", {
       alt: "Placeholder",
       className: "block rounded-full",
@@ -159,7 +137,7 @@ class Accueil extends Component {
     }, /* @__PURE__ */ React.createElement("article", {
       className: "overflow-hidden rounded-lg shadow-lg"
     }, /* @__PURE__ */ React.createElement(Link, {
-      to: "/href"
+      to: "/"
     }, /* @__PURE__ */ React.createElement("img", {
       alt: "Placeholder",
       className: "block h-auto w-full",
@@ -169,17 +147,15 @@ class Accueil extends Component {
     }, /* @__PURE__ */ React.createElement("h1", {
       className: "text-lg"
     }, /* @__PURE__ */ React.createElement(Link, {
-      to: "/href",
-      className: "no-underline hover:underline text-black",
-      href: "#"
+      to: "/",
+      className: "no-underline hover:underline text-black"
     }, "Auvergne")), /* @__PURE__ */ React.createElement("p", {
       className: "text-grey-darker text-sm"
     }, "Le-Puy-en-Vellais")), /* @__PURE__ */ React.createElement("footer", {
       className: "flex items-center justify-between leading-none p-2 md:p-4"
     }, /* @__PURE__ */ React.createElement(Link, {
-      to: "/href",
-      className: "flex items-center no-underline hover:underline text-black",
-      href: "#"
+      to: "/",
+      className: "flex items-center no-underline hover:underline text-black"
     }, /* @__PURE__ */ React.createElement("img", {
       alt: "Placeholder",
       className: "block rounded-full",
@@ -191,7 +167,7 @@ class Accueil extends Component {
     }, /* @__PURE__ */ React.createElement("article", {
       className: "overflow-hidden rounded-lg shadow-lg"
     }, /* @__PURE__ */ React.createElement(Link, {
-      href: "#"
+      to: "/"
     }, /* @__PURE__ */ React.createElement("img", {
       alt: "Placeholder",
       className: "block h-auto w-full",
@@ -201,17 +177,15 @@ class Accueil extends Component {
     }, /* @__PURE__ */ React.createElement("h1", {
       className: "text-lg"
     }, /* @__PURE__ */ React.createElement(Link, {
-      to: "/href",
-      className: "no-underline hover:underline text-black",
-      href: "#"
+      to: "/",
+      className: "no-underline hover:underline text-black"
     }, "Ile-de-france")), /* @__PURE__ */ React.createElement("p", {
       className: "text-grey-darker text-sm"
     }, "Bezons")), /* @__PURE__ */ React.createElement("footer", {
       className: "flex items-center justify-between leading-none p-2 md:p-4"
     }, /* @__PURE__ */ React.createElement(Link, {
-      to: "/href",
-      className: "flex items-center no-underline hover:underline text-black",
-      href: "#"
+      to: "/",
+      className: "flex items-center no-underline hover:underline text-black"
     }, /* @__PURE__ */ React.createElement("img", {
       alt: "Placeholder",
       className: "block rounded-full",
@@ -223,7 +197,7 @@ class Accueil extends Component {
     }, /* @__PURE__ */ React.createElement("article", {
       className: "overflow-hidden rounded-lg shadow-lg"
     }, /* @__PURE__ */ React.createElement(Link, {
-      href: "#"
+      to: "/"
     }, /* @__PURE__ */ React.createElement("img", {
       alt: "Placeholder",
       className: "block h-auto w-full",
@@ -233,17 +207,15 @@ class Accueil extends Component {
     }, /* @__PURE__ */ React.createElement("h1", {
       className: "text-lg"
     }, /* @__PURE__ */ React.createElement(Link, {
-      to: "/href",
-      className: "no-underline hover:underline text-black",
-      href: "#"
+      to: "/",
+      className: "no-underline hover:underline text-black"
     }, "Haute Normandie")), /* @__PURE__ */ React.createElement("p", {
       className: "text-grey-darker text-sm"
     }, "Louviers")), /* @__PURE__ */ React.createElement("footer", {
       className: "flex items-center justify-between leading-none p-2 md:p-4"
     }, /* @__PURE__ */ React.createElement(Link, {
-      to: "/href",
-      className: "flex items-center no-underline hover:underline text-black",
-      href: "#"
+      to: "/",
+      className: "flex items-center no-underline hover:underline text-black"
     }, /* @__PURE__ */ React.createElement("img", {
       alt: "Placeholder",
       className: "block rounded-full",
@@ -255,28 +227,25 @@ class Accueil extends Component {
     }, /* @__PURE__ */ React.createElement("article", {
       className: "overflow-hidden rounded-lg shadow-lg"
     }, /* @__PURE__ */ React.createElement(Link, {
-      to: "/href",
-      href: "#"
+      to: "/"
     }, /* @__PURE__ */ React.createElement("img", {
       alt: "Placeholder",
-      class: "block h-auto w-full",
+      className: "block h-auto w-full",
       src: "https://picsum.photos/600/400/?random"
     })), /* @__PURE__ */ React.createElement("header", {
       className: "flex items-center justify-between leading-tight p-2 md:p-4"
     }, /* @__PURE__ */ React.createElement("h1", {
       className: "text-lg"
     }, /* @__PURE__ */ React.createElement(Link, {
-      to: "/href",
-      className: "no-underline hover:underline text-black",
-      href: "#"
+      to: "/",
+      className: "no-underline hover:underline text-black"
     }, "Franche Comté")), /* @__PURE__ */ React.createElement("p", {
       className: "text-grey-darker text-sm"
     }, "Sainte-Claude")), /* @__PURE__ */ React.createElement("footer", {
       className: "flex items-center justify-between leading-none p-2 md:p-4"
     }, /* @__PURE__ */ React.createElement(Link, {
-      to: "/href",
-      className: "flex items-center no-underline hover:underline text-black",
-      href: "#"
+      to: "/",
+      className: "flex items-center no-underline hover:underline text-black"
     }, /* @__PURE__ */ React.createElement("img", {
       alt: "Placeholder",
       className: "block rounded-full",

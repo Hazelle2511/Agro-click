@@ -1,6 +1,6 @@
-import React from "../../_snowpack/pkg/react.js";
-import {Link} from "../../_snowpack/pkg/react-router-dom.js";
-import Logo from "../images/Agro-click.png.proxy.js";
+import React from "react";
+import {Link} from "react-router-dom";
+import Logo from "../images/Agro-click.png";
 const Dropdown = ({isOpen, toggle}) => {
   return /* @__PURE__ */ React.createElement("div", {
     className: isOpen ? "grid grid-rows-4 text-center items-center bg-yellow-500" : "hidden",
