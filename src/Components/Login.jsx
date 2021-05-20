@@ -59,7 +59,7 @@ props.history.push('/');
               <form onSubmit={handleSubmit} className="mt-6" >
                 <div>
                   <label className="block text-gray-700">E-mail</label>
-                  <input onChange={e => setEmail(e.target.value)} value={email} type="email" name="email" placeholder="E-mail" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-yellow-500 focus:bg-white focus:outline-none" autoFocus autoComplete="true" required></input>
+                  <input onChange={e => setEmail(e.target.value)} value={email} type="email" name="email" placeholder="E-mail" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-yellow-500 focus:bg-white focus:outline-none" autofocus autoComplete required></input>
                 </div>
         
                 <div className="mt-4">
