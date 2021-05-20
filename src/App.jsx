@@ -55,7 +55,7 @@ export default () => {
                <Route path="/accessProfil" component = {accessProfil} />
 
            </Switch>
-           <GoogleMap />
+           {/* <GoogleMap /> */}
         
 
         

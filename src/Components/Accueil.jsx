@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import videoo from '../images/pexels-zen-chung-5527769.mp4';
 import agri from '../images/soil-386749_1920.jpg';
 import Footer from '../Components/Footer';
+import GoogleMap from './GoogleMap';
 
 
 class Accueil extends Component {
@@ -283,7 +284,9 @@ class Accueil extends Component {
 
     </div>
 </div>
+<GoogleMap />
 <Footer />
+
 </div>
 
 
