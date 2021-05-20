@@ -18,5 +18,17 @@
     <!-- <h1>Welcome to Snowpack!</h1> -->
     
     <script type="module" src="/dist/index.js"></script>
+
+    <!-- //For pwa, check if serviceWorker is available in you nav -->
+    <script>
+      if('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./serviceWorker')
+            .then((reg) => console.log('Success: ', reg.scope))
+            .catch((err) => console.log('Failure: ', err))
+        })
+
+      }
+    </script>
   </body>
 </html>
