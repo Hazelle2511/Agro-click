@@ -17,10 +17,10 @@ export class MapContainer extends Component {
         activeMarker: {},
         selectedPlace: {},
 
-        mapCenter: {
-            lat: 48.856613,
-            lng: 2.352222,
-            }
+        // mapCenter: {
+        //     lat: 48.856613,
+        //     lng: 2.352222,
+        //     }
       }
     }
      
@@ -94,7 +94,7 @@ export class MapContainer extends Component {
                 </div>
                 )}
             </PlacesAutocomplete>
-                        <Map google={this.props.google}
+                   {/* <Map google={this.props.google}
                     // onClick={this.onMapClicked}
                     initialCenter = {{
                         lat: this.state.mapCenter.lat,
@@ -105,24 +105,91 @@ export class MapContainer extends Component {
                         lng: this.state.mapCenter.lng
                     }}
                     >
-                    <Marker
+                 
+                   <Marker
                         position ={{
                             lat: this.state.mapCenter.lat,
                             lng: this.state.mapCenter.lng
-                        }} />
-                {/* <Marker onClick={this.onMarkerClick}
-                        name={'Current location'} /> */}
+                        }} /> 
+                 <Marker onClick={this.onMarkerClick}
+                        name={'Current location'}
+                        position ={{
+                          lat: this.state.mapCenter.lat,
+                          lng: this.state.mapCenter.lng
+                      }} /> 
         
-                <InfoWindow
+                 <InfoWindow
                     marker={this.state.activeMarker}
                     visible={this.state.showingInfoWindow}>
                     <div>
                         <h1>{this.state.selectedPlace.name}</h1>
                     </div>
                 </InfoWindow>
-                </Map>
+                </Map>  */}
+
+
+                  <Map google={this.props.google}
+                      // style={{width: '100%', height: '100%', position: 'relative'}}
+                      // className={'map'}
+                      zoom={14}>
+                                    
+                                    
+                    <Marker onClick={this.onMarkerClick}
+                      title={'The marker`s title will appear as a tooltip.'}
+                      // name={'Toulouse, FR'}
+                      // position={{lat: 43.604652, lng: 1.444209}} />
+                      name={'SOMA'}
+                      position={{lat: 37.778519, lng: -122.405640}}/>
+
+                        <InfoWindow
+                                      marker={this.state.activeMarker}
+                                      visible={this.state.showingInfoWindow}>
+                                      <div>
+                                          <h1>{this.state.selectedPlace.name}</h1>
+                                      </div>
+                         </InfoWindow>
+                    <Marker onClick={this.onMarkerClick}
+                     name={'Dolores park'}
+                     position={{lat: 37.759703, lng: -122.428093}} />
+                      {/* name={'Amiens, FR'}
+                      position={{lat: 49.893890, lng: 2.294230}} /> */}
+
+                          <InfoWindow
+                                      marker={this.state.activeMarker}
+                                      visible={this.state.showingInfoWindow}>
+                                      <div>
+                                          <h1>{this.state.selectedPlace.name}</h1>
+                                      </div>
+                           </InfoWindow>
+                    <Marker />
+
+                    <Marker onClick={this.onMarkerClick}
+                        // name={'Your position'}
+                        // position={{lat: 37.762391, lng: -122.439192}}
+                        // icon={{
+                        //   url: "/path/to/custom_icon.png",
+                        //   anchor: new google.maps.Point(32,32),
+                        //   scaledSize: new google.maps.Size(64,64)
+                        // }} />
+                       name={'Paris'}
+                      position={{lat: 48.856613, lng: 2.352222}} /> 
+
+                            <InfoWindow
+                                      marker={this.state.activeMarker}
+                                      visible={this.state.showingInfoWindow}>
+                                      <div>
+                                          <h1>{this.state.selectedPlace.name}</h1>
+                                      </div>
+                            </InfoWindow>
+                    <Marker />
+
+
+
+                  </Map>
           </div>
       
+
+
       )
     }
   }
