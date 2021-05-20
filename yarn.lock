@@ -895,7 +895,7 @@
     "depd" "^1.1.2"
     "humanize-ms" "^1.2.1"
 
-"aggregate-error@^3.0.0":
+"aggregate-error@^3.0.0", "aggregate-error@^3.1.0":
   "version" "3.1.0"
   dependencies:
     "clean-stack" "^2.0.0"

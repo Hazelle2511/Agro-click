@@ -14,7 +14,7 @@ class Firebase {
     constructor(){
         app.initializeApp(Config);
         this.auth = app.auth();
-        const provider = new GoogleAuthProvider();
+        // const provider = new GoogleAuthProvider();
     }
 
     // methode d'inscription
