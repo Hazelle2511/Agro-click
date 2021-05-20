@@ -11,6 +11,8 @@ import Signup from "./pages/signup.jsx";
 import Searchbar from './Components/Searchbar';
 import Panier from './Components/ShoppingCard';
 
+import Footer from './Components/Footer';
+
 
  
 
@@ -51,7 +53,11 @@ export default () => {
                <Route path="/contact" component = {Contact} />
                <Route path="/ShoppingCard" component = {Panier} />
 
+             
+
            </Switch>
+          
+           <Footer/>
           
         
 
