@@ -35,12 +35,9 @@ class Firebase {
 
 
 
-    // connexion gmail
+    //Récupérer le mdp
 
-    
-
-
-    // deconnexion gmail
+passwordReset = email => this.auth.sendPasswordResetEmail(email);
 }
 
 export default Firebase;
