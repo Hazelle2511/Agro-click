@@ -15,6 +15,7 @@ import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 import Logout from './Components/Logout/index';
 import AccessProfil from './Components/Welcome/accessProfil.jsx';
 import accessProfil from './Components/Welcome/accessProfil.jsx';
+import ForgetPassword from './Components/ForgetPassword/MdpOublie';
 
 
 
@@ -53,9 +54,10 @@ export default () => {
                <Route path="/ShoppingCard" component = {Panier} />
                <Route path="/Logout" component = {Logout} />
                <Route path="/accessProfil" component = {accessProfil} />
+               <Route path="/ForgetPassword" component = {ForgetPassword} />
 
            </Switch>
-           <GoogleMap />
+           {/* <GoogleMap /> */}
         
 
         

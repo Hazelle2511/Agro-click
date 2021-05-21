@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import videoo from '../images/pexels-zen-chung-5527769.mp4';
 import agri from '../images/soil-386749_1920.jpg';
 import Footer from '../Components/Footer';
+import GoogleMap from './GoogleMap';
 
 
 class Accueil extends Component {
@@ -50,7 +51,7 @@ class Accueil extends Component {
         </svg>
           <div className="relative py-12 lg:py-24 px-8 lg:px-16 text-gray-700 leading-relaxed">
             <p>
-              <strong className="text-gray-900 font-medium">Agro-click</strong> séléctionne les meilleurs producteurs de la région. Nous garantissons des produits de qualité blablablablabla. Avec Agro-click, choisissez le producteur le plus prêt de chez vous, sélectionnez les produits qui vous font envies et faite vous livrer directement chez vous.  &mdash;
+              <strong className="text-gray-900 font-medium">AGRO CLICK</strong> séléctionne les meilleurs producteurs de la région. Nous garantissons des produits de qualité, livrés directement à domicile. Avec AGRO CLICK, choisissez le producteur le plus proche de chez vous, sélectionnez les produits qui vous font envies et faite vous livrer directement chez vous.  &mdash;
             </p>
             <p className="mt-6">
               <Link to="/"  className="font-medium text-yellow-500 hover:text-yellow-400">Pour en savoir plus &rarr;</Link>
@@ -283,7 +284,9 @@ class Accueil extends Component {
 
     </div>
 </div>
+<GoogleMap />
 <Footer />
+
 </div>
 
 

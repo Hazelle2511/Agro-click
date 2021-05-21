@@ -14,6 +14,7 @@ class Firebase {
     constructor(){
         app.initializeApp(Config);
         this.auth = app.auth();
+        // const provider = new GoogleAuthProvider();
     }
 
     // methode d'inscription
@@ -24,13 +25,19 @@ class Firebase {
 
     // methode connexion
 
-    loginUser = (email, password) =>
-    this.auth.signInWithEmailAndPassword(email,password);
+    loginUser = (email, password, google) =>
+    this.auth.signInWithEmailAndPassword(email,password, gmail);
 
 
     // deconnexion methode
 
     signoutUser = () => this.auth.signOut()
+
+
+
+    //Récupérer le mdp
+
+passwordReset = email => this.auth.sendPasswordResetEmail(email);
 }
 
 export default Firebase;

@@ -69,7 +69,7 @@ props.history.push('/');
                 </div>
         
                 <div className="text-right mt-2">
-                  <Link to="/" className="text-sm font-semibold text-gray-700 hover:text-yellow-400 focus:text-yellow-400">Mot de passe oublié ?</Link>
+                  <Link to="/ForgetPassword" className="text-sm font-semibold text-gray-700 hover:text-yellow-400 focus:text-yellow-400">Mot de passe oublié ?</Link>
                 </div>
         
                  {btn ? <button className="w-full block bg-yellow-500 hover:bg-yellow-400 focus:bg-yellow-400 text-white font-semibold rounded-lg
