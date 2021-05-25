@@ -7,6 +7,8 @@ import Footer from '../Components/Footer';
 import GoogleMap from './GoogleMap';
 
 
+
+
 class Accueil extends Component {
 
 
@@ -114,7 +116,7 @@ class Accueil extends Component {
 
                 <header className="flex items-center justify-between leading-tight p-2 md:p-4">
                     <h1 className="text-lg">
-                        <Link to="/" className="no-underline hover:underline text-black" >
+                        <Link to="#" className="no-underline hover:underline text-black" href="#">
                             Alsace
                         </Link>
                     </h1>
@@ -124,7 +126,7 @@ class Accueil extends Component {
                 </header>
 
                 <footer className="flex items-center justify-between leading-none p-2 md:p-4">
-                    <Link to="/" className="flex items-center no-underline hover:underline text-black">
+                    <Link className="flex items-center no-underline hover:underline text-black" to="#" href="#">
                         <img alt="Placeholder" className="block rounded-full" src="https://picsum.photos/32/32/?random"></img>
                         <p className="ml-2 text-sm">
                             Le clos
@@ -181,7 +183,7 @@ class Accueil extends Component {
        
             <article className="overflow-hidden rounded-lg shadow-lg">
 
-                <Link to="/">
+                <Link to ="#" href="#">
                     <img alt="Placeholder" className="block h-auto w-full" src="https://picsum.photos/600/400/?random"></img>
                 </Link>
 
@@ -216,7 +218,7 @@ class Accueil extends Component {
         
             <article className="overflow-hidden rounded-lg shadow-lg">
 
-                <Link to="/">
+                <Link to = "#" href="#">
                     <img alt="Placeholder" className="block h-auto w-full" src="https://picsum.photos/600/400/?random"></img>
                 </Link>
 
@@ -243,7 +245,7 @@ class Accueil extends Component {
 
             </article>
            
-
+            
         </div>
 
         <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
@@ -251,7 +253,7 @@ class Accueil extends Component {
         
             <article className="overflow-hidden rounded-lg shadow-lg">
 
-                <Link to="/">
+                <Link to="/href" href="#">
                     <img alt="Placeholder" className="block h-auto w-full" src="https://picsum.photos/600/400/?random"></img>
                 </Link>
 
@@ -277,17 +279,23 @@ class Accueil extends Component {
                 </footer>
 
             </article>
-           
-
+            
+         
+          
         </div>
+
+      
        
 
     </div>
+  
 </div>
 <GoogleMap />
 <Footer />
 
 </div>
+
+
 
 
 

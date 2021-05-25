@@ -1,0 +1,11 @@
+{
+  "imports": {
+    "firebase/app": "./firebase/app.js",
+    "firebase/auth": "./firebase/auth.js",
+    "google-maps-react": "./google-maps-react.js",
+    "react": "./react.js",
+    "react-dom": "./react-dom.js",
+    "react-places-autocomplete": "./react-places-autocomplete.js",
+    "react-router-dom": "./react-router-dom.js"
+  }
+}

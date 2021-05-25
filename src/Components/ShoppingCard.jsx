@@ -27,7 +27,7 @@ function ShoppingCard(){
                   <div className="flex flex-col justify-between ml-4 flex-grow">
                     <span className="font-bold text-sm">TOMATE</span>
                     <span className="text-yellow-500 text-xs">Coeur de boeuf</span>
-                    <Link href="#" className="font-semibold hover:text-yellow-500 text-gray-500 text-xs">Retirer</Link>
+                    <Link to ="#" tohref="#" className="font-semibold hover:text-yellow-500 text-gray-500 text-xs">Retirer</Link>
                   </div>
                 </div>
                 <div className="flex justify-center w-1/5">
@@ -93,7 +93,7 @@ function ShoppingCard(){
                 <span className="text-center w-1/5 font-semibold text-sm">€3.00</span>
               </div>
       
-              <Link href="#" className="flex font-semibold text-yellow-600 text-sm mt-10">
+              <Link to="#" href="#" className="flex font-semibold text-yellow-600 text-sm mt-10">
             
                 <svg className="fill-current mr-2 text-yellow-600 w-4" viewBox="0 0 448 512"><path d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z"/></svg>
                 Continuer mon shopping
