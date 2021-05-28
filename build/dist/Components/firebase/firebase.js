@@ -14,23 +14,37 @@ class Firebase {
     constructor(){
         app.initializeApp(Config);
         this.auth = app.auth();
+        
+        // //
+        // var provider = new app.auth.GoogleAuthProvider()
+            // this.google = new app.auth.GoogleAuthProvider()
+        // const provider = new GoogleAuthProvider();
     }
 
     // methode d'inscription
 
     signupUser = (email, password) => 
     this.auth.createUserWithEmailAndPassword(email,password);
+    
 
 
     // methode connexion
 
-    loginUser = (email, password) =>
-    this.auth.signInWithEmailAndPassword(email,password);
+    loginUser = (email, password, google) =>
+    this.auth.signInWithEmailAndPassword(email,password, gmail);
 
 
     // deconnexion methode
 
     signoutUser = () => this.auth.signOut()
+
+
+
+    //Récupérer le mdp
+
+passwordReset = email => this.auth.sendPasswordResetEmail(email);
 }
+
+
 
 export default Firebase;
