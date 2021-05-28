@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../images/Agro-click.png';
 import Panier from '../images/basket-690778_1920.jpg';
 import {FirebaseContext} from '../Components/firebase';
+import Footer from './Footer';
 // import GoogleLogin from './GoogleLogin';
 
 
@@ -87,8 +88,8 @@ props.history.push('/');
 
   
     return (
-        
-        <section className="flex flex-col md:flex-row h-screen items-center">
+        <div className="">
+        <section className="flex flex-col md:flex-row items-center">
         
           <div className="bg-indigo-600 hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen">
             <img src={Panier} alt="panier" className="w-full h-full object-cover"></img>
@@ -148,8 +149,15 @@ props.history.push('/');
           
         
         </section>
+        
+        <Footer />
+
+        </div>
 
     )
+
+
+
   }
 
 

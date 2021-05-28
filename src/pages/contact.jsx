@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import contactbg from '../images/contactbg.png';
 
 export default class Contact extends Component {
 
@@ -40,7 +41,9 @@ render() {
 return(
     // md:flex-row md:space-x-6 md:space-y-0
 
-    <div className="antialised bg-contactImg bg-contain">
+    <div className="bg-contactImg bg-cover">
+
+        {/* <img src={contactbg} alt="bgcontact" className="bg-center w-full h-full object-cover"></img> */}
         
         <div className="flex w-full min-h-screen text-center justify-center items-center">
             

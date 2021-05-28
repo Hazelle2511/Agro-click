@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 // import imageOne from '../images/Agro-click.png';
 import videoo from '../images/pexels-zen-chung-5527769.mp4';
 import agri from '../images/soil-386749_1920.jpg';
-import Footer from '../Components/Footer';
+import Footer from './Footer';
 import GoogleMap from './GoogleMap';
 
 
@@ -18,14 +18,14 @@ class Accueil extends Component {
     return(
 
 
-<div>
+<div className="">
   
-<header className="relative flex items-center justify-center h-screen overflow-hidden">
-  <div className="relative z-30 p-5 lg:text-7xl md:text-5xl sm:text-3xl text-2xl font-block mb-14 flex flex-col justify-center items-center mb-14 text-center">
+<header className="relative flex items-center justify-center h-screen overflow-hidden sm:h-auto sm:w-auto">
+  <div className="relative z-30 p-5 lg:text-7xl md:text-5xl sm:text-5xl sm:mt-28 text-2xl font-block mb-14 flex flex-col justify-center items-center mb-14 text-center ">
     Le goût et la qualité des producteurs directement chez vous 
 
     <Link  to="/" className="py-6 px-10 bg-yellow-500 rounded-full
-        text-3xl hover:bg-green-800 transition duration-300 ease-in-out flex items-center animate-bounce mt-10 text-white">
+        text-3xl hover:bg-green-800 transition duration-300 ease-in-out flex items-center animate-bounce mt-10 text-white sm: mt-28">
         Commander
 
          <svg className="w-6 h-6 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
@@ -33,18 +33,18 @@ class Accueil extends Component {
         
   </div>
   {/* w-auto */}
-   <video width="100%" height="100%" autoPlay loop  className="absolute z-10    min-w-full min-h-full max-w-none opacity-80 ">
+   <video width="100%" height="100%" autoPlay loop  className="absolute z-10  min-w-full min-h-full max-w-none opacity-80 sm:hidden">
      <source src={videoo} alt="video" type="video/mp4" ></source>
    </video>
 
 </header>
 
-<main>
+<main className="xl: mb-72 sm: mb-12">
 <div className="">
   <div className="max-w-6xl mx-auto px-8 py-16">
     <div className="relative">
       <div className="relative lg:flex rounded-lg shadow-2xl overflow-hidden">
-        <div className="h-56 lg:h-auto lg:w-5/12 relative flex items-center justify-center">
+        <div className="h-56 lg:h-auto lg:w-5/12 relative flex items-center justify-center sm: hidden">
           <img className="absolute h-full w-full object-cover" src={agri} alt="" />
         </div>
         <div className="relative lg:w-7/12 bg-white">
@@ -69,7 +69,7 @@ class Accueil extends Component {
 
 
 
-<div className="container my-12 mx-auto px-4 md:px-12">
+<div className="container my-12 mx-auto px-4 md:px-12 xl: mb-72">
     <div className="tracking-widest uppercase mb-8 mt-8 text-5xl text-yellow-500">
     La sélection des producteurs
 </div>
@@ -268,7 +268,7 @@ class Accueil extends Component {
                     </p>
                 </header>
 
-                <footer className="flex items-center justify-between leading-none p-2 md:p-4">
+                <div className="flex items-center justify-between leading-none p-2 md:p-4">
                     <Link to="/" className="flex items-center no-underline hover:underline text-black" >
                         <img alt="Placeholder" className="block rounded-full" src="https://picsum.photos/32/32/?random"></img>
                         <p className="ml-2 text-sm">
@@ -276,7 +276,7 @@ class Accueil extends Component {
                         </p>
                     </Link>
                     
-                </footer>
+                </div>
 
             </article>
             
@@ -291,9 +291,12 @@ class Accueil extends Component {
   
 </div>
 <GoogleMap />
-<Footer />
 
 </div>
+
+
+
+
 
 
 
