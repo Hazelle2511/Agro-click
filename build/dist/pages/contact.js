@@ -32,9 +32,9 @@ export default class Contact extends Component {
       className: "flex flex-col justify-between space-y-8 "
     }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h1", {
       className: " text-4xl lg:text-5xl font-bold   leading-tight"
-    }, "Parlons de tout!"), /* @__PURE__ */ React.createElement("p", {
+    }, "CONTACT"), /* @__PURE__ */ React.createElement("p", {
       className: "text-gray-700 mt-8 "
-    }, "Besoin d'aide ? Envoyez-nous un e-mail.")), /* @__PURE__ */ React.createElement("div", {
+    }, "Une question ? Contactez-nous.")), /* @__PURE__ */ React.createElement("div", {
       className: "flex space-x-5 justify-center items-center text-gray-700"
     }, /* @__PURE__ */ React.createElement("div", {
       className: "inline-flex space-x-2 items-center"
@@ -80,7 +80,7 @@ export default class Contact extends Component {
       strokeLinejoin: "round",
       strokeWidth: 2,
       d: "M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-    })), /* @__PURE__ */ React.createElement("span", null, "15 Rue, Paris, France"))), /* @__PURE__ */ React.createElement("div", {
+    })), /* @__PURE__ */ React.createElement("span", null, "15 Rue Daumesnil - 75012 Paris"))), /* @__PURE__ */ React.createElement("div", {
       className: "bg-white rounded-xl shadow-lg p-8 text-gray-600"
     }, /* @__PURE__ */ React.createElement("form", {
       onSubmit: this.handleSubmit,
@@ -89,7 +89,7 @@ export default class Contact extends Component {
     }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("label", {
       htmlFor: "POST_name",
       className: "uppercase text-sm text-gray-600 font-bold"
-    }, "Votre Nom"), /* @__PURE__ */ React.createElement("input", {
+    }, "Nom - Prénom"), /* @__PURE__ */ React.createElement("input", {
       name: "name",
       onChange: this.handleChange,
       type: "text",
@@ -99,7 +99,7 @@ export default class Contact extends Component {
     })), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("label", {
       htmlFor: "POST_email",
       className: "uppercase text-sm text-gray-600 font-bold"
-    }, "Email Address"), /* @__PURE__ */ React.createElement("input", {
+    }, "Adresse e-mail"), /* @__PURE__ */ React.createElement("input", {
       name: "email",
       type: "email",
       placeholder: "********@*****.**",
