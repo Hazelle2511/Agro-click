@@ -28,6 +28,7 @@
     "aggregate-error": "^3.1.0",
     "autoprefixer": "^9",
     "firebase": "^8.6.1",
+    "gmail-js": "^1.0.8",
     "google-maps-react": "^2.0.6",
     "heroicons-react": "^1.4.0",
     "history": "^4.10.1",
