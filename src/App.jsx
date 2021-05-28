@@ -15,7 +15,9 @@ import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 import Logout from './Components/Logout/index';
 import AccessProfil from './Components/Welcome/accessProfil.jsx';
 import accessProfil from './Components/Welcome/accessProfil.jsx';
+import Footer from './Components/Footer';
 import ForgetPassword from './Components/ForgetPassword/MdpOublie';
+
 
 
 
@@ -29,7 +31,7 @@ export default () => {
     useEffect(() => {
         const hideMenu = () => {
             window.innerWidth > 768 && isOpen ? setIsOpen(false): null;
-            console.log('resize')
+            // console.log('resize')
         }
     
     window.addEventListener('resize', hideMenu);
@@ -56,7 +58,12 @@ export default () => {
                <Route path="/accessProfil" component = {accessProfil} />
                <Route path="/ForgetPassword" component = {ForgetPassword} />
 
+             
+
            </Switch>
+          
+           <Footer/>
+          
            {/* <GoogleMap /> */}
         
 
