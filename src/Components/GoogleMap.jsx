@@ -18,8 +18,8 @@ export class MapContainer extends Component {
       selectedPlace: {},
   
       mapCenter: {
-        lat: 49.2827291,
-        lng: -123.1207375
+        lat: 48.82472,
+        lng: 2.17917
       }
     };
   }
@@ -50,8 +50,8 @@ export class MapContainer extends Component {
           onSelect={this.handleSelect}
         >
           {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-            <div>
-              <input
+            <div className="text-center">
+              <input className="text-center"
                 {...getInputProps({
                   placeholder: 'Search Places ...',
                   className: 'location-search-input',
@@ -106,5 +106,5 @@ export class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: ('AIzaSyDR-W-vv3VskO9RrX2D8U3TUwihS_07h3w')
+  apiKey: ('AIzaSyDBj-SKr6Cj9aLaMoAILHvdPpxwG74xQv4')
 })(MapContainer)
