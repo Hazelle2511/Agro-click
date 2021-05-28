@@ -14,23 +14,33 @@ class Firebase {
     constructor(){
         app.initializeApp(Config);
         this.auth = app.auth();
+        
+        // //
+        // var provider = new app.auth.GoogleAuthProvider()
+            // this.google = new app.auth.GoogleAuthProvider()
     }
 
     // methode d'inscription
 
     signupUser = (email, password) => 
     this.auth.createUserWithEmailAndPassword(email,password);
+    
 
 
     // methode connexion
 
-    loginUser = (email, password) =>
+    loginUser = (email, password) => {
     this.auth.signInWithEmailAndPassword(email,password);
+    // //
+    
+    }
 
 
     // deconnexion methode
 
     signoutUser = () => this.auth.signOut()
 }
+
+
 
 export default Firebase;
