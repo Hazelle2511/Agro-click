@@ -1,8 +1,10 @@
-import React, {Component, useState, useEffect, useContext} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../images/Agro-click.png';
 import Panier from '../images/basket-690778_1920.jpg';
 import {FirebaseContext} from '../Components/firebase';
+// import GoogleLogin from './GoogleLogin';
+
 
 const Login = (props) => {
 
@@ -22,9 +24,14 @@ const Login = (props) => {
   }, [password, email])
 
 
+  
+
+
   const handleSubmit = e =>{
     e.preventDefault();
     
+   
+
     firebase.loginUser(email, password)
     .then(user => {
       setEmail('');
@@ -37,6 +44,47 @@ props.history.push('/');
       setPassword('');
     })
   }
+
+/***** */
+  const onClickGoogle = () => {
+    // 
+    
+    try {
+      console.log('firebase',  firebase)
+
+      var provider = new firebase.auth.GoogleAuthProvider();
+   
+      firebase.auth()
+        .signInWithPopup(provider)
+        .then((result) => {
+          /** @type {firebase.auth.OAuthCredential} */
+          var credential = result.credential;
+  
+          // This gives you a Google Access Token. You can use it to access the Google API.
+          var token = credential.accessToken;
+          // The signed-in user info.
+          var user = result.user;
+          // ...
+    })
+        .catch((error) => {
+        console.log(error)
+    });
+      
+    } catch (error) {
+      console.log(error)
+    }
+   
+
+    //
+
+
+
+ }
+
+ /**** */
+
+
+
   
     return (
         
@@ -59,7 +107,7 @@ props.history.push('/');
               <form onSubmit={handleSubmit} className="mt-6" >
                 <div>
                   <label className="block text-gray-700">E-mail</label>
-                  <input onChange={e => setEmail(e.target.value)} value={email} type="email" name="email" placeholder="E-mail" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-yellow-500 focus:bg-white focus:outline-none" autofocus autoComplete required></input>
+                  <input onChange={e => setEmail(e.target.value)} value={email} type="email" name="email" placeholder="E-mail" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-yellow-500 focus:bg-white focus:outline-none" autoFocus autoComplete required></input>
                 </div>
         
                 <div className="mt-4">
@@ -79,12 +127,16 @@ props.history.push('/');
         
               <hr className="my-6 border-gray-300 w-full"></hr>
         
-              <button type="button" className="w-full block bg-white hover:bg-yellow-400 focus:bg-yellow-400 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-yellow-500">
+              <button type="button" className="w-full block bg-white hover:bg-yellow-400 focus:bg-yellow-400 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-yellow-500"
+              onClick={onClickGoogle}>
                     <div className="flex items-center justify-center">
                     <span className="ml-4">
-                    Se connecter avec Google</span>
+                    Se connecter avec Google
+                    </span>
                     </div>
                   </button>
+
+                  {/* <GoogleLogin/> */}
         <br/> 
               <p className="mt-8">Nouveau chez Agro-Click ? <Link className="text-yellow-500 hover:text-yellow-400 font-semibold" to="/signup" >Créez un compte.</Link>
               </p>

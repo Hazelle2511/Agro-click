@@ -14,6 +14,10 @@ class Firebase {
     constructor(){
         app.initializeApp(Config);
         this.auth = app.auth();
+        
+        // //
+        // var provider = new app.auth.GoogleAuthProvider()
+            // this.google = new app.auth.GoogleAuthProvider()
         // const provider = new GoogleAuthProvider();
     }
 
@@ -21,6 +25,7 @@ class Firebase {
 
     signupUser = (email, password) => 
     this.auth.createUserWithEmailAndPassword(email,password);
+    
 
 
     // methode connexion
@@ -39,5 +44,7 @@ class Firebase {
 
 passwordReset = email => this.auth.sendPasswordResetEmail(email);
 }
+
+
 
 export default Firebase;
