@@ -40,7 +40,8 @@ function ShoppingCard() {
   }, "TOMATE"), /* @__PURE__ */ React.createElement("span", {
     className: "text-yellow-500 text-xs"
   }, "Coeur de boeuf"), /* @__PURE__ */ React.createElement(Link, {
-    href: "#",
+    to: "#",
+    tohref: "#",
     className: "font-semibold hover:text-yellow-500 text-gray-500 text-xs"
   }, "Retirer"))), /* @__PURE__ */ React.createElement("div", {
     className: "flex justify-center w-1/5"
@@ -141,6 +142,7 @@ function ShoppingCard() {
   }, "€3.00"), /* @__PURE__ */ React.createElement("span", {
     className: "text-center w-1/5 font-semibold text-sm"
   }, "€3.00")), /* @__PURE__ */ React.createElement(Link, {
+    to: "#",
     href: "#",
     className: "flex font-semibold text-yellow-600 text-sm mt-10"
   }, /* @__PURE__ */ React.createElement("svg", {

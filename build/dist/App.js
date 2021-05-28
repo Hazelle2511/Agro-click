@@ -9,6 +9,13 @@ import {Switch, Route} from "../_snowpack/pkg/react-router-dom.js";
 import Signup from "./pages/signup.js";
 import Searchbar from "./Components/Searchbar.js";
 import Panier from "./Components/ShoppingCard.js";
+import GoogleMap from "./Components/GoogleMap.js";
+import {Map, InfoWindow, Marker, GoogleApiWrapper} from "../_snowpack/pkg/google-maps-react.js";
+import Logout from "./Components/Logout/index.js";
+import AccessProfil from "./Components/Welcome/accessProfil.js";
+import accessProfil from "./Components/Welcome/accessProfil.js";
+import Footer from "./Components/Footer.js";
+import ForgetPassword from "./Components/ForgetPassword/MdpOublie.js";
 export default () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
@@ -17,7 +24,6 @@ export default () => {
   useEffect(() => {
     const hideMenu = () => {
       window.innerWidth > 768 && isOpen ? setIsOpen(false) : null;
-      console.log("resize");
     };
     window.addEventListener("resize", hideMenu);
     return () => {
@@ -45,5 +51,14 @@ export default () => {
   }), /* @__PURE__ */ React.createElement(Route, {
     path: "/ShoppingCard",
     component: Panier
-  })));
+  }), /* @__PURE__ */ React.createElement(Route, {
+    path: "/Logout",
+    component: Logout
+  }), /* @__PURE__ */ React.createElement(Route, {
+    path: "/accessProfil",
+    component: accessProfil
+  }), /* @__PURE__ */ React.createElement(Route, {
+    path: "/ForgetPassword",
+    component: ForgetPassword
+  })), /* @__PURE__ */ React.createElement(Footer, null));
 };

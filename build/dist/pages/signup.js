@@ -5,7 +5,6 @@ import Contactbg from "../images/mill.gif.proxy.js";
 import {FirebaseContext} from "../Components/firebase/index.js";
 const Signup = (props) => {
   const firebase = useContext(FirebaseContext);
-  console.log(firebase);
   const data = {
     fName: "",
     lName: "",
@@ -38,7 +37,7 @@ const Signup = (props) => {
   }, "Inscription");
   const errorMsg = error !== "" && /* @__PURE__ */ React.createElement("span", null, error.message);
   return /* @__PURE__ */ React.createElement("div", {
-    className: "min-w-screen min-h-screen bg-gray-200   flex items-center justify-center px-5 py-5"
+    className: "min-w-screen min-h-screen flex items-center justify-center px-5 py-5"
   }, /* @__PURE__ */ React.createElement("div", {
     className: "bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden",
     style: {maxWidth: "1000px"}
@@ -56,7 +55,7 @@ const Signup = (props) => {
     className: "text-center mb-10"
   }, errorMsg, /* @__PURE__ */ React.createElement("h1", {
     className: "font-bold text-3xl text-gray-900"
-  }, "INSCRIPTION"), /* @__PURE__ */ React.createElement("p", null, "Entrez vos informations pour vous enregistrer")), /* @__PURE__ */ React.createElement("form", {
+  }, "INSCRIPTION")), /* @__PURE__ */ React.createElement("form", {
     onSubmit: handleSubmit
   }, /* @__PURE__ */ React.createElement("div", {
     className: "flex -mx-3"
@@ -77,7 +76,7 @@ const Signup = (props) => {
     name: "fName",
     type: "text",
     required: true,
-    className: "w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500",
+    className: "w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-yellow-500",
     placeholder: "Jane"
   })))), /* @__PURE__ */ React.createElement("div", {
     className: "flex -mx-3"
@@ -98,7 +97,7 @@ const Signup = (props) => {
     value: lName,
     onChange: handleChange,
     type: "text",
-    className: "w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500",
+    className: "w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-yellow-500",
     placeholder: "Doe"
   })))), /* @__PURE__ */ React.createElement("div", {
     className: "flex -mx-3"
@@ -119,7 +118,7 @@ const Signup = (props) => {
     value: email,
     onChange: handleChange,
     type: "email",
-    className: "w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500",
+    className: "w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-yellow-500",
     placeholder: "janedoe@example.com"
   })))), /* @__PURE__ */ React.createElement("div", {
     className: "flex -mx-3"
@@ -140,7 +139,7 @@ const Signup = (props) => {
     value: password,
     onChange: handleChange,
     type: "password",
-    className: "w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500",
+    className: "w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-yellow-500",
     placeholder: "*****"
   })))), /* @__PURE__ */ React.createElement("div", {
     className: "flex -mx-3"
@@ -154,24 +153,30 @@ const Signup = (props) => {
   }, /* @__PURE__ */ React.createElement("div", {
     className: "w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"
   }, /* @__PURE__ */ React.createElement("i", {
-    className: "mdi mdi-lock-outline text-gray-400 text-lg"
+    className: "mdi mdi-lock-outline text-lg"
   })), /* @__PURE__ */ React.createElement("input", {
     required: true,
     name: "cPassword",
     value: cPassword,
     onChange: handleChange,
     type: "password",
-    className: "w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500",
+    className: "w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-yellow-500",
     placeholder: "*****"
   })))), /* @__PURE__ */ React.createElement("div", {
     className: "flex -mx-3"
   }, /* @__PURE__ */ React.createElement("div", {
     className: "w-full px-3 mb-5"
-  }, btn))), /* @__PURE__ */ React.createElement("div", {
+  }, btn)), /* @__PURE__ */ React.createElement("div", {
+    className: "flex -mx-3"
+  }, /* @__PURE__ */ React.createElement("div", {
+    className: "w-full px-3 mb-5"
+  }, /* @__PURE__ */ React.createElement("button", {
+    className: "block w-full max-w-xs mx-auto bg-yellow-500 hover:bg-yellow-700 focus:bg-yellow-700 text-white rounded-lg px-3 py-3 font-semibold"
+  }, "Inscription avec Gmail")))), /* @__PURE__ */ React.createElement("div", {
     className: "linkContainer"
-  }, /* @__PURE__ */ React.createElement(Link, {
-    className: "simpleLink",
+  }, " ", /* @__PURE__ */ React.createElement("span", null, " Déjà inscrit ? "), /* @__PURE__ */ React.createElement(Link, {
+    className: "text-yellow-500 hover:text-yellow-400 font-semibold",
     to: "/Login"
-  }, " Déjà inscrit ? Connectez vous."))))));
+  }, "Connectez vous."))))));
 };
 export default Signup;

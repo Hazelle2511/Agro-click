@@ -622,11 +622,6 @@ video {
   background-color: rgba(245, 158, 11, var(--tw-bg-opacity));
 }
 
-.bg-green-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(5, 150, 105, var(--tw-bg-opacity));
-}
-
 .bg-indigo-500 {
   --tw-bg-opacity: 1;
   background-color: rgba(99, 102, 241, var(--tw-bg-opacity));
@@ -657,9 +652,9 @@ video {
   background-color: rgba(180, 83, 9, var(--tw-bg-opacity));
 }
 
-.hover\:bg-green-400:hover {
+.hover\:bg-green-800:hover {
   --tw-bg-opacity: 1;
-  background-color: rgba(52, 211, 153, var(--tw-bg-opacity));
+  background-color: rgba(6, 95, 70, var(--tw-bg-opacity));
 }
 
 .hover\:bg-indigo-700:hover {
@@ -713,11 +708,6 @@ video {
 .focus\:border-yellow-500:focus {
   --tw-border-opacity: 1;
   border-color: rgba(245, 158, 11, var(--tw-border-opacity));
-}
-
-.focus\:border-indigo-500:focus {
-  --tw-border-opacity: 1;
-  border-color: rgba(99, 102, 241, var(--tw-border-opacity));
 }
 
 .rounded-lg {
@@ -853,10 +843,6 @@ video {
   height: 2rem;
 }
 
-.h-12 {
-  height: 3rem;
-}
-
 .h-16 {
   height: 4rem;
 }
@@ -986,11 +972,6 @@ video {
   margin-right: -2rem;
 }
 
-.-mx-24 {
-  margin-left: -6rem;
-  margin-right: -6rem;
-}
-
 .-mx-3\.5 {
   margin-left: -0.875rem;
   margin-right: -0.875rem;
@@ -1046,18 +1027,6 @@ video {
 
 .mb-14 {
   margin-bottom: 3.5rem;
-}
-
-.mt-24 {
-  margin-top: 6rem;
-}
-
-.-mr-6 {
-  margin-right: -1.5rem;
-}
-
-.-ml-6 {
-  margin-left: -1.5rem;
 }
 
 .-mt-8 {
@@ -1258,21 +1227,8 @@ video {
   position: sticky;
 }
 
-.inset-y-0 {
-  top: 0px;
-  bottom: 0px;
-}
-
 .top-0 {
   top: 0px;
-}
-
-.right-0 {
-  right: 0px;
-}
-
-.left-0 {
-  left: 0px;
 }
 
 .resize {
@@ -1441,10 +1397,6 @@ video {
 
 .w-10 {
   width: 2.5rem;
-}
-
-.w-12 {
-  width: 3rem;
 }
 
 .w-20 {
@@ -1689,10 +1641,6 @@ video {
     display: flex;
   }
 
-  .lg\:items-center {
-    align-items: center;
-  }
-
   .lg\:h-auto {
     height: auto;
   }
@@ -1715,10 +1663,6 @@ video {
   .lg\:-mx-4 {
     margin-left: -1rem;
     margin-right: -1rem;
-  }
-
-  .lg\:mt-0 {
-    margin-top: 0px;
   }
 
   .lg\:max-w-full {
