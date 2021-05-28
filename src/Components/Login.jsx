@@ -117,7 +117,7 @@ props.history.push('/');
                 </div>
         
                 <div className="text-right mt-2">
-                  <Link to = "#" href="#" className="text-sm font-semibold text-gray-700 hover:text-yellow-400 focus:text-yellow-400">Mot de passe oublié ?</Link>
+                  <Link to="/ForgetPassword" className="text-sm font-semibold text-gray-700 hover:text-yellow-400 focus:text-yellow-400">Mot de passe oublié ?</Link>
                 </div>
         
                  {btn ? <button className="w-full block bg-yellow-500 hover:bg-yellow-400 focus:bg-yellow-400 text-white font-semibold rounded-lg
@@ -138,7 +138,7 @@ props.history.push('/');
 
                   {/* <GoogleLogin/> */}
         <br/> 
-              <p className="mt-8">Besoin d'un compte ? <Link className="text-yellow-500 hover:text-yellow-400 font-semibold" to='/signup' >Créer un compte</Link>
+              <p className="mt-8">Nouveau chez Agro-Click ? <Link className="text-yellow-500 hover:text-yellow-400 font-semibold" to="/signup" >Créez un compte.</Link>
               </p>
               <div className="flex items-center justify-center">
               <img className="w-52 h-52" src={Logo} alt="logo"></img>
