@@ -20,7 +20,7 @@ class Accueil extends Component {
 
 <div className="">
   
-<header className="relative flex items-center justify-center h-screen overflow-hidden sm:h-auto sm:w-auto">
+<header className="relative flex items-center justify-center h-screen w-screen overflow-hidden sm:h-auto sm:w-auto">
   <div className="relative z-30 p-5 lg:text-7xl md:text-5xl sm:text-5xl sm:mt-28 text-2xl font-block mb-14 flex flex-col justify-center items-center mb-14 text-center ">
     Le goût et la qualité des producteurs directement chez vous 
 
@@ -51,7 +51,7 @@ class Accueil extends Component {
   <div className="max-w-6xl mx-auto px-8 py-16">
     <div className="relative">
       <div className="relative lg:flex rounded-lg shadow-2xl overflow-hidden">
-        <div className="h-56 lg:h-auto lg:w-5/12 relative flex items-center justify-center sm: hidden">
+        <div className="h-56 lg:h-auto lg:w-5/12 relative flex items-center justify-center ">
           <img className="absolute h-full w-full object-cover" src={agri} alt="" />
         </div>
         <div className="relative lg:w-7/12 bg-white">

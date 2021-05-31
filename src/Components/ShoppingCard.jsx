@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Footer from './Footer';
 
 
 function ShoppingCard(){
     return(
       
-      <div>
-        <div className="container mx-auto mt-10">
+      <div className="">
+        <div className="xl:container md:container xl:mx-10 lg:mx-6 md:mx-10 ml-8">
           <div className="flex shadow-md my-10">
             <div className="w-3/4 bg-white px-10 py-10">
               <div className="flex justify-between border-b pb-8">
@@ -113,7 +114,7 @@ function ShoppingCard(){
                 </select>
               </div>
               <div className="py-10">
-                <label for="promo" className="font-semibold inline-block mb-3 text-sm uppercase">Code de réduction</label>
+                <label htmlFor="promo" className="font-semibold inline-block mb-3 text-sm uppercase">Code de réduction</label>
                 <input type="text" id="promo" placeholder="Saisissez votre code" className="p-2 text-sm w-full"/>
               </div>
               <button className="bg-yellow-500 hover:bg-yellow-600 px-5 py-2 text-sm text-white uppercase">Appliquer</button>
@@ -127,7 +128,9 @@ function ShoppingCard(){
             </div>
       
           </div>
+         
         </div>
+         <Footer/>
         </div>
       
 
