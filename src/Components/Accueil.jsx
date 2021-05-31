@@ -24,6 +24,8 @@ class Accueil extends Component {
   <div className="relative z-30 p-5 lg:text-7xl md:text-5xl sm:text-5xl sm:mt-28 text-2xl font-block mb-14 flex flex-col justify-center items-center mb-14 text-center ">
     Le goût et la qualité des producteurs directement chez vous 
 
+
+
     <Link  to="/" className="py-6 px-10 bg-yellow-500 rounded-full
         text-3xl hover:bg-green-800 transition duration-300 ease-in-out flex items-center animate-bounce mt-10 text-white sm: mt-28">
         Commander
@@ -33,13 +35,18 @@ class Accueil extends Component {
         
   </div>
   {/* w-auto */}
-   <video width="100%" height="100%" autoPlay loop  className=" absolute z-10  min-w-full min-h-full max-w-none opacity-80">
+  {/* max-w-none opacity-80 sm:hidden */}
+   <video width="100%" height="100%" autoPlay loop  className="absolute w-auto z-10 min-w-full  min-h-full  max-w-none opacity-80 sm:hidden"> 
      <source src={videoo} alt="video" type="video/mp4" ></source>
+     
+
+    
    </video>
 
 </header>
 
 <main className="xl: mb-72 sm: mb-12">
+
 <div className="">
   <div className="max-w-6xl mx-auto px-8 py-16">
     <div className="relative">
