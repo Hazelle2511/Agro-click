@@ -78,7 +78,7 @@ function ShoppingCard(){
                   <div className="flex flex-col justify-between ml-4 flex-grow">
                     <span className="font-bold text-sm">OEUFS</span>
                     <span className="text-yellow-500 text-xs">Élevé en plein air</span>
-                    <Link href="#" className="font-semibold hover:text-yellow-500 text-gray-500 text-xs">Retirer</Link>
+                    <Link to="#" href="#" className="font-semibold hover:text-yellow-500 text-gray-500 text-xs">Retirer</Link>
                   </div>
                 </div>
                 <div className="flex justify-center w-1/5">
@@ -130,7 +130,7 @@ function ShoppingCard(){
           </div>
          
         </div>
-         <Footer/>
+         {/* <Footer/> */}
         </div>
       
 

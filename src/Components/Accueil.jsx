@@ -36,7 +36,7 @@ class Accueil extends Component {
   </div>
   {/* w-auto */}
   {/* max-w-none opacity-80 sm:hidden */}
-   <video width="100%" height="100%" autoPlay loop  className="absolute w-auto z-10 min-w-full  min-h-full  max-w-none opacity-80 sm:hidden"> 
+   <video width="100%" height="100%" autoPlay loop  className="absolute w-auto z-10 min-w-full  min-h-full  max-w-none opacity-80 aspect-w-3"> 
      <source src={videoo} alt="video" type="video/mp4" ></source>
      
 

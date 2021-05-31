@@ -31,7 +31,7 @@ export default () => {
     useEffect(() => {
         const hideMenu = () => {
             window.innerWidth > 768 && isOpen ? setIsOpen(false): null;
-            console.log('resize')
+            // console.log('resize')
         }
     
     window.addEventListener('resize', hideMenu);
@@ -61,6 +61,8 @@ export default () => {
              
 
            </Switch>
+
+           <Footer/>
           
          
           
