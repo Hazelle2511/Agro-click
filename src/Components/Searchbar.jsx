@@ -17,8 +17,8 @@ function Searchbar() {
   // console.log(datas);
 
     return(
-        
-        <div className="p-2 w-1/4">
+      // w-1/4
+        <div className="p-2 ">
         <div className="bg-white flex items-center rounded-full shadow-md">
           <input className="  rounded-l-full w-full py-1 px-4 text-gray-700 leading-tight focus:outline-none " id="search" type="text" placeholder="Recherche.."></input>
           
@@ -32,6 +32,9 @@ function Searchbar() {
             </div>
           </div>
         </div>
+
+
+
       
 
   )
