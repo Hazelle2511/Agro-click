@@ -21,7 +21,7 @@ class Accueil extends Component {
 <div className="">
   
 <header className="relative flex items-center justify-center h-screen w-screen overflow-hidden sm:h-auto sm:w-auto">
-  <div className="relative z-30 p-5 lg:text-7xl md:text-5xl sm:text-5xl sm:mt-28 text-2xl font-block mb-14 flex flex-col justify-center items-center mb-14 text-center ">
+  <div className="relative z-20 p-5 lg:text-7xl md:text-5xl sm:text-5xl sm:mt-28 text-2xl font-block mb-14 flex flex-col justify-center items-center mb-14 text-center ">
     Le goût et la qualité des producteurs directement chez vous 
 
 
@@ -36,7 +36,7 @@ class Accueil extends Component {
   </div>
   {/* w-auto */}
   {/* max-w-none opacity-80 sm:hidden */}
-   <video width="100%" height="100%" autoPlay loop  className="absolute w-auto z-10 min-w-full  min-h-full  max-w-none opacity-80 aspect-w-3"> 
+   <video width="100%" height="100%" autoPlay loop  className="absolute z-10 min-w-full  min-h-full  max-w-none opacity-80 hidden md:block "> 
      <source src={videoo} alt="video" type="video/mp4" ></source>
      
 
