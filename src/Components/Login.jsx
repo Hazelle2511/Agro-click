@@ -103,7 +103,7 @@ props.history.push('/');
             
             {error !== '' && <div className="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4" role="alert"><span className="font-bold">ATTENTION</span><span>Mauvais mot de passe</span></div>}
         
-              <h1 className="text-xl md:text-2xl font-bold leading-tight -mt-8">SE CONNECTER</h1>
+              <h1 className="text-xl md:text-2xl font-bold leading-tight -mt-8 my-4">SE CONNECTER</h1>
         
               <form onSubmit={handleSubmit} className="mt-6" >
                 <div>
@@ -149,8 +149,8 @@ props.history.push('/');
           
         
         </section>
-        
-        <Footer />
+{/*         
+        <Footer /> */}
 
         </div>
 
