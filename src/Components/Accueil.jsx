@@ -297,6 +297,7 @@ class Accueil extends Component {
     </div>
   
 </div>
+
 <GoogleMap />
 
 </div>
