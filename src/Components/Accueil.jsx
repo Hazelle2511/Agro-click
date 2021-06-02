@@ -18,7 +18,7 @@ class Accueil extends Component {
     return(
 
 
-<div className="">
+<div className="overflow-hidden">
   
 <header className="relative flex items-center justify-center h-screen w-screen overflow-hidden sm:h-auto sm:w-auto">
   <div className="relative z-20 p-5 lg:text-7xl md:text-5xl sm:text-5xl sm:mt-28 text-2xl font-block mb-14 flex flex-col justify-center items-center mb-14 text-center ">
