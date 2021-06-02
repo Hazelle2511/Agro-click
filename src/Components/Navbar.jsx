@@ -6,9 +6,10 @@ import Searchbar from "./Searchbar";
 
 function Navbar({toggle}) {
     // flex justify-between items-center h-16 bg-white text-black relative shadow-sm font-mono sticky top-0 z-50
+    //w-32 h-16
     return(
-        <nav className="flex justify-between items-center h-16 bg-white text-black relative shadow-sm font-mono sticky top-0 animated z-40">
-            <Link to ="/"><img src={Logo} alt="carrot" className="w-32 h-16"/></Link>
+        <nav className="flex justify-between items-center h-16 bg-white text-black relative shadow-sm font-mono sticky top-0 z-50">
+            <Link to ="/"><img src={Logo} alt="carrot" className="w-22 h-10"/></Link>
            
         {/* Anais */}
             {/* <div className="p-2">

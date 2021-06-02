@@ -4,22 +4,14 @@ import Logo from '../images/Agro-click.png';
 
 const Dropdown = ({isOpen, toggle}) => {
     // grid grid-rows-4 text-center items-center bg-yellow-500
-    // w-full text-gray-700 bg-white h-16 fixed sticky  top-0 animated z-40
+    // w-full text-gray-700 bg-white h-16 fixed sticky  top-0 animated z-40 h-20 w-full h-auto
     return(
-        <div className={isOpen ? " grid grid-rows-4 text-center items-center bg-yellow-500   w-full  h-20 sticky  top-0 animated z-40"  : "hidden"} 
-        onClick={toggle}>
-           
-             
-        
-
-                
-                    <Link className="p-4" to="/">Accueil</Link>
-                    <Link className="p-4" to="/Login">Se connecter</Link>
-                    <Link className="p-4" to="/contact">Contact</Link>
-                    <Link className="p-4" to="/signup">Sign up</Link>
-
-           
-  
+        <div className={isOpen ? "grid grid-rows-4 text-center items-center h-screen w-screen -mt-16 text-2xl bg-yellow-500  block  sticky top-0 animated z-40  flex-1 overflow-y-scroll"  : "hidden"} 
+        onClick={toggle}>     
+                    <Link className="mt-20 p-4 block font-semiblod hover:bg-gray-200" to="/">Accueil</Link>
+                    <Link className="p-4 block font-semiblod hover:bg-gray-200 " to="/Login">Se connecter</Link>
+                    <Link className="p-4 block font-semiblod hover:bg-gray-200" to="/contact">Contact</Link>
+                    <Link className="p-4 block font-semiblod hover:bg-gray-200" to="/signup">Sign up</Link>
         </div>
     )
 
