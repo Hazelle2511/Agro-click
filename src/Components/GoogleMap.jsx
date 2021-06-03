@@ -40,10 +40,25 @@ export class MapContainer extends Component {
       })
       .catch(error => console.error('Error', error));
   };
+
+  
+  componentDidMount() {
+    if ("geolocation" in navigator) {
+      console.log("Available");
+    } else {
+      console.log("Not Available");
+    }
+  }
+
  
   render() {
     return (
+
+      
+
       <div id='googleMaps' className="h-screen">
+
+        
         <PlacesAutocomplete
           value={this.state.address}
           onChange={this.handleChange}
@@ -106,5 +121,6 @@ export class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: ('AIzaSyDBj-SKr6Cj9aLaMoAILHvdPpxwG74xQv4')
+  apiKey: ('AIzaSyDBj-SKr6Cj9aLaMoAILHvdPpxwG74xQv4' )
+  
 })(MapContainer)
