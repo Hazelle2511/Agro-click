@@ -28,7 +28,7 @@
     "@svg-icons/heroicons-outline": "^1.50.0",
     "@tailwindcss/postcss7-compat": "^2.1.2",
     "aggregate-error": "^3.1.0",
-    "autoprefixer": "^9",
+    "autoprefixer": "^10.2.5",
     "firebase": "^8.6.1",
     "gmail-js": "^1.0.8",
     "google-maps-react": "^2.0.6",

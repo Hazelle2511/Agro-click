@@ -12,15 +12,14 @@ export class MapContainer extends Component {
     this.state = {
       // for google map places autocomplete
       address: '',
+      lat: null,
+      lng: null,
 
       showingInfoWindow: false,
       activeMarker: {},
       selectedPlace: {},
   
-      mapCenter: {
-        lat: 48.82472,
-        lng: 2.17917
-      }
+      
     };
   }
 
@@ -42,14 +41,28 @@ export class MapContainer extends Component {
   };
 
   
-  componentDidMount() {
-    if ("geolocation" in navigator) {
-      console.log("Available");
-    } else {
-      console.log("Not Available");
-    }
-  }
+  // componentDidMount() {
+  //   if ("geolocation" in navigator) {
+  //     console.log("Available");
+  //   } else {
+  //     console.log("Not Available");
+  //   }
+  // }
 
+  //  UserPosition = position => {
+  //   this.setState({ position });
+  //   lat = position.coords.latitude,
+  //   lng = position.coords.longitude
+  // };
+
+  componentWillMount() {
+    navigator.geolocation.getCurrentPosition(
+      position => {
+        this.setState({ lat: position.coords.latitude, lng: position.coords.longitude});
+      },
+      error => console.log(error)
+    );
+  }
  
   render() {
     return (
@@ -101,18 +114,18 @@ export class MapContainer extends Component {
         <Map 
           google={this.props.google}
           initialCenter={{
-            lat: this.state.mapCenter.lat,
-            lng: this.state.mapCenter.lng
+            lat: this.state.lat,
+            lng: this.state.lng
           }}
           center={{
-            lat: this.state.mapCenter.lat,
-            lng: this.state.mapCenter.lng
+            lat: this.state.lat,
+            lng: this.state.lng
           }}
         >
           <Marker 
             position={{
-              lat: this.state.mapCenter.lat,
-              lng: this.state.mapCenter.lng
+              lat: this.state.lat,
+              lng: this.state.lng
             }} />
         </Map>
       </div>
