@@ -12,15 +12,14 @@ export class MapContainer extends Component {
     this.state = {
       // for google map places autocomplete
       address: '',
+      lat: null,
+      lng: null,
 
       showingInfoWindow: false,
       activeMarker: {},
       selectedPlace: {},
   
-      mapCenter: {
-        lat: 48.82472,
-        lng: 2.17917
-      }
+      
     };
   }
 
@@ -40,10 +39,39 @@ export class MapContainer extends Component {
       })
       .catch(error => console.error('Error', error));
   };
+
+  
+  // componentDidMount() {
+  //   if ("geolocation" in navigator) {
+  //     console.log("Available");
+  //   } else {
+  //     console.log("Not Available");
+  //   }
+  // }
+
+  //  UserPosition = position => {
+  //   this.setState({ position });
+  //   lat = position.coords.latitude,
+  //   lng = position.coords.longitude
+  // };
+
+  componentWillMount() {
+    navigator.geolocation.getCurrentPosition(
+      position => {
+        this.setState({ lat: position.coords.latitude, lng: position.coords.longitude});
+      },
+      error => console.log(error)
+    );
+  }
  
   render() {
     return (
+
+      
+
       <div id='googleMaps' className="h-screen">
+
+        
         <PlacesAutocomplete
           value={this.state.address}
           onChange={this.handleChange}
@@ -86,18 +114,18 @@ export class MapContainer extends Component {
         <Map 
           google={this.props.google}
           initialCenter={{
-            lat: this.state.mapCenter.lat,
-            lng: this.state.mapCenter.lng
+            lat: this.state.lat,
+            lng: this.state.lng
           }}
           center={{
-            lat: this.state.mapCenter.lat,
-            lng: this.state.mapCenter.lng
+            lat: this.state.lat,
+            lng: this.state.lng
           }}
         >
           <Marker 
             position={{
-              lat: this.state.mapCenter.lat,
-              lng: this.state.mapCenter.lng
+              lat: this.state.lat,
+              lng: this.state.lng
             }} />
         </Map>
       </div>
@@ -106,5 +134,6 @@ export class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: ('AIzaSyDBj-SKr6Cj9aLaMoAILHvdPpxwG74xQv4')
+  apiKey: ('AIzaSyDBj-SKr6Cj9aLaMoAILHvdPpxwG74xQv4' )
+  
 })(MapContainer)
