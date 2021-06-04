@@ -41,20 +41,7 @@ export class MapContainer extends Component {
   };
 
   
-  // componentDidMount() {
-  //   if ("geolocation" in navigator) {
-  //     console.log("Available");
-  //   } else {
-  //     console.log("Not Available");
-  //   }
-  // }
-
-  //  UserPosition = position => {
-  //   this.setState({ position });
-  //   lat = position.coords.latitude,
-  //   lng = position.coords.longitude
-  // };
-
+ 
   componentWillMount() {
     navigator.geolocation.getCurrentPosition(
       position => {
