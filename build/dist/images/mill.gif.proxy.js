@@ -1,1 +1,0 @@
-export default "/dist/images/mill.gif";
