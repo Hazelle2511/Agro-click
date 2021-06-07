@@ -1,6 +1,7 @@
 import app from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
+import 'firebase/storage';
 
 // const Config = {
 //     apiKey: "AIzaSyDTU5LpzQB0S8pWWaNBg7RVssLXEiF1kxU",
@@ -11,7 +12,7 @@ import 'firebase/firestore';
 //     appId: "1:212315726896:web:a325936465a1e9e1d6b9f5"
 //   };
 
-const Config = {
+ const Config = {
     apiKey: "AIzaSyA24cR3PpWjqRO8O-teOdmG-_G28umVInM",
     authDomain: "agro-click-7a346.firebaseapp.com",
     databaseURL: "https://agro-click-7a346-default-rtdb.europe-west1.firebasedatabase.app",
@@ -72,11 +73,14 @@ passwordReset = email => this.auth.sendPasswordResetEmail(email);
 }
 
 
-    app.initializeApp(Config);
+//   export const config =  app.initializeApp(Config);
+   app.initializeApp(Config);
 
+export const storage = app.storage();
 export const auth = app.auth();
 export const db = app.firestore();
-export const {collection, getDocs} = app.firestore();
+export const {collection, getDocs, getStorage, ref, getDownloadUrl} = app.firestore();
+
 
 
 // 

@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import Firebase from "./firebase/firebase";
 import {auth, db, getDocs,collection} from "./firebase/firebase";
 import {Link} from 'react-router-dom';
+// import ImageUpload from "./ImageUploader";
+
 // import { collection, getDocs } from "firebase/firestore"; 
 
 
@@ -21,10 +23,12 @@ class Agriculteur extends Component {
             Agriculteurs: null
         }
     }
+    //For images
 
     
+    
 
-    async componentDidMount() {
+     componentDidMount() {
         // const querySnapshot = await getDocs(collection(db, "Agriculteurs"));
            
         //         querySnapshot.forEach((doc) => {
@@ -32,20 +36,29 @@ class Agriculteur extends Component {
         //     })
             
         
-        console.log('mounted');
-        console.log('Db',db)
-       await db.collection('Agriculteurs')
+        // console.log('mounted');
+        // console.log('Db',db)
+         db.collection('Agriculteurs')
          .get()
          .then(snapshot => {
                 console.log('Snapshot',snapshot);
                 const Agriculteurs = []
                 snapshot.forEach(doc => {
                     const data = doc.data()
-                    console.log('Data', data);
+                    // console.log('Data', data);
                     Agriculteurs.push(data)
-                })
-               
-                   this.setState({Agriculteurs: snapshot.forEach(doc => doc.data()) })
+                });
+
+                for (const [k, v] of Object.entries(snapshot)) {
+                    console.log(k,v)
+                }
+                //
+               if(Array.isArray(snapshot) && snapshot.length > 0) {
+                   console.log('Tableau', snapshot)
+               } else {
+                   console.warn('Pas Tableau', Array.from(snapshot))
+               }
+                //    this.setState({Agriculteurs: snapshot.forEach(doc => doc.data()) })
                    this.setState({Agriculteurs})
 
                 //  this.setState({Agriculteurs: snapshot.map(doc => doc.data()) });
@@ -62,14 +75,13 @@ class Agriculteur extends Component {
             <div>
                  <div className="tracking-widest uppercase mb-8 mt-8 text-5xl text-yellow-500">
                                                  La sélection des producteurs
-                                    </div>
-                {/* <h1>Agriculteurs</h1> */}
-                {this.state.Agriculteurs && this.state.Agriculteurs.map(Agriculteurs => {
+                                                 
+                                   
+               
+                {this.state?.Agriculteurs?.length > 0 && this.state.Agriculteurs.map(Agriculteurs => {
                     return(
                         <div>
-                            {/* <p>{Agriculteurs.Name}</p> */}
-
-                            {/* <h1>Start</h1> */}
+                          
                             <div className="container my-12 mx-auto px-4 md:px-12 xl: mb-72">
                                     {/* <div className="tracking-widest uppercase mb-8 mt-8 text-5xl text-yellow-500">
                                                  La sélection des producteurs
@@ -79,11 +91,13 @@ class Agriculteur extends Component {
                                     <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
                                         <article className="overflow-hidden rounded-lg shadow-lg">
 
-                                            <Link to="/">
+                                            {/* <Link to="/">
                                                   <img alt="Placeholder" className="block h-auto w-full" src="https://picsum.photos/600/400/?random">
                                                   </img>
-                                            </Link>   
-                                            {/* {Agriculteurs.imageSrc} */}
+                                            </Link>    */}
+                                            {/* <ImageUpload/> */}
+                                            <img src={Agriculteurs.imageSrc} alt="" />
+                                            
                                         <div className="flex items-center justify-between leading-tight p-2 md:p-4">
                                                 <h1 className="text-lg">
                                                      <div className="no-underline hover:underline text-black" href="#">
@@ -91,22 +105,23 @@ class Agriculteur extends Component {
                                                              <h2>{Agriculteurs.Name}</h2>
                                                     </div> 
                                                 </h1> 
-                                                 <p className="text-grey-darker text-sm">
+                                                 <div className="text-grey-darker text-sm">
                                                         <h2>{Agriculteurs.ville}</h2>
-                                                 </p>
+                                                 </div>
                                          </div>
                                          </article>
                                     </div>
                                 </div>   
                             </div>
                                
-                            {/* <h1>End</h1> */}
+                          
                         </div>
                         
 
                        
                     )
                 })}
+                </div>
             </div>
         )
     }
