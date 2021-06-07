@@ -25,65 +25,40 @@ const Login = (props) => {
   }, [password, email])
 
 
-  const handleSubmit = e => {
-    e.preventDefault();
-  
-    firebase.loginUser(email, password)
-    console.log('ok1')
-    .then(user => {
-      // console.log('ok loginuser2');
+ 
+  const handleSubmit = async e => {
+    try { e.preventDefault();
+      const user = await firebase.loginUser(email, password)
+    // console.log('ok1')
+      // console.log('ok loginuser2', user);
       setEmail('');
       setPassword('');
-  props.history.push('/welcome');
-    })
-    .catch(error => {
+  props.history.push('/welcome'); 
+    } catch (error) {
+      console.warn('error', error);
       setError(error);
       setEmail('');
       setPassword('');
-    })
-    
-  }
-
-/***** */
-  // const onClickGoogle = () => {
-  //   // 
-    
-  //   try {
-  //     console.log('firebase',  firebase)
-
-  //     var provider = new firebase.auth.GoogleAuthProvider();
-   
-  //     firebase.auth()
-  //       .signInWithPopup(provider)
-  //       .then((result) => {
-  //         /** @type {firebase.auth.OAuthCredential} */
-  //         var credential = result.credential;
-  
-  //         // This gives you a Google Access Token. You can use it to access the Google API.
-  //         var token = credential.accessToken;
-  //         // The signed-in user info.
-  //         var user = result.user;
-  //         // ...
-  //   })
-  //       .catch((error) => {
-  //       console.log(error)
-  //   });
       
-  //   } catch (error) {
-  //     console.log(error)
-  //   } }
+  }} 
+  
+  //   firebase.loginUser(email, password)
+  //   // console.log('ok1')
+  //   .then(user => {
+  //     console.log('ok loginuser2', user);
+  //     setEmail('');
+  //     setPassword('');
+  // props.history.push('/welcome');
+  //   })
+  //   .catch(error => {
+  //     console.warn('error', error);
+  //     setError(error);
+  //     setEmail('');
+  //     setPassword('');
+  //   })
+    
+ 
    
-
-
-    //
-
-
-
-
- /**** */
-
-
-
   
     return (
         <div className="">

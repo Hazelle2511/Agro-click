@@ -23,17 +23,14 @@ class Firebase {
 
     // methode d'inscription
 
-    signupUser = (email, password) => 
-    this.auth.createUserWithEmailAndPassword(email,password);
+    signupUser = (email, password) => this.auth.createUserWithEmailAndPassword(email,password);
     
 
 
     // methode connexion
 
-    loginUser = (email, password) => {
-    this.auth.signInWithEmailAndPassword(email,password)
-     console.log('OK')
-    }
+    loginUser = (email, password) => this.auth.signInWithEmailAndPassword(email,password);
+    
    
   
 
