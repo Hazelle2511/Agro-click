@@ -5,7 +5,7 @@ import videoo from '../images/pexels-zen-chung-5527769.mp4';
 import agri from '../images/soil-386749_1920.jpg';
 import Footer from './Footer';
 import GoogleMap from './GoogleMap';
-
+import Agriculteur from './Agriculteur';
 
 
 
@@ -76,7 +76,7 @@ class Accueil extends Component {
 
 
 
-<div className="container my-12 mx-auto px-4 md:px-12 xl: mb-72">
+{/* <div className="container my-12 mx-auto px-4 md:px-12 xl: mb-72">
     <div className="tracking-widest uppercase mb-8 mt-8 text-5xl text-yellow-500">
     La sélection des producteurs
 </div>
@@ -145,10 +145,10 @@ class Accueil extends Component {
             </article>
             
 
-        </div>
+        </div> */}
         
         
-        <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+        {/* <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
 
             
             <article className="overflow-hidden rounded-lg shadow-lg">
@@ -253,9 +253,9 @@ class Accueil extends Component {
             </article>
            
             
-        </div>
+        </div> */}
 
-        <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+        {/* <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
 
         
             <article className="overflow-hidden rounded-lg shadow-lg">
@@ -285,18 +285,19 @@ class Accueil extends Component {
                     
                 </div>
 
-            </article>
+            </article> */}
             
          
           
-        </div>
+        {/* </div>
 
       
        
 
-    </div>
+    </div> */}
   
-</div>
+{/* </div> */}
+<Agriculteur/>
 
 <GoogleMap />
 
