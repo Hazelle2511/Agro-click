@@ -25,67 +25,40 @@ const Login = (props) => {
   }, [password, email])
 
 
-  
-
-
-  const handleSubmit = e =>{
-    e.preventDefault();
-    
-   
-
-    firebase.loginUser(email, password)
-    .then(user => {
+ 
+  const handleSubmit = async e => {
+    try { e.preventDefault();
+      const user = await firebase.loginUser(email, password)
+    // console.log('ok1')
+      // console.log('ok loginuser2', user);
       setEmail('');
       setPassword('');
-props.history.push('/');
-    })
-    .catch(error => {
+  props.history.push('/welcome'); 
+    } catch (error) {
+      console.warn('error', error);
       setError(error);
       setEmail('');
       setPassword('');
-    })
-  }
-
-/***** */
-  const onClickGoogle = () => {
-    // 
-    
-    try {
-      console.log('firebase',  firebase)
-
-      var provider = new firebase.auth.GoogleAuthProvider();
-   
-      firebase.auth()
-        .signInWithPopup(provider)
-        .then((result) => {
-          /** @type {firebase.auth.OAuthCredential} */
-          var credential = result.credential;
-  
-          // This gives you a Google Access Token. You can use it to access the Google API.
-          var token = credential.accessToken;
-          // The signed-in user info.
-          var user = result.user;
-          // ...
-    })
-        .catch((error) => {
-        console.log(error)
-    });
       
-    } catch (error) {
-      console.log(error)
-    }
+  }} 
+  
+  //   firebase.loginUser(email, password)
+  //   // console.log('ok1')
+  //   .then(user => {
+  //     console.log('ok loginuser2', user);
+  //     setEmail('');
+  //     setPassword('');
+  // props.history.push('/welcome');
+  //   })
+  //   .catch(error => {
+  //     console.warn('error', error);
+  //     setError(error);
+  //     setEmail('');
+  //     setPassword('');
+  //   })
+    
+ 
    
-
-    //
-
-
-
- }
-
- /**** */
-
-
-
   
     return (
         <div className="">
@@ -129,8 +102,8 @@ props.history.push('/');
               <hr className="my-6 border-gray-300 w-full"></hr>
         
               <button type="button" className="w-full block bg-white hover:bg-yellow-400 focus:bg-yellow-400 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-yellow-500"
-              onClick={onClickGoogle}>
-                    <div className="flex items-center justify-center">
+              // onClick={onClickGoogle}
+                    ><div className="flex items-center justify-center">
                     <span className="ml-4">
                     Se connecter avec Google
                     </span>

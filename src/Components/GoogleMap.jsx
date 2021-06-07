@@ -55,7 +55,7 @@ export class MapContainer extends Component {
   //   lng = position.coords.longitude
   // };
 
-  componentWillMount() {
+  componentDidMount() {
     navigator.geolocation.getCurrentPosition(
       position => {
         this.setState({ lat: position.coords.latitude, lng: position.coords.longitude});
@@ -79,12 +79,12 @@ export class MapContainer extends Component {
         >
           {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
             <div className="text-center">
-              <input className="text-center"
+              {/* <input className="text-center"
                 {...getInputProps({
                   placeholder: 'Search Places ...',
                   className: 'location-search-input',
                 })}
-              />
+              /> */}
               <div className="autocomplete-dropdown-container">
                 {loading && <div>Loading...</div>}
                 {suggestions.map(suggestion => {
