@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Firebase from "./firebase/firebase";
-import {auth, db} from "./firebase/firebase";
+import {auth, db, getDocs,collection} from "./firebase/firebase";
 import {Link} from 'react-router-dom';
 // import { collection, getDocs } from "firebase/firestore"; 
 
@@ -25,14 +25,13 @@ class Agriculteur extends Component {
     
 
     async componentDidMount() {
-        // const querySnapshot = await getDocs(collection(db, "Agriculteurs"))
-        //     .get()
-        //     .then(querySnapshot => {
+        // const querySnapshot = await getDocs(collection(db, "Agriculteurs"));
+           
         //         querySnapshot.forEach((doc) => {
-        //             console.log(`${doc.id} => ${doc.data()}`);
+        //             console.log(`Doc, ${doc.id} => ${doc.data()}`);
         //     })
-       
-        // })
+            
+        
         console.log('mounted');
         console.log('Db',db)
        await db.collection('Agriculteurs')
@@ -46,10 +45,11 @@ class Agriculteur extends Component {
                     Agriculteurs.push(data)
                 })
                
-                // this.setState({Agriculteurs: snapshot.forEach(doc => doc.data()) })
-                this.setState({Agriculteurs})
-               
+                   this.setState({Agriculteurs: snapshot.forEach(doc => doc.data()) })
+                   this.setState({Agriculteurs})
 
+                //  this.setState({Agriculteurs: snapshot.map(doc => doc.data()) });
+                 
             })
          .catch(error => console.log('Error', error))
 

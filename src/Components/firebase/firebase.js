@@ -76,6 +76,7 @@ passwordReset = email => this.auth.sendPasswordResetEmail(email);
 
 export const auth = app.auth();
 export const db = app.firestore();
+export const {collection, getDocs} = app.firestore();
 
 
 // 
