@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useContext} from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../images/Agro-click.png';
+import Logo from '../images/2.png';
 import Panier from '../images/basket-690778_1920.jpg';
 import {FirebaseContext} from '../Components/firebase';
 import Footer from './Footer';
@@ -75,8 +75,8 @@ const Login = (props) => {
 
             
             {error !== '' && <div className="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4" role="alert"><span className="font-bold">ATTENTION</span><span>Mauvais mot de passe</span></div>}
-        
-              <h1 className="text-xl md:text-2xl font-bold leading-tight -mt-8 my-4">SE CONNECTER</h1>
+            {/* -mt-8 my-4*/}
+              <h1 className="text-xl md:text-2xl font-bold leading-tight -mt-14 my-4">SE CONNECTER</h1>
         
               <form onSubmit={handleSubmit} className="mt-6" >
                 <div>
@@ -115,7 +115,7 @@ const Login = (props) => {
               <p className="mt-8">Nouveau chez Agro-Click ? <Link className="text-yellow-500 hover:text-yellow-400 font-semibold" to="/signup" >Créez un compte.</Link>
               </p>
               <div className="flex items-center justify-center">
-              <img className="w-52 h-52" src={Logo} alt="logo"></img>
+              <img className="w-20 h-20 pt-6" src={Logo} alt="logo"></img>
               </div>
         </div>
             </div>

@@ -71,7 +71,7 @@ const Signup = (props) => {
             <div className="w-full md:w-1/2 py-10 px-5 md:px-10">
                                 <div className="text-center mb-10">
                                     {errorMsg}
-                    <h1 className="font-bold text-3xl text-gray-900">INSCRIPTION</h1>
+                    <h1 className="font-bold text-3xl -my-8 text-gray-900">INSCRIPTION</h1>
                     
                 </div>
                 <form onSubmit={handleSubmit}>
