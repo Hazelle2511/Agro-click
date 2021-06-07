@@ -30,20 +30,24 @@ class Firebase {
 
     // methode connexion
 
-    loginUser = (email, password, google) =>
-    this.auth.signInWithEmailAndPassword(email,password, gmail);
+    loginUser = (email, password) => {
+    this.auth.signInWithEmailAndPassword(email,password)
+     console.log('OK')
+    }
+   
+  
 
 
     // deconnexion methode
 
-    signoutUser = () => this.auth.signOut()
+    signoutUser = () => this.auth.signOut();
 
 
 
     //Récupérer le mdp
 
 passwordReset = email => this.auth.sendPasswordResetEmail(email);
-}
+};
 
 
 
