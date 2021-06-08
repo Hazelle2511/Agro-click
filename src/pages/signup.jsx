@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import Logo from '../images/Agro-click.png';
 import Contactbg from '../images/mill.gif';
 import {FirebaseContext} from '../Components/firebase';
+import 'firebase/auth';
+// import {firebaseApp,provider} from '../../../services/firebase_setup';
+// import { getAuth, signInWithPopup, GoogleAuthProvider, signOut} from "firebase/auth";
 
 
 
@@ -12,6 +15,9 @@ const Signup = (props) => {
 
    const firebase = useContext(FirebaseContext);
 //    console.log(firebase);
+
+this.auth = firebase.auth;
+this.auth_ = firebase.auth();
 
     
     const data = {
@@ -55,6 +61,34 @@ const Signup = (props) => {
     //gestion des erreurs
 
     const errorMsg = error !== '' && <span>{error.message}</span>;
+
+
+    const handleClick = async e =>  { 
+        console.log('googlebutton')
+        var provider = new this.auth.GoogleAuthProvider();
+        this.auth_.signInWithPopup(provider)
+        .then((result) => {
+         
+          // /** @type {firebase.auth.OAuthCredential} */
+          var credential = result.credential;
+      
+          // This gives you a Google Access Token. You can use it to access the Google API.
+          var token = credential.accessToken;
+          // The signed-in user info.
+          var user = result.user;
+          // ...
+        }).catch((error) => {
+          console.log(error);
+        }); 
+      }
+      
+        const signOut = () => {
+      signOut(auth).then(() => {
+        console.log('signoutOK')
+      }).catch((error) => {
+        console.log('signout error')
+      });
+      }
 
   
     return (
@@ -131,13 +165,14 @@ const Signup = (props) => {
                     <div className="flex -mx-3">
                         <div className="w-full px-3 mb-5">
                         
-                         <button className="block w-full max-w-xs mx-auto bg-yellow-500 hover:bg-yellow-700 focus:bg-yellow-700 text-white rounded-lg px-3 py-3 font-semibold">Inscription avec Gmail</button>
+                         <button type="button" onClick={handleClick} className="block w-full max-w-xs mx-auto bg-yellow-500 hover:bg-yellow-700 focus:bg-yellow-700 text-white rounded-lg px-3 py-3 font-semibold">Inscription avec Gmail</button>
                             {/* <button className="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold"></button> */}
                         </div>
                     </div>
                     
                     
                 </form>
+
                 <div className="linkContainer"> <span> Déjà inscrit ? </span>
                     <Link className="text-yellow-500 hover:text-yellow-400 font-semibold" to='/Login'>Connectez vous.</Link>
                 </div>
