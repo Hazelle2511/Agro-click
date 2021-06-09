@@ -8,7 +8,7 @@ import "firebase/analytics";
 
 // firebase config // 
 
-export const provider = new firebase.auth.GoogleAuthProvider();
+// export const provider = new firebase.auth.GoogleAuthProvider();
 
 
 // const Config = {

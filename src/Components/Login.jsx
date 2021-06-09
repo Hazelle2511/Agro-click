@@ -4,11 +4,11 @@ import Logo from '../images/2.png';
 import Panier from '../images/basket-690778_1920.jpg';
 import {FirebaseContext} from '../Components/firebase';
 import Footer from './Footer';
-import {firebase,provider} from '../../../services/firebase_setup';
-import firebase from '../Components/firebase/firebase.js';
-import 'firebase/auth';
-import 'firebase_setup'
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut} from "firebase/auth";
+// import {firebase,provider} from '../../../services/firebase_setup';
+// import firebase from '../Components/firebase/firebase.js';
+// import 'firebase/auth';
+// import 'firebase_setup'
+// import { getAuth, signInWithPopup, GoogleAuthProvider, signOut} from "firebase/auth";
 
 
 const Login = (props) => {

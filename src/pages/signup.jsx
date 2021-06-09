@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../images/Agro-click.png';
 import Contactbg from '../images/mill.gif';
 import {FirebaseContext} from '../Components/firebase';
-import 'firebase/auth';
+// import 'firebase/auth';
 // import {firebaseApp,provider} from '../../../services/firebase_setup';
 // import { getAuth, signInWithPopup, GoogleAuthProvider, signOut} from "firebase/auth";
 
@@ -63,32 +63,32 @@ this.auth_ = firebase.auth();
     const errorMsg = error !== '' && <span>{error.message}</span>;
 
 
-    const handleClick = async e =>  { 
-        console.log('googlebutton')
-        var provider = new this.auth.GoogleAuthProvider();
-        this.auth_.signInWithPopup(provider)
-        .then((result) => {
+    // const handleClick = async e =>  { 
+    //     console.log('googlebutton')
+    //     var provider = new this.auth.GoogleAuthProvider();
+    //     this.auth_.signInWithPopup(provider)
+    //     .then((result) => {
          
-          // /** @type {firebase.auth.OAuthCredential} */
-          var credential = result.credential;
+    //       // /** @type {firebase.auth.OAuthCredential} */
+    //       var credential = result.credential;
       
-          // This gives you a Google Access Token. You can use it to access the Google API.
-          var token = credential.accessToken;
-          // The signed-in user info.
-          var user = result.user;
-          // ...
-        }).catch((error) => {
-          console.log(error);
-        }); 
-      }
+    //       // This gives you a Google Access Token. You can use it to access the Google API.
+    //       var token = credential.accessToken;
+    //       // The signed-in user info.
+    //       var user = result.user;
+    //       // ...
+    //     }).catch((error) => {
+    //       console.log(error);
+    //     }); 
+    //   }
       
-        const signOut = () => {
-      signOut(auth).then(() => {
-        console.log('signoutOK')
-      }).catch((error) => {
-        console.log('signout error')
-      });
-      }
+    //     const signOut = () => {
+    //   signOut(auth).then(() => {
+    //     console.log('signoutOK')
+    //   }).catch((error) => {
+    //     console.log('signout error')
+    //   });
+    //   }
 
   
     return (
