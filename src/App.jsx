@@ -17,12 +17,15 @@ import AccessProfil from './Components/Welcome/accessProfil.jsx';
 import accessProfil from './Components/Welcome/accessProfil.jsx';
 import Footer from './Components/Footer';
 import ForgetPassword from './Components/ForgetPassword/MdpOublie';
-
+import User1Profile from './Components/User1Profile';
+import BounceLoader from "react-spinners/BounceLoader";
 
 
 
 export default () => {
+
     const [isOpen, setIsOpen] = useState(false) ;
+    const [loading, setLoading] = useState(false);
     
     const toggle = () => {
         setIsOpen(!isOpen)
@@ -33,21 +36,33 @@ export default () => {
             window.innerWidth > 768 && isOpen ? setIsOpen(false): null;
             // console.log('resize')
         }
-    
-    window.addEventListener('resize', hideMenu);
+        setLoading(true)
+        setTimeout(() => {
+            setLoading(false)
+        },5000)
+        window.addEventListener('resize', hideMenu);
+       
 
-    return() => {
-        window.removeEventListener('resize', hideMenu);
-    }
-})
+        return() => {
+            window.removeEventListener('resize', hideMenu);
+        }
+
+      
+}, [])
     return(
         <>
-       
-            {/* {
-           <Accueil/> */} 
+          {/* For loader Spiner */}
+         <div className="App">
+          {
+            loading ?
+
+            <BounceLoader color={'#F5A623'} loading={loading} size={150} />
+
+            :
+           
+            <div>
            <Navbar toggle={toggle} />
            <Dropdown toggle={toggle} isOpen={isOpen}/>
-          {/* <Searchbar /> */}
            <Switch>
                <Route path="/" exact component = {Accueil} />
                <Route path="/signup" component = {Signup} />
@@ -57,17 +72,16 @@ export default () => {
                <Route path="/Logout" component = {Logout} />
                <Route path="/accessProfil" component = {accessProfil} />
                <Route path="/ForgetPassword" component = {ForgetPassword} />
-
-             
-
+               <Route path="/Profile" component = {User1Profile}/>
            </Switch>
 
            <Footer/>
-          
+           </div>
          
           
-           {/* <GoogleMap /> */}
-        
+          }
+          </div>
+         
 
         
 
