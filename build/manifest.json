@@ -1,0 +1,24 @@
+{
+    "short_name": "Agro-Click",
+    "name": "Agro-Click",
+
+     
+    "icons": [
+      {
+        "src": "icon-192.png",
+        "sizes": "192x122",
+        "type": "image/png"
+      },
+      {
+        "src": "icon-512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "start_url": ".",
+    "display": "fullscreen",
+    "theme_color": "#3367D6",
+    "background_color": "#FFFFFF"
+  }
+
+ 
