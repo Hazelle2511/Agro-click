@@ -18,6 +18,7 @@ import accessProfil from './Components/Welcome/accessProfil.jsx';
 import Footer from './Components/Footer';
 import ForgetPassword from './Components/ForgetPassword/MdpOublie';
 import User1Profile from './Components/User1Profile';
+import {jsx, css } from "@emotion/react";
 import BounceLoader from "react-spinners/BounceLoader";
 
 
@@ -30,6 +31,15 @@ export default () => {
     const toggle = () => {
         setIsOpen(!isOpen)
     };
+
+    const override = css`
+      display: block;
+      margin: 200px auto;
+
+   
+     
+    
+`;
 
     useEffect(() => {
         const hideMenu = () => {
@@ -56,7 +66,7 @@ export default () => {
           {
             loading ?
 
-            <BounceLoader color={'#F5A623'} loading={loading} size={150} />
+            <BounceLoader color={'#F5A623'} css={override} loading={loading} size={150} />
 
             :
            

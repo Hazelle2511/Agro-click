@@ -66,7 +66,7 @@ class Agriculteur extends Component {
                     </div>
                     <div className="flex flex-wrap -mx-1 lg:-mx-4">                                             
                         {this.state?.Agriculteurs?.length > 0 && this.state.Agriculteurs.map(Agriculteurs => {
-                       <User1Profile name = "heeloe" />
+                     
                        return(
                            
                                     <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
@@ -93,7 +93,7 @@ class Agriculteur extends Component {
                               })}
                      </div>  
                      {/* <User1Profile/>  */}
-                     {agriArray}
+                     {/* {agriArray} */}
                 </div>
             
         )
