@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-// import contactbg from '../images/contactbg.png';
+import contact from '../../public/locales/components/contactt.json';
+const locale = navigator.language.substr(0, 2)
+const lang = Object.keys(contact).includes(locale) ? locale : settings.defaultLanguage // fallback to default
 
+console.log(lang);
 export default class Contact extends Component {
 
     constructor(props) {
