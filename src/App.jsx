@@ -18,28 +18,28 @@ import accessProfil from './Components/Welcome/accessProfil.jsx';
 import Footer from './Components/Footer';
 import ForgetPassword from './Components/ForgetPassword/MdpOublie';
 import User1Profile from './Components/User1Profile';
-import BounceLoader from "react-spinners/BounceLoader";
+
 
 
 
 export default () => {
 
     const [isOpen, setIsOpen] = useState(false) ;
-    const [loading, setLoading] = useState(false);
+  
     
     const toggle = () => {
         setIsOpen(!isOpen)
     };
+
 
     useEffect(() => {
         const hideMenu = () => {
             window.innerWidth > 768 && isOpen ? setIsOpen(false): null;
             // console.log('resize')
         }
-        setLoading(true)
-        setTimeout(() => {
-            setLoading(false)
-        },5000)
+
+
+        //For 
         window.addEventListener('resize', hideMenu);
        
 
@@ -51,16 +51,9 @@ export default () => {
 }, [])
     return(
         <>
-          {/* For loader Spiner */}
-         <div className="App">
-          {
-            loading ?
-
-            <BounceLoader color={'#F5A623'} loading={loading} size={150} />
-
-            :
-           
-            <div>
+         
+         
+          
            <Navbar toggle={toggle} />
            <Dropdown toggle={toggle} isOpen={isOpen}/>
            <Switch>
@@ -76,11 +69,8 @@ export default () => {
            </Switch>
 
            <Footer/>
-           </div>
-         
-          
-          }
-          </div>
+        
+      
          
 
         

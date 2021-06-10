@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
-// import contactbg from '../images/contactbg.png';
+import contact from '../../public/locales/components/contact.json';
+
+//For multilanguage translation
+const locale = navigator.language.substr(0, 2)
+const lang = Object.keys(contact).includes(locale) ? locale : 'fr' 
+//
+
 
 export default class Contact extends Component {
 
@@ -51,12 +57,10 @@ return(
                 <div className="flex flex-col justify-between space-y-8 ">
                     <div>
                         <h1 className=" text-4xl lg:text-5xl font-bold   leading-tight">
-                       
-                       CONTACT
- 
+                            {contact[lang].title}
                         </h1>
                         <p className="text-gray-700 mt-8 ">
-                        Une question ? Contactez-nous.
+                           {contact[lang].description} 
                         </p>
                     </div>
                     
@@ -81,19 +85,19 @@ return(
                     <div className="bg-white rounded-xl shadow-lg p-8 text-gray-600">
                         <form onSubmit={this.handleSubmit} className="flex flex-col space-y-4" id="myFormu">
                             <div>
-                                <label htmlFor="POST_name" className="uppercase text-sm text-gray-600 font-bold">Nom - Prénom</label>
+                                <label htmlFor="POST_name" className="uppercase text-sm text-gray-600 font-bold">{contact[lang].labelName} </label>
                                 <input name="name" onChange={this.handleChange} type="text" placeholder="Jane Doe" className=" w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" required/>
                             </div>
                             <div>
-                                <label htmlFor="POST_email" className="uppercase text-sm text-gray-600 font-bold">Adresse e-mail</label>  
+                                <label htmlFor="POST_email" className="uppercase text-sm text-gray-600 font-bold">{contact[lang].labelEmail} </label>  
                                 <input name="email"  type="email" placeholder="********@*****.**"  className=" w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" required/>
                             </div>
                             <div>
-                                <label htmlFor="POST_msg" className="uppercase text-sm text-gray-600 font-bold">Message</label>  
+                                <label htmlFor="POST_msg" className="uppercase text-sm text-gray-600 font-bold">{contact[lang].labelMessage}</label>  
                                 <textarea name="msg" onChange={this.handleChange} type="text"
                                 rows="4" placeholder="Message"  className=" w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" required/>
                             </div>
-                            <button type="submit" className="uppercase text-sm font-bold tracking-wide text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline  bg-yellow-500 hover:bg-yellow-700 focus:bg-yellow-700  ">Envoyer</button>
+                            <button type="submit" className="uppercase text-sm font-bold tracking-wide text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline  bg-yellow-500 hover:bg-yellow-700 focus:bg-yellow-700  ">{contact[lang].btnSend}</button>
                    
                         </form>
                     </div>
