@@ -9,6 +9,7 @@ const accessProfil = () => {
         <div className="">
             <div className="container">
                 <AccessProfil/>
+                <div>CONNECTÉ !!!</div>
             </div>
         </div>
     )

@@ -24,13 +24,17 @@ const Welcome = props => {
         <Fragment>
         <div className="loader"></div>
         <p>Patienter..</p>
+        <div>CONNECTÉ !!!</div>
         </Fragment>
+        
     ) :  (
         <div>
             <div>
                 <Logout/>
                 <AccessProfil/>
             </div>
+
+
         </div>
     )
 
