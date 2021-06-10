@@ -1,0 +1,28 @@
+{
+    "en": {
+        "title": "Sign Up",
+        "labelFname": "First Name",
+        "labelLname": "Last Name",
+        "labelEmail": "E-mail",
+        "labelPassword": "Password",
+        "labelConfirmation": "Password Confirmation",
+        "btnSignup": "Sign Up",
+        "btnGoogle": "Sign up avec Google",
+        "linkRegistered": "Already registered ?",
+        "linkConnect": "Connect"
+    },
+
+    
+    "fr": {
+        "title": "Inscription",
+        "labelFname": "Prénom",
+        "labelLname": "Nom",
+        "labelEmail": "E-mail",
+        "labelPassword": "Mot de passe",
+        "labelConfirmation": "Confirmation du mot de passe",
+        "btnSignup": "Inscription",
+        "btnGoogle": "Inscription avec Google",
+        "linkRegistered": "Déjà inscrit ?",
+        "linkConnect": "Connectez vous"
+    }
+}

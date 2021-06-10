@@ -1,6 +1,13 @@
 import { Result } from 'postcss';
 import React, { useEffect, useState } from 'react';
 
+import nav from '../../public/locales/components/nav.json';
+
+//For multilanguage translation
+const locale = navigator.language.substr(0, 2)
+const lang = Object.keys(nav).includes(locale) ? locale : 'fr' 
+//
+
 
 function Searchbar() {
 

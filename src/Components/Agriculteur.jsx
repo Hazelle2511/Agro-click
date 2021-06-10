@@ -5,6 +5,15 @@ import {Link} from 'react-router-dom';
 import User1Profile from "./User1Profile";
 
 
+import accueil from '../../public/locales/components/accueil.json';
+
+//For multilanguage translation
+const locale = navigator.language.substr(0, 2)
+const lang = Object.keys(accueil).includes(locale) ? locale : 'fr' 
+//
+
+
+
 class Agriculteur extends Component {
     
     constructor() {
@@ -60,7 +69,7 @@ class Agriculteur extends Component {
             
                 <div className="container my-12 mx-auto px-4 md:px-12 xl: mb-72">
                        <div className="tracking-widest uppercase mb-8 mt-8 text-5xl text-yellow-500">
-                        La sélection des producteurs
+                       {accueil[lang].labelProducteur}
                         
                       
                     </div>
