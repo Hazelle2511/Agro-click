@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../images/2.png';
 import Panier from '../images/basket-690778_1920.jpg';
 import {FirebaseContext} from '../Components/firebase';
-import Footer from './Footer';
+
 // import GoogleLogin from './GoogleLogin';
 
 
