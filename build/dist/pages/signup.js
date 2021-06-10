@@ -3,6 +3,7 @@ import {Link} from "../../_snowpack/pkg/react-router-dom.js";
 import Logo from "../images/Agro-click.png.proxy.js";
 import Contactbg from "../images/mill.gif.proxy.js";
 import {FirebaseContext} from "../Components/firebase/index.js";
+import "../../_snowpack/pkg/firebase/auth.js";
 const Signup = (props) => {
   const firebase = useContext(FirebaseContext);
   this.auth = firebase.auth;

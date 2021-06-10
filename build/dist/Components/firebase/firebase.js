@@ -1,15 +1,14 @@
 import app from '../../../_snowpack/pkg/firebase/app.js';
 import '../../../_snowpack/pkg/firebase/auth.js';
 import '../../../_snowpack/pkg/firebase/firestore.js';
-import '../../../_snowpack/pkg/firebase.js';
-// import "firebase/analytics";
-
-
+import "../../../_snowpack/pkg/firebase/analytics.js";
 
 
 
 
 // firebase config // 
+
+// export const provider = new firebase.auth.GoogleAuthProvider();
 
 
 // const Config = {
@@ -35,16 +34,29 @@ const Config = {
 
 
 
-
 export default class Firebase {
     constructor(){
 
+        // if (!app.apps.length) {
+           
+        //     app.initializeApp({});
+            
+        //  }else {
+        //     app.app(); // if already initialized, use that one
+        //  }
+        // app.initializeApp(Config);
         this.auth = app.auth();
-   
+        
+    
+        //  var provider = new app.auth.GoogleAuthProvider()
+        //  this.google = new app.auth.GoogleAuthProvider()
+        //  const provider = new GoogleAuthProvider();
 
     // // //    //For agriculteurs
      this.db = app.firestore();
     }
+
+
 
     // methode d'inscription
 
@@ -55,16 +67,21 @@ export default class Firebase {
     // methode connexion
 
     loginUser = (email, password) => this.auth.signInWithEmailAndPassword(email,password);
+    
    
+  
+
 
     // deconnexion methode
 
     signoutUser = () => this.auth.signOut();
 
 
+
     //Récupérer le mdp
 
 passwordReset = email => this.auth.sendPasswordResetEmail(email);
+
 
 
 //connexion gmail
@@ -78,3 +95,8 @@ passwordReset = email => this.auth.sendPasswordResetEmail(email);
 export const auth = app.auth();
 export const db = app.firestore();
 export const {collection, getDocs} = app.firestore();
+
+
+
+// 
+

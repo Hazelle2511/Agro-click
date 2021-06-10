@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../images/Agro-click.png';
 import Contactbg from '../images/mill.gif';
 import {FirebaseContext} from '../Components/firebase';
-// import 'firebase/auth';
+import 'firebase/auth';
 // import {firebaseApp,provider} from '../../../services/firebase_setup';
 // import { getAuth, signInWithPopup, GoogleAuthProvider, signOut} from "firebase/auth";
 

@@ -1,6 +1,6 @@
 {
   "imports": {
-    "firebase": "./firebase.js",
+    "firebase/analytics": "./firebase/analytics.js",
     "firebase/app": "./firebase/app.js",
     "firebase/auth": "./firebase/auth.js",
     "firebase/firestore": "./firebase/firestore.js",
