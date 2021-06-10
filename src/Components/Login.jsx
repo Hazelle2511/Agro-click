@@ -4,7 +4,11 @@ import Logo from '../images/2.png';
 import Panier from '../images/basket-690778_1920.jpg';
 import {FirebaseContext} from '../Components/firebase';
 import Footer from './Footer';
-// import GoogleLogin from './GoogleLogin';
+// import {firebase,provider} from '../../../services/firebase_setup';
+// import firebase from '../Components/firebase/firebase.js';
+// import 'firebase/auth';
+// import 'firebase_setup'
+// import { getAuth, signInWithPopup, GoogleAuthProvider, signOut} from "firebase/auth";
 
 
 const Login = (props) => {
@@ -26,9 +30,11 @@ const Login = (props) => {
 
 
  
-  const handleSubmit = async e => {
+  const handleSubmit = async e => { 
+    console.log('inscriptionbutton')
     try { e.preventDefault();
       const user = await firebase.loginUser(email, password)
+     
     // console.log('ok1')
       // console.log('ok loginuser2', user);
       setEmail('');
@@ -41,7 +47,8 @@ const Login = (props) => {
       setPassword('');
       
   }} 
-  
+  // Version 1 LOGIN USER //
+
   //   firebase.loginUser(email, password)
   //   // console.log('ok1')
   //   .then(user => {
@@ -56,8 +63,39 @@ const Login = (props) => {
   //     setEmail('');
   //     setPassword('');
   //   })
+
+  //////////////
     
- 
+
+
+  // connexion gmail
+
+
+
+// const onSubmit = async e => {
+//   try { e.preventDefault();
+//     var provider =  await new firebase.auth.GoogleAuthProvider();
+//     firebase.auth() 
+//     console.log('OKGOOGLE')
+//     .signInWithPopup(provider)
+   
+//     .then((result) => {
+//       /* @type {firebase.auth.OAuthCredential} */
+//       var credential = result.credential;
+//   // This gives you a Google Access Token. You can use it to access the Google API.
+//       var token = credential.accessToken;
+//       // The signed-in user info.
+//       var user = result.user;
+      
+//     })}
+
+//   catch (error) {
+//       console.log(error);
+//     }; 
+//   }
+
+
+
    
   
     return (
@@ -97,33 +135,29 @@ const Login = (props) => {
                  {btn ? <button className="w-full block bg-yellow-500 hover:bg-yellow-400 focus:bg-yellow-400 text-white font-semibold rounded-lg
                       px-4 py-3 mt-6">Connexion</button> : <button className="cursor-not-allowed w-full block bg-yellow-500 hover:bg-yellow-400 focus:bg-yellow-400 text-white font-semibold rounded-lg
                       px-4 py-3 mt-6" disabled >Connexion</button> }
-              </form>
-        
-              <hr className="my-6 border-gray-300 w-full"></hr>
-        
-              <button type="button" className="w-full block bg-white hover:bg-yellow-400 focus:bg-yellow-400 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-yellow-500"
-              // onClick={onClickGoogle}
-                    ><div className="flex items-center justify-center">
-                    <span className="ml-4">
-                    Se connecter avec Google
-                    </span>
-                    </div>
-                  </button>
 
-                  {/* <GoogleLogin/> */}
+
+                  
+
+
+              </form>
+           
+              <hr className="my-6 border-gray-300 w-full"></hr>
+      
+
+            
         <br/> 
               <p className="mt-8">Nouveau chez Agro-Click ? <Link className="text-yellow-500 hover:text-yellow-400 font-semibold" to="/signup" >Créez un compte.</Link>
               </p>
               <div className="flex items-center justify-center">
               <img className="w-20 h-20 pt-6" src={Logo} alt="logo"></img>
-              </div>
+             
+             </div>
         </div>
-            </div>
+            </div> 
           
-        
+           
         </section>
-{/*         
-        <Footer /> */}
 
         </div>
 

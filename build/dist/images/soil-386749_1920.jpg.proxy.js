@@ -1,0 +1,1 @@
+export default "/dist/images/soil-386749_1920.jpg";

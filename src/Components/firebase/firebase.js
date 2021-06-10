@@ -1,6 +1,15 @@
 import app from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
+import "firebase/analytics";
+
+
+
+
+// firebase config // 
+
+// export const provider = new firebase.auth.GoogleAuthProvider();
+
 
 // const Config = {
 //     apiKey: "AIzaSyDTU5LpzQB0S8pWWaNBg7RVssLXEiF1kxU",
@@ -20,7 +29,10 @@ const Config = {
     messagingSenderId: "413825840890",
     appId: "1:413825840890:web:021fbff28b2c8af1493b43"
 
-}
+};
+
+
+
 
 export default class Firebase {
     constructor(){
@@ -43,6 +55,8 @@ export default class Firebase {
     // // //    //For agriculteurs
      this.db = app.firestore();
     }
+
+
 
     // methode d'inscription
 
@@ -67,14 +81,21 @@ export default class Firebase {
     //Récupérer le mdp
 
 passwordReset = email => this.auth.sendPasswordResetEmail(email);
-};
 
+
+
+//connexion gmail
+
+// signInWithPopup = () => this.auth.GoogleAuthProvider();
+
+};
 
     app.initializeApp(Config);
 
 export const auth = app.auth();
 export const db = app.firestore();
 export const {collection, getDocs} = app.firestore();
+
 
 
 // 
