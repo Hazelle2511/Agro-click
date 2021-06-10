@@ -23,8 +23,8 @@ const Signup = (props) => {
    const firebase = useContext(FirebaseContext);
 //    console.log(firebase);
 
-this.auth = firebase.auth;
-this.auth_ = firebase.auth();
+// this.auth = firebase.auth;
+// this.auth_ = firebase.auth();
 
     
     const data = {
