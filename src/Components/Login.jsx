@@ -10,6 +10,14 @@ import Footer from './Footer';
 // import 'firebase_setup'
 // import { getAuth, signInWithPopup, GoogleAuthProvider, signOut} from "firebase/auth";
 
+// import GoogleLogin from './GoogleLogin';
+import login from '../../public/locales/components/login.json';
+
+//For multilanguage translation
+const locale = navigator.language.substr(0, 2)
+const lang = Object.keys(login).includes(locale) ? locale : 'fr' 
+//
+
 
 const Login = (props) => {
 
@@ -111,43 +119,46 @@ const Login = (props) => {
         
             <div className="w-full h-100">
 
-            
-            {error !== '' && <div className="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4" role="alert"><span className="font-bold">ATTENTION</span><span>Mauvais mot de passe</span></div>}
+            {/* p-4 */}
+            {error !== '' && <div className="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-0" role="alert"><span className="font-bold">  {login[lang].alert} </span><span> {login[lang].alertPassword} </span></div>}
             {/* -mt-8 my-4*/}
-              <h1 className="text-xl md:text-2xl font-bold leading-tight -mt-14 my-4">SE CONNECTER</h1>
+              <h1 className="text-xl md:text-2xl font-bold leading-tight -mt-14 my-4"> {login[lang].title}</h1>
         
               <form onSubmit={handleSubmit} className="mt-6" >
                 <div>
-                  <label className="block text-gray-700">E-mail</label>
+                  <label className="block text-gray-700">{login[lang].labelEmail}</label>
                   <input onChange={e => setEmail(e.target.value)} value={email} type="email" name="email" placeholder="E-mail" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-yellow-500 focus:bg-white focus:outline-none" autoFocus autoComplete required></input>
                 </div>
         
                 <div className="mt-4">
-                  <label className="block text-gray-700">Mot de passe</label>
+                  <label className="block text-gray-700">{login[lang].labelPassword}</label>
                   <input onChange={e => setPassword(e.target.value)} value={password} type="password" name="password" placeholder="Mot de passe" minLength="5" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-yellow-500
                         focus:bg-white focus:outline-none" required></input>
                 </div>
         
                 <div className="text-right mt-2">
-                  <Link to="/ForgetPassword" className="text-sm font-semibold text-gray-700 hover:text-yellow-400 focus:text-yellow-400">Mot de passe oublié ?</Link>
+                  <Link to="/ForgetPassword" className="text-sm font-semibold text-gray-700 hover:text-yellow-400 focus:text-yellow-400">{login[lang].passwordMessage}</Link>
                 </div>
         
                  {btn ? <button className="w-full block bg-yellow-500 hover:bg-yellow-400 focus:bg-yellow-400 text-white font-semibold rounded-lg
                       px-4 py-3 mt-6">Connexion</button> : <button className="cursor-not-allowed w-full block bg-yellow-500 hover:bg-yellow-400 focus:bg-yellow-400 text-white font-semibold rounded-lg
-                      px-4 py-3 mt-6" disabled >Connexion</button> }
-
-
-                  
-
-
+                      px-4 py-3 mt-6" disabled >{login[lang].btnConnect}</button> }
               </form>
            
               <hr className="my-6 border-gray-300 w-full"></hr>
-      
+        
+              <button type="button" className="w-full block bg-white hover:bg-yellow-400 focus:bg-yellow-400 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-yellow-500"
+             >
+                    <div className="flex items-center justify-center">
+                    <span className="ml-4">
+                    {login[lang].btnGoogle}
+                    </span>
+                    </div>
+                  </button>
 
-            
+                  {/* <GoogleLogin/> */}
         <br/> 
-              <p className="mt-8">Nouveau chez Agro-Click ? <Link className="text-yellow-500 hover:text-yellow-400 font-semibold" to="/signup" >Créez un compte.</Link>
+              <p className="mt-8">{login[lang].description} <Link className="text-yellow-500 hover:text-yellow-400 font-semibold" to="/signup" > {login[lang].createAccount}</Link>
               </p>
               <div className="flex items-center justify-center">
               <img className="w-20 h-20 pt-6" src={Logo} alt="logo"></img>

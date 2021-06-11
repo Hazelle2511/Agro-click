@@ -17,37 +17,45 @@ import AccessProfil from './Components/Welcome/accessProfil.jsx';
 import accessProfil from './Components/Welcome/accessProfil.jsx';
 import Footer from './Components/Footer';
 import ForgetPassword from './Components/ForgetPassword/MdpOublie';
+import User1Profile from './Components/User1Profile';
 
 
 
 
 export default () => {
+
     const [isOpen, setIsOpen] = useState(false) ;
+  
     
     const toggle = () => {
         setIsOpen(!isOpen)
     };
+
 
     useEffect(() => {
         const hideMenu = () => {
             window.innerWidth > 768 && isOpen ? setIsOpen(false): null;
             // console.log('resize')
         }
-    
-    window.addEventListener('resize', hideMenu);
 
-    return() => {
-        window.removeEventListener('resize', hideMenu);
-    }
-})
+
+        //For 
+        window.addEventListener('resize', hideMenu);
+       
+
+        return() => {
+            window.removeEventListener('resize', hideMenu);
+        }
+
+      
+}, [])
     return(
         <>
-       
-            {/* {
-           <Accueil/> */} 
+         
+         
+          
            <Navbar toggle={toggle} />
            <Dropdown toggle={toggle} isOpen={isOpen}/>
-          {/* <Searchbar /> */}
            <Switch>
                <Route path="/" exact component = {Accueil} />
                <Route path="/signup" component = {Signup} />
@@ -57,17 +65,13 @@ export default () => {
                <Route path="/Logout" component = {Logout} />
                <Route path="/accessProfil" component = {accessProfil} />
                <Route path="/ForgetPassword" component = {ForgetPassword} />
-
-             
-
+               <Route path="/Profile" component = {User1Profile}/>
            </Switch>
 
            <Footer/>
-          
-         
-          
-           {/* <GoogleMap /> */}
         
+      
+         
 
         
 

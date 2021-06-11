@@ -3,6 +3,13 @@ import {Link} from 'react-router-dom';
 import Logo from '../images/2.png';
 import Searchbar from "./Searchbar";
 
+import nav from '../../public/locales/components/nav.json';
+
+//For multilanguage translation
+const locale = navigator.language.substr(0, 2)
+const lang = Object.keys(nav).includes(locale) ? locale : 'fr' 
+//
+
 
 function Navbar({toggle}) {
     // flex justify-between items-center h-16 bg-white text-black relative shadow-sm font-mono sticky top-0 z-50
@@ -10,21 +17,7 @@ function Navbar({toggle}) {
     return(
         <nav className="flex justify-between items-center h-16 bg-white text-black relative shadow-sm font-mono sticky top-0 z-50">
             <Link to ="/"><img src={Logo} alt="carrot" className="w-22 h-10"/></Link>
-           
-        {/* Anais */}
-            {/* <div className="p-2">
-                <div className="bg-white flex items-center rounded-full shadow-sm">
-                <input className="rounded-l-full w-full py-1 px-1 text-gray-700 leading-tight focus:outline-none " id="search" type="text" placeholder="Rechercher"></input>
-          
-            <div className="p-2">
-                <button className="bg-yellow-500 text-white rounded-full p-1 hover:bg-yellow-400 focus:outline-none w-6 h-6 flex items-center justify-center">
-            
-            </button>
-            
-                   
-            </div>
-          </div>
-        </div>   */}
+  
         <Searchbar />
 
           {/* Hazelle   */}
@@ -40,10 +33,10 @@ function Navbar({toggle}) {
             {/* pr-5 */}
           
 
-                <Link className="p-4" to="/">Accueil</Link>
-                <Link className="p-4" to="/signup">Inscription</Link>
-                <Link className="p-4" to="/Login">Connexion</Link>
-                <Link className="p-4" to="/contact">Contact</Link>
+                <Link className="p-4" to="/">{nav[lang].home}</Link>
+                <Link className="p-4" to="/signup">{nav[lang].signUp}</Link>
+                <Link className="p-4" to="/Login">{nav[lang].logIn}</Link>
+                <Link className="p-4" to="/contact">{nav[lang].contact}</Link>
                 {/* <Link className="p-4" to="/ShoppingCard">Panier</Link> */}
 
             </div>
