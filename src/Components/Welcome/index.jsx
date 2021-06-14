@@ -2,6 +2,7 @@ import React, {useState, Fragment, useContext, useEffect} from 'react';
 import { FirebaseContext } from '../firebase';
 import Logout from '../Logout';
 import AccessProfil from '../Welcome';
+// import profilLogUser from '../Welcome';
 
 
 const Welcome = props => {
@@ -28,6 +29,7 @@ const Welcome = props => {
     ) :  (
         <div>
             <div>
+                {/* <profilLogUser/> */}
                 <Logout/>
                 <AccessProfil/>
             </div>

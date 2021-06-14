@@ -27,8 +27,9 @@ const firebase = useContext(FirebaseContext);
     <label className="switch">
         <input onChange={handleChange}
         type ="checkbox"
-        checked = {checked} />
-        <span className="slider round"></span>
+        // checked = {checked}
+        className = "rounded-full form-radio h-8 w-8 text-orange-600 " />
+        <span className="rounded-full py-3 px-6">PILLS</span>
     </label>
 </div>
 
