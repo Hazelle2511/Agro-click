@@ -2,16 +2,17 @@ import React, {Component, Fragment} from 'react';
 import { Link } from 'react-router-dom';
 
 
-class profilLogUser extends Component {
+const profilLogUser = (props) => {
 
-    constructor() {
-        super()
-        this.state = {
-            User: null
-        }
-    }
+     console.log(props);
+    // constructor() {
+    //     super()
+    //     this.state = {
+    //         User: null
+    //     }
+    // }
 
-    render() {
+    // render() {
     return(
 
         <div className="bg-gray-100">
@@ -65,7 +66,7 @@ class profilLogUser extends Component {
                            
                            
                     </div>
-                    <h1 className="text-gray-900 font-bold text-xl leading-8 my-1">Lucie</h1>
+                    {/* <h1 className="text-gray-900 font-bold text-xl leading-8 my-1">{props.userData.fName}</h1> */}
                     <ul
                         className="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
                        
@@ -127,7 +128,7 @@ class profilLogUser extends Component {
                             <div className="grid grid-cols-2">
                                 <div className="px-4 py-2 font-semibold">Email</div>
                                 <div className="px-4 py-2">
-                                    <a className="text-green-700" href="mailto:jane@example.com">luciedoe@gmail.com</a>
+                                    {/* <a className="text-green-700" href="mailto:jane@example.com">{props.email}</a> */}
                                 </div>
                             </div>
                             
@@ -169,6 +170,6 @@ class profilLogUser extends Component {
     )
 
 }
-}
+
 
 export default profilLogUser

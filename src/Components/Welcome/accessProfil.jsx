@@ -1,6 +1,6 @@
 import React from 'react';
-import Logout from '../Logout';
-import AccessProfil from '../Welcome';
+import profilLogUser from './profilLogUser';
+
 
 
 const accessProfil = () => {
@@ -8,7 +8,7 @@ const accessProfil = () => {
     return (
         <div className="">
             <div className="container">
-                <AccessProfil/>
+                <profilLogUser userData={userData}/>
             </div>
         </div>
     )

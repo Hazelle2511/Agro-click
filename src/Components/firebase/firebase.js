@@ -89,6 +89,9 @@ passwordReset = email => this.auth.sendPasswordResetEmail(email);
 
 // signInWithPopup = () => this.auth.GoogleAuthProvider();
 
+// for profil log users
+user = uid => this.db.doc(`users/${uid}`);
+
 };
 
 

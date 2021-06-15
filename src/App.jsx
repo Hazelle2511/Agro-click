@@ -13,7 +13,6 @@ import Panier from './Components/ShoppingCard';
 import GoogleMap from './Components/GoogleMap'
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 import Logout from './Components/Logout/index';
-import AccessProfil from './Components/Welcome/accessProfil.jsx';
 import accessProfil from './Components/Welcome/accessProfil.jsx';
 import Footer from './Components/Footer';
 import ForgetPassword from './Components/ForgetPassword/MdpOublie';
