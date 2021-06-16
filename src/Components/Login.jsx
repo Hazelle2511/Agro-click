@@ -148,8 +148,8 @@ const Login = (props) => {
               <hr className="my-6 border-gray-300 w-full"></hr>
         
               <button type="button" className="w-full block bg-white hover:bg-yellow-400 focus:bg-yellow-400 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-yellow-500"
-             >
-                    <div className="flex items-center justify-center">
+              // onClick={onClickGoogle}
+                    ><div className="flex items-center justify-center">
                     <span className="ml-4">
                     {login[lang].btnGoogle}
                     </span>
