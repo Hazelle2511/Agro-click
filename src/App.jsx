@@ -16,7 +16,7 @@ import Logout from './Components/Logout/index';
 import accessProfil from './Components/Welcome/accessProfil.jsx';
 import Footer from './Components/Footer';
 import ForgetPassword from './Components/ForgetPassword/MdpOublie';
-import User1Profile from './Components/User1Profile';
+// import User1Profile from './Components/User1Profile';
 import profilLogUser from './Components/Welcome/profilLogUser';
 // import AgriProfilePublic from './Components/Public';
 import ProfileAgri from './Components/ProfileAgri';
