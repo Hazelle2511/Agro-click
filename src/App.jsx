@@ -13,11 +13,11 @@ import Panier from './Components/ShoppingCard';
 import GoogleMap from './Components/GoogleMap'
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 import Logout from './Components/Logout/index';
-import AccessProfil from './Components/Welcome/accessProfil.jsx';
 import accessProfil from './Components/Welcome/accessProfil.jsx';
 import Footer from './Components/Footer';
 import ForgetPassword from './Components/ForgetPassword/MdpOublie';
 import User1Profile from './Components/User1Profile';
+import profilLogUser from './Components/Welcome/profilLogUser';
 
 
 
@@ -62,6 +62,7 @@ export default () => {
                <Route path="/login" component = {Login} />
                <Route path="/contact" component = {Contact} />
                <Route path="/ShoppingCard" component = {Panier} />
+               <Route path="/profilLogUser" component = {profilLogUser} />
                <Route path="/Logout" component = {Logout} />
                <Route path="/accessProfil" component = {accessProfil} />
                <Route path="/ForgetPassword" component = {ForgetPassword} />

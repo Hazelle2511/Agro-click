@@ -45,9 +45,16 @@ const Signup = (props) => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        const {email, password} = loginData;
+        const {email, password, fName} = loginData;
     
-        firebase.signupUser(email, password )
+        firebase.signupUser(email, password)
+        .then(authUser => {
+            return firebase.user(authUser.user.uid).set( {
+                fName,
+                lName,
+                email,
+            })
+        })
         .then(user => {
             setLoginData({...data});
             props.history.push('/');

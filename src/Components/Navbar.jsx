@@ -37,6 +37,7 @@ function Navbar({toggle}) {
                 <Link className="p-4" to="/signup">{nav[lang].signUp}</Link>
                 <Link className="p-4" to="/Login">{nav[lang].logIn}</Link>
                 <Link className="p-4" to="/contact">{nav[lang].contact}</Link>
+                <Link className="p-4" to="/profilLogUser">{nav[lang].profilLogUser}</Link>
                 {/* <Link className="p-4" to="/ShoppingCard">Panier</Link> */}
 
             </div>
