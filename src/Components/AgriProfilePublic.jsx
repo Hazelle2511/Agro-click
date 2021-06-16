@@ -1,8 +1,10 @@
 import React from 'react';
 import ImageUpload from './ImageUploader';
+// import {auth, db, getDocs,collection} from "./firebase/firebase";
+// import AgriculteurDetails from './AgriculteurDetails';
 
 
-export default function User1Profile(props) {
+export default function AgriProfilePublic(props) {
 
     console.log('Props Data', props)
     return (
@@ -33,7 +35,7 @@ export default function User1Profile(props) {
                 <div  className="relative" x-data="{ open: false }">
                     <button 
                         className="flex flex-row items-center space-x-2 w-full px-4 py-2 mt-2 text-sm font-semibold text-left  bg-yellow-500 hover:bg-blue-800 md:w-auto md:inline md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-blue-800 focus:outline-none focus:shadow-outline">
-                        <span>Chez meme et pepe</span>
+                        <span>{props.name}</span>
                        
                         {/* <img className="inline h-6 rounded-full"
                             src="https://avatars2.githubusercontent.com/u/24622175?s=60&amp;v=4"/> */}
@@ -77,16 +79,16 @@ export default function User1Profile(props) {
                         {/* <img className="h-auto w-full mx-auto"
                             src="https://lavinephotography.com.au/wp-content/uploads/2017/01/PROFILE-Photography-112.jpg"
                             alt=""/> */}
-                            <ImageUpload/>
-                           
+                            {/* <ImageUpload/> */}
+                            <img className="h-auto w-full mx-auto"
+                            src={props.image}
+                            alt="Profile Pic"/>
                            
                     </div>
-                    <h1 className="text-gray-900 font-bold text-xl leading-8 my-1">Chez meme et pepe</h1>
-                    <h3 className="text-gray-600 font-lg text-semibold leading-6">Owner at Her Company Inc.</h3>
-                    <p className="text-sm text-gray-500 hover:text-gray-600 leading-6">Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit.
-                        Reprehenderit, eligendi dolorum sequi illum qui unde aspernatur non deserunt</p>
-                    <ul
+                    <h1 className="text-gray-900 font-bold text-xl leading-8 my-1"> {props.FName} {props.LName}</h1>
+                    <h3 className="text-gray-600 font-lg text-semibold leading-6">Owner  at <span className="text-green-500">{props.name}.</span></h3>
+                    <p className="text-sm text-gray-500 hover:text-gray-600 leading-6">{props.description}</p>
+                    {/* <ul
                         className="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
                         <li className="flex items-center py-3">
                             <span>Status</span>
@@ -98,7 +100,7 @@ export default function User1Profile(props) {
                             <span className="ml-auto">{props.name}</span>
                           
                         </li>
-                    </ul>
+                    </ul> */}
                 </div>
                 {/* <!-- End of profile card --> */}
                 <div className="my-4"></div>
@@ -119,34 +121,41 @@ export default function User1Profile(props) {
                         </span>
                         <span className="tracking-wide">A propos</span>
                     </div>
+                    
                     <div className="text-gray-700">
                         <div className="grid md:grid-cols-2 text-sm">
                              <div className="grid grid-cols-2">
                                 <div className="px-4 py-2 font-semibold">Prénom</div>
-                                <div className="px-4 py-2">Jane</div>
+                                <div className="px-4 py-2">{props.FName}</div>
                             </div>
                             <div className="grid grid-cols-2">
                                 <div className="px-4 py-2 font-semibold">Nom</div>
-                                <div className="px-4 py-2">Doe</div>
+                                <div className="px-4 py-2">{props.LName}</div>
                             </div>
-                            <div className="grid grid-cols-2">
+                            {/* <div className="grid grid-cols-2">
                                 <div className="px-4 py-2 font-semibold">Contact No.</div>
-                                <div className="px-4 py-2">+11 998001001</div>
+                                <div className="px-4 py-2">key here:{props.key}</div>
+                            </div> */}
+                              <div className="grid grid-cols-2">
+                                <div className="px-4 py-2 font-semibold">Email.</div>
+                                <div className="px-4 py-2">
+                                    <a className="text-blue-800" href="mailto:jane@example.com">{props.Email}</a>
+                                </div>
                             </div>
                             <div className="grid grid-cols-2">
                                 <div className="px-4 py-2 font-semibold">Current Address</div>
-                                <div className="px-4 py-2">Beech Creek, PA, Pennsylvania</div>
+                                <div className="px-4 py-2">{props.addresse}</div>
                             </div>
-                            <div className="grid grid-cols-2">
+                            {/* <div className="grid grid-cols-2">
                                 <div className="px-4 py-2 font-semibold">Permanant Address</div>
                                 <div className="px-4 py-2">Arlington Heights, IL, Illinois</div>
-                            </div>
-                            <div className="grid grid-cols-2">
+                            </div> */}
+                            {/* <div className="grid grid-cols-2">
                                 <div className="px-4 py-2 font-semibold">Email.</div>
                                 <div className="px-4 py-2">
                                     <a className="text-blue-800" href="mailto:jane@example.com">jane@example.com</a>
                                 </div>
-                            </div>
+                            </div> */}
                             
                         </div>
                     </div>
@@ -169,7 +178,18 @@ export default function User1Profile(props) {
                                             d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                                     </svg>
                                 </span>
-                                <span className="tracking-wide">Produits</span>
+                                <div>
+                                    <span className="tracking-wide">Produits</span>
+                                    <div className="image overflow-hidden">
+                                    {/* h-auto w-full mx-auto */}
+                                        <img className="h-2/4 w-2/4 mx-auto"
+                                        src={props.produits}
+                                        alt="Products Pics"/>
+                                        {/* {props.produits} */}
+                                    </div>
+                                
+                            
+                                </div>
                             </div>
                           
                         </div>
