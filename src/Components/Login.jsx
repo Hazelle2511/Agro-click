@@ -47,7 +47,7 @@ const Login = (props) => {
       // console.log('ok loginuser2', user);
       setEmail('');
       setPassword('');
-  props.history.push('/welcome'); 
+  props.history.push('/profilLogUser'); 
     } catch (error) {
       console.warn('error', error);
       setError(error);
