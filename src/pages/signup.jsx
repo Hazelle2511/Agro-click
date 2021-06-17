@@ -44,7 +44,27 @@ const Signup = (props) => {
     }
 
     const handleSubmit = e => {
-        e.preventDefault();
+        if (error === null) {
+            const {email, password, fName} = loginData;
+    
+            firebase.signupUser(email, password)
+            .then(authUser => {
+                return firebase.user(authUser.user.uid).set( {
+                    fName,
+                    lName,
+                    email,
+                })
+            })
+            .then(user => {
+                setLoginData({...data});
+                props.history.push('/');
+            })
+    
+            .catch(error => {
+            setError(error);
+            setLoginData({...data});
+            }) 
+        } else if (error !== null) { e.preventDefault()
         const {email, password, fName} = loginData;
     
         firebase.signupUser(email, password)
@@ -64,7 +84,7 @@ const Signup = (props) => {
         setError(error);
         setLoginData({...data});
         })
-    }
+    }};
 
     const {fName, lName, email, password, cPassword} = loginData;
     
@@ -74,7 +94,28 @@ const Signup = (props) => {
 
     //gestion des erreurs
 
-    const errorMsg = error !== '' && <span>{error.message}</span>;
+    const errorMsg = error !== '' && <div className="alert flex flex-row items-center bg-yellow-200 p-5 rounded border-b-2 border-yellow-300">
+			<div className="alert-icon flex items-center bg-yellow-100 border-2 border-yellow-500 justify-center h-10 w-10 flex-shrink-0 rounded-full">
+				<span className="text-yellow-500">
+					<svg fill="currentColor"
+						 viewBox="0 0 20 20"
+						 class="h-6 w-6">
+						<path fill-rule="evenodd"
+							  d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+							  clip-rule="evenodd"></path>
+					</svg>
+				</span>
+			</div>
+			<div className="alert-content ml-4">
+				<div className="alert-title font-semibold text-lg text-yellow-800">
+					Attention
+				</div>
+				<div className="alert-description text-sm text-yellow-600">
+					- Votre mot de passe doit comporter minimum 5 caractères
+				</div>
+			</div>
+	</div>;
+    // <span>{error.message}</span>
 
 
     // const handleClick = async e =>  { 
@@ -118,11 +159,13 @@ const Signup = (props) => {
             </div>
             <div className="w-full md:w-1/2 py-10 px-5 md:px-10">
                                 <div className="text-center mb-10">
-                                    {errorMsg}
+                                
                     <h1 className="font-bold text-3xl -my-8 text-gray-900">{signup[lang].title}</h1>
                     
                 </div>
                 <form onSubmit={handleSubmit}>
+                    {errorMsg}
+
                 <div className="flex -mx-3">
                     <div className="w-full px-3 mb-5">
                                 <label  htmlFor="" className="text-xs font-semibold px-1">{signup[lang].labelFname}</label>

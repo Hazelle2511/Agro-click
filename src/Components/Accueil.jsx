@@ -28,7 +28,7 @@ class Accueil extends Component {
                     <header className="relative flex items-center justify-center h-screen w-screen overflow-hidden sm:h-auto sm:w-auto">
                         <div className="relative z-20 p-5 lg:text-7xl md:text-5xl sm:text-5xl sm:mt-28 text-2xl font-block mb-14 flex flex-col justify-center items-center mb-14 text-center ">
                             {accueil[lang].title}
-                            <Link  to="/" className="py-6 px-10 rounded-full
+                            <Link  to="/ShoppingCard" className="py-6 px-10 rounded-full
                                 text-3xl bg-yellow-500 hover:bg-yellow-700 focus:bg-yellow-700  transition duration-300 ease-in-out flex items-center animate-bounce mt-10 text-white sm: mt-28">
                                {accueil[lang].btnOrder}
                                 <svg className="w-6 h-6 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
@@ -58,9 +58,7 @@ class Accueil extends Component {
                             <p>
                             <strong className="text-gray-900 font-medium">AGRO CLICK</strong>  {accueil[lang].description}  &mdash;
                             </p>
-                            <p className="mt-6">
-                            <Link to="/"  className="font-medium text-yellow-500 hover:text-yellow-400">{accueil[lang].btnMoreInfo}   &rarr;</Link>
-                            </p>
+                            
                         </div>
                         </div>
                     </div>  
