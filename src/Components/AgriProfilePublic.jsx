@@ -1,24 +1,25 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import Agriculteur from './Agriculteur';
+import {auth, db, getDocs,collection} from "./firebase/firebase";
 import ImageUpload from './ImageUploader';
-// import {auth, db, getDocs,collection} from "./firebase/firebase";
-// import AgriculteurDetails from './AgriculteurDetails';
-
 
 export default function AgriProfilePublic(props) {
 
-    console.log('Props Data', props)
+
+   
     return (
     
 
 
 <div className="bg-gray-100">
+
  <div className="w-full text-white bg-main-color">
         <div x-data="{ open: false }"
             className="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
             <div className="p-4 flex flex-row items-center justify-between">
                 <a href="#"
                     className="text-lg font-semibold tracking-widest uppercase text-green-700 rounded-lg focus:outline-none focus:shadow-outline">
-                    Profil Agriculteur</a>
+                    Profil Agriculteur </a>
                 <button className="md:hidden rounded-lg focus:outline-none focus:shadow-outline">
                     <svg fill="currentColor" viewBox="0 0 20 20" className="w-6 h-6">
                         <path x-show="!open" fillRule="evenodd"
@@ -74,34 +75,37 @@ export default function AgriProfilePublic(props) {
             {/* <!-- Left Side --> */}
             <div className="w-full md:w-3/12 md:mx-2">
                 {/* <!-- Profile Card --> */}
+
+             
+                
                 <div className="bg-white p-3 border-t-4 border-green-400">
-                    <div className="image overflow-hidden">
-                        {/* <img className="h-auto w-full mx-auto"
-                            src="https://lavinephotography.com.au/wp-content/uploads/2017/01/PROFILE-Photography-112.jpg"
-                            alt=""/> */}
-                            {/* <ImageUpload/> */}
-                            <img className="h-auto w-full mx-auto"
-                            src={props.image}
-                            alt="Profile Pic"/>
-                           
-                    </div>
-                    <h1 className="text-gray-900 font-bold text-xl leading-8 my-1"> {props.FName} {props.LName}</h1>
-                    <h3 className="text-gray-600 font-lg text-semibold leading-6">Owner  at <span className="text-green-500">{props.name}.</span></h3>
-                    <p className="text-sm text-gray-500 hover:text-gray-600 leading-6">{props.description}</p>
-                    {/* <ul
-                        className="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
-                        <li className="flex items-center py-3">
-                            <span>Status</span>
-                            <span className="ml-auto"><span
-                                    className="bg-green-500 py-1 px-2 rounded text-white text-sm">Active</span></span>
-                        </li>
-                        <li className="flex items-center py-3">
-                            <span>Member since</span>
-                            <span className="ml-auto">{props.name}</span>
-                          
-                        </li>
-                    </ul> */}
+                <div className="image overflow-hidden">
+                    
+                        {/* <ImageUpload/> */}
+                        <img className="h-auto w-full mx-auto"
+                        src={props.image}
+                        alt="Profile Pic"/>
+                       
                 </div>
+                <h1 className="text-gray-900 font-bold text-xl leading-8 my-1"> {Agriculteur.FName} {props.LName}</h1>
+                <h3 className="text-gray-600 font-lg text-semibold leading-6">Owner  at <span className="text-green-500">{props.name}.</span></h3>
+                <p className="text-sm text-gray-500 hover:text-gray-600 leading-6">{props.description}</p>
+                {/* <ul
+                    className="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
+                    <li className="flex items-center py-3">
+                        <span>Status</span>
+                        <span className="ml-auto"><span
+                                className="bg-green-500 py-1 px-2 rounded text-white text-sm">Active</span></span>
+                    </li>
+                    <li className="flex items-center py-3">
+                        <span>Member since</span>
+                        <span className="ml-auto">{props.name}</span>
+                      
+                    </li>
+                </ul> */}
+            </div>
+                {/* )} */}
+               
                 {/* <!-- End of profile card --> */}
                 <div className="my-4"></div>
               
@@ -185,7 +189,10 @@ export default function AgriProfilePublic(props) {
                                         <img className="h-2/4 w-2/4 mx-auto"
                                         src={props.produits}
                                         alt="Products Pics"/>
-                                        {/* {props.produits} */}
+                                        <br/>
+                                         <img className="h-2/4 w-2/4 mx-auto"
+                                        src={props.produits2}
+                                        alt="Products Pics"/>
                                     </div>
                                 
                             

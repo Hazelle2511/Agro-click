@@ -19,7 +19,8 @@ import ForgetPassword from './Components/ForgetPassword/MdpOublie';
 // import User1Profile from './Components/User1Profile';
 import profilLogUser from './Components/Welcome/profilLogUser';
 // import AgriProfilePublic from './Components/Public';
-import ProfileAgri from './Components/ProfileAgri';
+import location from './Components/ProfileAgri';
+import AgriProfilePublic from './Components/AgriProfilePublic';
 
 
 
@@ -69,7 +70,11 @@ export default () => {
                <Route path="/Logout" component = {Logout} />
                <Route path="/accessProfil" component = {accessProfil} />
                <Route path="/ForgetPassword" component = {ForgetPassword} />
-               <Route path="/Profile/" component = {ProfileAgri}/>
+               <Route path="/Profile/" component = {location}/>
+
+
+
+              
            </Switch>
 
            <Footer/>
