@@ -87,7 +87,7 @@ export default function AgriProfilePublic(props) {
                         alt="Profile Pic"/>
                        
                 </div>
-                <h1 className="text-gray-900 font-bold text-xl leading-8 my-1"> {Agriculteur.FName} {props.LName}</h1>
+                <h1 className="text-gray-900 font-bold text-xl leading-8 my-1"> {props.FName} {props.LName}</h1>
                 <h3 className="text-gray-600 font-lg text-semibold leading-6">Owner  at <span className="text-green-500">{props.name}.</span></h3>
                 <p className="text-sm text-gray-500 hover:text-gray-600 leading-6">{props.description}</p>
                 {/* <ul
