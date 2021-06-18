@@ -2,7 +2,7 @@
 
 # AgroClick
 
-The goal of the website is to help local farmer promote,  sale  and deliver their products to the people near them. It helps the user know whose local farmer available near them. The website  **MUST**  be  **responsive/adaptive** to the most usable devices. 
+The goal of the website is to help local farmers promote,  sale  and deliver their products to the people near them. It helps the user to know who are the local farmers available around them. The website  **MUST**  be  **responsive/adaptive** to the most usable devices. 
 
 
 ## Built With
@@ -73,4 +73,9 @@ Project Link: https://projetcyb.netlify.app/
 - [Netlify](https://app.netlify.com/)
 - [Heroicons](https://heroicons.dev/)
 - [GoogleMapPlatform Api](https://developers.google.com/maps)
+
+
+### Project Status
+The development will slow down after the internship .
+
 
