@@ -1,0 +1,21 @@
+{
+    "en": {
+        "home": "Home",
+        "signUp": "Sign Up",
+        "logIn": "Log In",
+        "contact": "Contact",
+        "recherche": "Search..."
+
+    },
+    "fr": {
+        "home": "Accueil",
+        "signUp": "Inscription",
+        "logIn": "Connexion",
+        "contact": "Contact",
+        "recherche": "Recherche..."
+    }
+
+
+
+
+}

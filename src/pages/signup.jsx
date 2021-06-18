@@ -4,6 +4,16 @@ import { Link } from 'react-router-dom';
 import Logo from '../images/Agro-click.png';
 import Contactbg from '../images/mill.gif';
 import {FirebaseContext} from '../Components/firebase';
+import 'firebase/auth';
+// import {firebaseApp,provider} from '../../../services/firebase_setup';
+// import { getAuth, signInWithPopup, GoogleAuthProvider, signOut} from "firebase/auth";
+import signup from '../../public/locales/components/signup.json';
+
+//For multilanguage translation
+const locale = navigator.language.substr(0, 2)
+const lang = Object.keys(signup).includes(locale) ? locale : 'fr' 
+//
+
 
 
 
@@ -11,7 +21,10 @@ import {FirebaseContext} from '../Components/firebase';
 const Signup = (props) => {
 
    const firebase = useContext(FirebaseContext);
-   console.log(firebase);
+//    console.log(firebase);
+
+// this.auth = firebase.auth;
+// this.auth_ = firebase.auth();
 
     
     const data = {
@@ -32,9 +45,16 @@ const Signup = (props) => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        const {email, password} = loginData;
+        const {email, password, fName} = loginData;
     
-        firebase.signupUser(email, password )
+        firebase.signupUser(email, password)
+        .then(authUser => {
+            return firebase.user(authUser.user.uid).set( {
+                fName,
+                lName,
+                email,
+            })
+        })
         .then(user => {
             setLoginData({...data});
             props.history.push('/');
@@ -50,18 +70,67 @@ const Signup = (props) => {
     
    const btn = fName == '' || lName == '' || email == '' || password == '' || password !== cPassword
 
-    ? <button className="block w-full max-w-xs mx-auto bg-yellow-500 hover:bg-yellow-700 focus:bg-yellow-700 text-white rounded-lg px-3 py-3 font-semibold cursor-not-allowed" disabled >Inscription</button> : <button className="block w-full max-w-xs mx-auto bg-yellow-500 hover:bg-yellow-700 focus:bg-yellow-700 text-white rounded-lg px-3 py-3 font-semibold">Inscription</button>
+    ? <button className="block w-full max-w-xs mx-auto bg-yellow-500 hover:bg-yellow-700 focus:bg-yellow-700 text-white rounded-lg px-3 py-3 font-semibold cursor-not-allowed" disabled >{signup[lang].btnSignup}</button> : <button className="block w-full max-w-xs mx-auto bg-yellow-500 hover:bg-yellow-700 focus:bg-yellow-700 text-white rounded-lg px-3 py-3 font-semibold">Inscription</button>
 
     //gestion des erreurs
 
-    const errorMsg = error !== '' && <span>{error.message}</span>;
+    const errorMsg = error !== '' && <div className="alert flex flex-row items-center bg-yellow-200 p-5 rounded border-b-2 border-yellow-300">
+			<div className="alert-icon flex items-center bg-yellow-100 border-2 border-yellow-500 justify-center h-10 w-10 flex-shrink-0 rounded-full">
+				<span className="text-yellow-500">
+					<svg fill="currentColor"
+						 viewBox="0 0 20 20"
+						 class="h-6 w-6">
+						<path fill-rule="evenodd"
+							  d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+							  clip-rule="evenodd"></path>
+					</svg>
+				</span>
+			</div>
+			<div className="alert-content ml-4">
+				<div className="alert-title font-semibold text-lg text-yellow-800">
+					Attention
+				</div>
+				<div className="alert-description text-sm text-yellow-600">
+					- Votre mot de passe doit comporter au minimum 5 caractères
+				</div>
+			</div>
+	</div>;
+    // <span>{error.message}</span>
+
+
+    // const handleClick = async e =>  { 
+    //     console.log('googlebutton')
+    //     var provider = new this.auth.GoogleAuthProvider();
+    //     this.auth_.signInWithPopup(provider)
+    //     .then((result) => {
+         
+    //       // /** @type {firebase.auth.OAuthCredential} */
+    //       var credential = result.credential;
+      
+    //       // This gives you a Google Access Token. You can use it to access the Google API.
+    //       var token = credential.accessToken;
+    //       // The signed-in user info.
+    //       var user = result.user;
+    //       // ...
+    //     }).catch((error) => {
+    //       console.log(error);
+    //     }); 
+    //   }
+      
+    //     const signOut = () => {
+    //   signOut(auth).then(() => {
+    //     console.log('signoutOK')
+    //   }).catch((error) => {
+    //     console.log('signout error')
+    //   });
+    //   }
 
   
     return (
       
         // bg-gray-900
-<div className="min-w-screen min-h-screen bg-gray-200   flex items-center justify-center px-5 py-5">
-    <div className="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden" style={{maxWidth: "1000px"}}>
+<div className="w-screen h-screen flex items-center justify-center px-5 py-5">
+    <div className="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden" >
         <div className="md:flex w-full">
             <div className="hidden md:block w-1/2  py-10 px-10">
             {/* bg-indigo-500 */}
@@ -70,65 +139,77 @@ const Signup = (props) => {
             </div>
             <div className="w-full md:w-1/2 py-10 px-5 md:px-10">
                                 <div className="text-center mb-10">
-                                    {errorMsg}
-                    <h1 className="font-bold text-3xl text-gray-900">INSCRIPTION</h1>
+                                    
+                    <h1 className="font-bold text-3xl -my-8 text-gray-900">{signup[lang].title}</h1>
                     
                 </div>
                 <form onSubmit={handleSubmit}>
+                    {errorMsg}
                 <div className="flex -mx-3">
                     <div className="w-full px-3 mb-5">
-                                <label  htmlFor="" className="text-xs font-semibold px-1">Prénom</label>
+                                <label  htmlFor="" className="text-xs font-semibold px-1">{signup[lang].labelFname}</label>
                                 <div className="flex">
                                     <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                    <input onChange={handleChange} value={fName} name='fName' type="text" required className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Jane"/>
+                                    <input onChange={handleChange} value={fName} name='fName' type="text" required className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-yellow-500" placeholder="Jane"/>
                                 </div>
                     </div>
                     </div>
                     <div className="flex -mx-3">
                             <div className="w-full px-3 mb-5">
-                                        <label htmlFor="" className="text-xs font-semibold px-1">Nom de famille</label>
+                                        <label htmlFor="" className="text-xs font-semibold px-1">{signup[lang].labelLname}</label>
                                         <div className="flex">
                                             <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                            <input required name='lName' value={lName} onChange={handleChange} type="text" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Doe"/>
+                                            <input required name='lName' value={lName} onChange={handleChange} type="text" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-yellow-500" placeholder="Doe"/>
                                         </div>
                             </div>
                     </div>
                     <div className="flex -mx-3">
                         <div className="w-full px-3 mb-5">
-                            <label htmlFor="" className="text-xs font-semibold px-1">Email</label>
+                            <label htmlFor="" className="text-xs font-semibold px-1">{signup[lang].labelEmail}</label>
                             <div className="flex">
                                 <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
-                                <input required name='email' value={email} onChange={handleChange} type="email" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="janedoe@example.com"/>
+                                <input required name='email' value={email} onChange={handleChange} type="email" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-yellow-500" placeholder="janedoe@example.com"/>
                             </div>
                         </div>
                     </div>
                     <div className="flex -mx-3">
                         <div className="w-full px-3 mb-5">
-                            <label htmlFor="" className="text-xs font-semibold px-1">Mot de passe</label>
+                            <label htmlFor="" className="text-xs font-semibold px-1">{signup[lang].labelPassword}</label>
                             <div className="flex">
                                 <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
-                                <input required name='password' value={password} onChange={handleChange} type="password" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="*****"/>
+                                <input required name='password' value={password} onChange={handleChange} type="password" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-yellow-500" placeholder="*****"/>
                             </div>
                         </div>
                     </div>
                     <div className="flex -mx-3">
                         <div className="w-full px-3 mb-5">
-                            <label htmlFor="" className="text-xs font-semibold px-1">Confirmation du mot de passe</label>
+                            <label htmlFor="" className="text-xs font-semibold px-1">{signup[lang].labelConfirmation}</label>
                             <div className="flex">
                                 <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-lock-outline text-lg"></i></div>
-                                <input required name='cPassword' value={cPassword} onChange={handleChange} type="password" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="*****"/>
+                                <input required name='cPassword' value={cPassword} onChange={handleChange} type="password" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-yellow-500" placeholder="*****"/>
                             </div>
                         </div>
                     </div>
                     <div className="flex -mx-3">
                         <div className="w-full px-3 mb-5">
                          {btn}
+
                             {/* <button className="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold"></button> */}
                         </div>
                     </div>
+
+                    <div className="flex -mx-3">
+                        <div className="w-full px-3 mb-5">
+                        
+                         <button className="block w-full max-w-xs mx-auto bg-yellow-500 hover:bg-yellow-700 focus:bg-yellow-700 text-white rounded-lg px-3 py-3 font-semibold">{signup[lang].btnGoogle}</button>
+                            {/* <button className="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold"></button> */}
+                        </div>
+                    </div>
+                    
+                    
                 </form>
-                <div className="linkContainer"> <span> Déjà inscrit ? </span>
-                    <Link className="text-yellow-500 hover:text-yellow-400 font-semibold" to='/Login'>Connectez vous.</Link>
+                <div className="linkContainer text-center"> <span> {signup[lang].linkRegistered} </span>
+                    <Link className="text-yellow-500 hover:text-yellow-400 font-semibold" to='/Login'> {signup[lang].linkConnect}</Link>
                 </div>
             </div>
         </div>

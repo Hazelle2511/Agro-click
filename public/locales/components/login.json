@@ -1,0 +1,32 @@
+{
+    "en": {
+        "title": "Log In",
+        "description": "New to Agro-Click ? ",
+        "createAccount": "Create an account.",
+        "btnConnect": "Connect",
+        "btnGoogle": "Connect with Google",
+        "labelEmail": "E-mail",
+        "labelPassword": "Password",
+        "passwordMessage": "Forgot your password ?",
+        "alert": "Warning",
+        "alertPassword": "Wrong Password"
+
+
+    },
+    "fr": {
+        "title": "Se connecter",
+        "description": "Nouveau chez Agro-Click ? ",
+        "createAccount": "Créez un compte.",
+        "btnConnect": "Connexion",
+        "btnGoogle": "Se connecter avec Google",
+        "labelEmail": "E-mail",
+        "labelPassword": "Mot de passe",
+        "passwordMessage": "Mot de passe oublié?",
+        "alert": "Warning",
+        "alertPassword": "Wrong Password"
+    }
+
+
+
+
+}

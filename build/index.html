@@ -4,19 +4,38 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Starter Snowpack App" />
+    <meta name="theme-color" content= "#3367D6" />
     <link rel="stylesheet" type="text/css" href="./index.css" />
     <link rel="icon" type="image/png" href="Agro-click.png" sizes="16x16">
+
+    <!-- PWA -->
+    
+  
+    <link rel="manifest" href="manifest.json">
     <title>Agro-Click</title>
   </head>
   <body>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script> -->
 
     <div id="root">
      
+  <!-- <span id="pwaInstallLink" style= color:black, display:block>Loading</span> -->
       
     </div>
-    <!-- <h1>Welcome to Snowpack!</h1> -->
+   
     
     <script type="module" src="/dist/index.js"></script>
+
+    <!-- //For pwa, check if serviceWorker is available in you nav -->
+    <script>
+      if('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./serviceworker.js')
+            .then((reg) => console.log('Success: ', reg.scope))
+            .catch((err) => console.log('Failure: ', err))
+        })
+
+      }
+    </script>
   </body>
 </html>
