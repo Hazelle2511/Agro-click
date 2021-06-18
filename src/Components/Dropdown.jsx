@@ -9,7 +9,7 @@ const Dropdown = ({isOpen, toggle}) => {
     return(
 
         <div>
-        <div className={isOpen ? "px-2 bg-yellow rounded-md shadow dark-mode:bg-gray-800 text-center text-xl" : "hidden"} 
+        <div className={isOpen ? " fixed relative px-2 bg-yellow rounded-md shadow dark-mode:bg-gray-800 text-center text-xl" : "hidden"} 
         onClick={toggle}>
         <Transition show={isOpen}
         enter="transition ease-out duration-100" 
@@ -18,7 +18,7 @@ const Dropdown = ({isOpen, toggle}) => {
         leave="transition ease-in duration-75" 
         leaveFrom="transform opacity-100 scale-100" 
         leaveTo="transform opacity-0 scale-95" 
-        className=" fixed z-0 right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+        className=" right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
          
           <Link className="p-4 block font-semiblod hover:bg-gray-200" to="/">Accueil</Link>
                     <Link className="p-4 block font-semiblod hover:bg-gray-200 " to="/Login">Inscription</Link>
