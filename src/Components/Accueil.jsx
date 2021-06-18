@@ -40,33 +40,33 @@ class Accueil extends Component {
                             <source src={videoo} alt="video" type="video/mp4" ></source>   
                         </video>
                     </header>
+                    {/* xl: mb-72 sm: mb-12 */}
+                <main className="xl: mb-12 sm: mb-12">
 
-                <main className="xl: mb-72 sm: mb-12">
-
-                <div className="">
-                <div className="max-w-6xl mx-auto px-8 py-16">
-                    <div className="relative">
-                    <div className="relative lg:flex rounded-lg shadow-2xl overflow-hidden">
-                        <div className="h-56 lg:h-auto lg:w-5/12 relative flex items-center justify-center ">
-                        <img className="absolute h-full w-full object-cover" src={agri} alt="" />
+                    <div className="">
+                        <div className="max-w-6xl mx-auto px-8 py-16">
+                            <div className="relative">
+                            <div className="relative lg:flex rounded-lg shadow-2xl overflow-hidden">
+                                <div className="h-56 lg:h-auto lg:w-5/12 relative flex items-center justify-center ">
+                                <img className="absolute h-full w-full object-cover" src={agri} alt="" />
+                                </div>
+                                <div className="relative lg:w-7/12 bg-white">
+                                <svg className="absolute h-full text-white w-24 -ml-12" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                    <polygon points="50,0 100,0 50,100 0,100"/>
+                                </svg>
+                                <div className="relative py-12 lg:py-24 px-8 lg:px-16 text-gray-700 leading-relaxed">
+                                    <p>
+                                    <strong className="text-gray-900 font-medium">AGRO CLICK</strong>  {accueil[lang].description}  &mdash;
+                                    </p>
+                                    <p className="mt-6">
+                                    <Link to="/"  className="font-medium text-yellow-500 hover:text-yellow-400">{accueil[lang].btnMoreInfo}   &rarr;</Link>
+                                    </p>
+                                </div>
+                                </div>
+                            </div>  
+                            </div>
                         </div>
-                        <div className="relative lg:w-7/12 bg-white">
-                        <svg className="absolute h-full text-white w-24 -ml-12" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none">
-                            <polygon points="50,0 100,0 50,100 0,100"/>
-                        </svg>
-                        <div className="relative py-12 lg:py-24 px-8 lg:px-16 text-gray-700 leading-relaxed">
-                            <p>
-                            <strong className="text-gray-900 font-medium">AGRO CLICK</strong>  {accueil[lang].description}  &mdash;
-                            </p>
-                            <p className="mt-6">
-                            <Link to="/"  className="font-medium text-yellow-500 hover:text-yellow-400">{accueil[lang].btnMoreInfo}   &rarr;</Link>
-                            </p>
-                        </div>
-                        </div>
-                    </div>  
                     </div>
-                </div>
-                </div>
                 </main>
                 <Agriculteur/>
                 <GoogleMap />
