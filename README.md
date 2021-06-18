@@ -92,6 +92,14 @@ Thanks for these awesome resources that we used during the development:
     <img src="https://avatars.githubusercontent.com/u/2439389?v=4?s=100" width="100px;" alt=""/><br />
     <sub><b>Arthur Gregoire</b></sub></a><br /> 
     </td>
+     <td align="center"><a href="https://github.com/AnaisHammouche">
+    <img src="https://avatars.githubusercontent.com/u/72383729?v=4?s=100" width="100px;" alt=""/><br />
+    <sub><b>Anais Hammouche</b></sub></a><br /> 
+    </td>
+      <td align="center"><a href="https://github.com/Hazelle2511">
+    <img src="https://avatars.githubusercontent.com/u/62952538?v=4?s=100" width="100px;" alt=""/><br />
+    <sub><b>Hazelle Camacho</b></sub></a><br /> 
+    </td>
   </tr>
 </table>
 
