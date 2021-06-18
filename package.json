@@ -26,6 +26,7 @@
     "@headlessui/react": "^1.1.1",
     "@svg-icons/heroicons-outline": "^1.50.0",
     "@tailwindcss/postcss7-compat": "^2.1.2",
+    "@tailwindui/react": "^0.1.1",
     "aggregate-error": "^3.1.0",
     "autoprefixer": "^10.2.5",
     "firebase": "^8.6.1",

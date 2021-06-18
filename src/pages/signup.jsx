@@ -44,27 +44,7 @@ const Signup = (props) => {
     }
 
     const handleSubmit = e => {
-        if (error === null) {
-            const {email, password, fName} = loginData;
-    
-            firebase.signupUser(email, password)
-            .then(authUser => {
-                return firebase.user(authUser.user.uid).set( {
-                    fName,
-                    lName,
-                    email,
-                })
-            })
-            .then(user => {
-                setLoginData({...data});
-                props.history.push('/');
-            })
-    
-            .catch(error => {
-            setError(error);
-            setLoginData({...data});
-            }) 
-        } else if (error !== null) { e.preventDefault()
+        e.preventDefault();
         const {email, password, fName} = loginData;
     
         firebase.signupUser(email, password)
@@ -84,7 +64,7 @@ const Signup = (props) => {
         setError(error);
         setLoginData({...data});
         })
-    }};
+    }
 
     const {fName, lName, email, password, cPassword} = loginData;
     
@@ -111,7 +91,7 @@ const Signup = (props) => {
 					Attention
 				</div>
 				<div className="alert-description text-sm text-yellow-600">
-					- Votre mot de passe doit comporter minimum 5 caractères
+					- Votre mot de passe doit comporter au minimum 5 caractères
 				</div>
 			</div>
 	</div>;
@@ -159,13 +139,12 @@ const Signup = (props) => {
             </div>
             <div className="w-full md:w-1/2 py-10 px-5 md:px-10">
                                 <div className="text-center mb-10">
-                                
+                                    
                     <h1 className="font-bold text-3xl -my-8 text-gray-900">{signup[lang].title}</h1>
                     
                 </div>
                 <form onSubmit={handleSubmit}>
                     {errorMsg}
-
                 <div className="flex -mx-3">
                     <div className="w-full px-3 mb-5">
                                 <label  htmlFor="" className="text-xs font-semibold px-1">{signup[lang].labelFname}</label>
