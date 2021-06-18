@@ -80,7 +80,20 @@ Thanks for these awesome resources that we used during the development:
 - [Tailwind and React Tutorial](https://www.youtube.com/watch?v=gOQ31Kc8H5E)
 - [Trello](https://trello.com/b/LKlN4SRW)
 
+## Contributors :sparkles:
 
+- Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/chisNaN">
+    <img src="https://avatars.githubusercontent.com/u/2439389?v=4?s=100" width="100px;" alt=""/><br />
+    <sub><b>Arthur Gregoire</b></sub></a><br /> 
+    </td>
+  </tr>
+</table>
 
 ### Project Status
 The development will slow down after the internship .
