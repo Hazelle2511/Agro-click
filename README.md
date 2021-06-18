@@ -16,11 +16,10 @@ List of major frameworks that we used:
 
 
 ## Required softwares
--[git](
-https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - [node](https://nodejs.org/en/download/)
--[yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable) (npm i yarn -g)
--[snowpackjs](https://www.snowpack.dev/)(npm i snowpack)
+- [yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable) (npm i yarn -g)
+- [snowpackjs](https://www.snowpack.dev/)(npm i snowpack)
 
 ### Getting Started
 
@@ -51,8 +50,8 @@ yarn start
 
 ## Contact
 
-Email: projetcyb@gmail.com
-Project Link: https://projetcyb.netlify.app/
+- Email: projetcyb@gmail.com
+- Project Link: https://projetcyb.netlify.app/
 
 ## Main Js Libraries
 
