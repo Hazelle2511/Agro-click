@@ -27,7 +27,7 @@ function Searchbar() {
       // w-1/4
         <div className="p-2 ">
         <div className="bg-white flex items-center rounded-full shadow-md">
-          <input className="  rounded-l-full w-full py-1 px-4 text-gray-700 leading-tight focus:outline-none " id="search" type="text" placeholder="Recherche.."></input>
+          <input className="  rounded-l-full w-full py-1 px-4 text-gray-700 leading-tight focus:outline-none " id="search" type="search" placeholder="Recherche.."></input>
           
           <div className="p-2" name="result">
             {/* {datas.map((post) => {
