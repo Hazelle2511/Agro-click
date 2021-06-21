@@ -63,7 +63,7 @@ yarn start
 
 ## Other web technologies
 
-:bulb: To keep it simple this project does not use ~~React Native~~ (nor Redux) but progressive web app
+:bulb: To keep it simple this project does not use ~~React Native~~ (not Redux) but progressive web app
 
 - [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
 
