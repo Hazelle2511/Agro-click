@@ -26,6 +26,7 @@ import AgriProfilePublic from './Components/AgriProfilePublic';
 
 
 
+
 export default () => {
 
     const [isOpen, setIsOpen] = useState(false) ;
@@ -71,6 +72,7 @@ export default () => {
                <Route path="/accessProfil" component = {accessProfil} />
                <Route path="/ForgetPassword" component = {ForgetPassword} />
                <Route path="/Profile/" component = {location}/>
+               <Route path="/search/" component = {Searchbar}/>
 
 
 

@@ -7,6 +7,6 @@
   <Image>favicon.png</Image>
   <Language>fr</Language>
   <InputEncoding>UTF-8</InputEncoding>
-      <Url type="text/html" method="get" template="https://projetcyb.netlify.app/?q={searchTerms}" />
+      <Url type="text/html" method="get" template="https://projetcyb.netlify.app/search/?q={searchTerms}" />
  
 </OpenSearchDescription>
