@@ -28,7 +28,7 @@ class Agriculteur extends Component {
          db.collection('Agriculteurs')
          .get()
          .then(snapshot => {
-                console.log('Snapshot',snapshot);
+                // console.log('Snapshot',snapshot);
                 const Agriculteurs = []
                 snapshot.forEach(doc => {
                     const data = doc.data()

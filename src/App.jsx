@@ -21,6 +21,7 @@ import profilLogUser from './Components/Welcome/profilLogUser';
 // import AgriProfilePublic from './Components/Public';
 import location from './Components/ProfileAgri';
 import AgriProfilePublic from './Components/AgriProfilePublic';
+import Agriculteur from './Components/Agriculteur';
 
 
 
@@ -72,7 +73,7 @@ export default () => {
                <Route path="/accessProfil" component = {accessProfil} />
                <Route path="/ForgetPassword" component = {ForgetPassword} />
                <Route path="/Profile/" component = {location}/>
-               <Route path="/search/" component = {Searchbar}/>
+               <Route path="/search/" component = {Agriculteur}/>
 
 
 
