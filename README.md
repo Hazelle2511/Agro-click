@@ -42,9 +42,9 @@ dev branch is the most recent repo
 
 ```
 git clone https://github.com/Hazelle2511/Agro-click
+cd Agro-Click
 git checkout dev
 yarn install
-cd Agro-Click
 yarn start
 
 ```
