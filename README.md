@@ -19,7 +19,7 @@ List of major frameworks that we used:
 - [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - [node](https://nodejs.org/en/download/)
 - [yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable) (npm i yarn -g)
-- [snowpackjs](https://www.snowpack.dev/)(npm i snowpack)
+
 
 ### Getting Started
 
