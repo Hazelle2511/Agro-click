@@ -101,7 +101,7 @@ user = uid => this.db.doc(`users/${uid}`);
 export const storage = app.storage();
 export const auth = app.auth();
 export const db = app.firestore();
-export const {collection, getDocs, getStorage, ref, getDownloadUrl} = app.firestore();
+export const {collection, getDocs, getStorage, ref, getDownloadUrl, where, query} = app.firestore();
 
 
 

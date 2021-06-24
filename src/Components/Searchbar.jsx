@@ -2,7 +2,9 @@ import { Result } from 'postcss';
 import React, { useEffect, useState } from 'react';
 
 import nav from '../../public/locales/components/nav.json';
-import {auth, db, getDocs,collection} from "./firebase/firebase";
+import {auth, db, getDocs,collection, query, where} from "./firebase/firebase";
+
+
 
 //For multilanguage translation
 const locale = navigator.language.substr(0, 2)
@@ -21,26 +23,102 @@ function Searchbar() {
 
   // const [datas, setDatas] = useState([]);  // data est déclaré mais jamais lu
 
-useEffect(()=> {
+  // let AgriculteursRef = db.collection('Agriculteurs');
+  // // let Farmers = Promise.all([
+  // //   AgriculteursRef.doc('Chez meme et pepe').collection('Farmers').doc().set({
+  // //     name: 'Chez meme et pepe'
+      
+  // // }),
+  // // ])
+  // // console.log('Farmers', Farmers)
+  // // let Farmers = Promise.all([
+  // //   AgriculteursRef.where("Name",  ">=", "L'ecurie")
+  // // ])
+
+  // let query = AgriculteursRef.where("Name",  "==", "Chez Meme et Pepe")
+  // .get()
+  // .then(snap => {
+  //   snap.forEach(doc => {
+  //     console.log('Doc', doc.data())
+  //   })
   
-  db.collection('Agriculteurs')
-  .get()
-         .then(snapshot => {
-                console.log('SearchbarSnapshot',snapshot);
-                const Agriculteurs = []
-                snapshot.forEach(doc => {
-                    const data = doc.data()
-                    Agriculteurs.push(data)
-                });
-                setState({Agriculteurs})          
-              })
-           .catch(error => console.log('Errorr', error))
+  // })
+
+  // query.on('value', snap => {
+  //   console.log('Snap', snap)
+  // })
+
+  // console.log('Query', query)
+  // console.log('Farmers', Farmers)
+
+
+  //
+
+ 
+
+
+
+
+
+
+  //
+  useEffect(()=> {
+
+    
+    let searchString = "l'ecurie"
+  
+    db.collection('Agriculteurs')
+   
+    // .where("Name",  "==", "Chez Meme et Pepe" )
+    // .orderBy("Name", "asc")
+    // .startAt(Name.toLowerCase()).endAt(Name.toLowerCase() + "\uf8ff")
+    .orderBy('Name')
+    .startAt(searchString)
+    .endAt(searchString + `uf8ff`)
+    // .orderByChild("case_folded_name")
+    // .startAt(searchString)
+    .get()
+    .then(snap => {
+      snap.forEach(doc => {
+        console.log('Doc', doc.data())
+      })
+    
+    })
+    
+                
+                
+        
+  
+  }, [])
+
+    const handleSearchTerm=(e) => {
+    let value = e.target.value.toLowerCase();
+    console.log(value)
+    setSearchTerm(value)
+  }
+
+
+// useEffect(()=> {
+
+  
+//   db.collection('Agriculteurs')
+//   .get()
+//          .then(snapshot => {
+//                 console.log('SearchbarSnapshot',snapshot);
+//                 const Agriculteurs = []
+//                 snapshot.forEach(doc => {
+//                     const data = doc.data()
+//                     Agriculteurs.push(data)
+//                 });
+//                 setState({Agriculteurs})          
+//               })
+//            .catch(error => console.log('Errorr', error))
   
               
               
       
 
-}, [])
+// }, [])
 
 // useEffect(() => {
 //   setFilteredAgriculteurs(
@@ -57,12 +135,7 @@ useEffect(()=> {
 
   // console.log(datas);
 
-  const handleSearchTerm=(e) => {
-    // console.log(e.target.value)
-    console.log(e.target.value)
-    let value = e.target.value;
-    setSearchTerm(value)
-  }
+
 
     return(
       // w-1/4
