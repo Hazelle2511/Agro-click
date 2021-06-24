@@ -41,7 +41,7 @@ npm i yarn -g
 dev branch is the most recent repo
 
 ```
-git clone git@github.com:Hazelle2511/Agro-click.git
+git clone git@github.com:Hazelle2511/Agro-click.git or https://github.com/Hazelle2511/Agro-click
 git checkout dev
 yarn install
 yarn start
