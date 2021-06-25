@@ -8,6 +8,7 @@ import GoogleMap from './GoogleMap';
 import Agriculteur from './Agriculteur';
 
 import accueil from '../../public/locales/components/accueil.json';
+import Searchbar from './Searchbar';
 
 //For multilanguage translation
 const locale = navigator.language.substr(0, 2)
@@ -19,7 +20,25 @@ const lang = Object.keys(accueil).includes(locale) ? locale : 'fr'
 
 class Accueil extends Component {
 
+    //for filter
+    constructor(props) {
+        super(props);
+        this.state = { 
+        
+
+            searchAgriculteur: ''
+        }
+    }
+
+    // handleInput = (e) =>  {
+    //     console.log(e.target.value)
+    //     this.setState({searchAgriculteur: e.target.value})
+    // }
+
   render() {
+    //   let filteredAgriculteurs = this.state.Agriculteurs.filter((Agriculteur) => {
+    //       return Agriculteur.name.toLowerCase().includes(this.state.searchAgriculteur.toLocaleLowerCase())
+    //   })
     return(
 
 
@@ -68,6 +87,7 @@ class Accueil extends Component {
                         </div>
                     </div>
                 </main>
+                {/* <Searchbar handleInput={this.handleInput}/> */}
                 <Agriculteur/>
                 <GoogleMap />
                 </div>

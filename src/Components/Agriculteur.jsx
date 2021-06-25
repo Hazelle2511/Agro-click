@@ -19,7 +19,8 @@ class Agriculteur extends Component {
     constructor() {
         super()
         this.state = {
-            Agriculteurs: null
+            Agriculteurs: null,
+            searchAgriculteur: ''
         }
     }
 
@@ -69,7 +70,7 @@ class Agriculteur extends Component {
                     <div className="flex flex-wrap -mx-1 lg:-mx-4">                                             
                      
                             {this.state?.Agriculteurs?.length > 0 && this.state.Agriculteurs.map((Agriculteurs,id) => {
-                                <div key={Agriculteurs.id}/>
+                                <div key={id}/>
                 
                                     
                        return(

@@ -73,7 +73,7 @@ export default () => {
                <Route path="/accessProfil" component = {accessProfil} />
                <Route path="/ForgetPassword" component = {ForgetPassword} />
                <Route path="/Profile/" component = {location}/>
-               <Route path="/search/" component = {Agriculteur}/>
+               <Route path="/search/" component = {Searchbar}/>
 
 
 
