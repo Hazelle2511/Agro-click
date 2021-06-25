@@ -41,7 +41,7 @@ class Accueil extends Component {
                         </video>
                     </header>
 
-                <main className="xl: mb-72 sm: mb-12">
+                <main className="xl: mb-72 mt-72 sm: mt-12 mb-12">
 
                 <div className="">
                 <div className="max-w-6xl mx-auto px-8 py-16">

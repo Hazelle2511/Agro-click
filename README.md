@@ -16,11 +16,10 @@ List of major frameworks that we used:
 
 
 ## Required softwares
--[git](
-https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - [node](https://nodejs.org/en/download/)
--[yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable) (npm i yarn -g)
--[snowpackjs](https://www.snowpack.dev/)(npm i snowpack)
+- [yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable) (npm i yarn -g)
+- [snowpackjs](https://www.snowpack.dev/)(npm i snowpack)
 
 ### Getting Started
 
@@ -51,8 +50,8 @@ yarn start
 
 ## Contact
 
-Email: projetcyb@gmail.com
-Project Link: https://projetcyb.netlify.app/
+- Email: projetcyb@gmail.com
+- Project Link: https://projetcyb.netlify.app/
 
 ## Main Js Libraries
 
@@ -64,7 +63,7 @@ Project Link: https://projetcyb.netlify.app/
 
 ## Other web technologies
 
-:bulb: To keep it simple this project does not use ~~React Native~~ (nor Redux) but progressive web app
+:bulb: To keep it simple this project does not use ~~React Native~~ (not Redux) but progressive web app
 
 - [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
 
@@ -81,7 +80,28 @@ Thanks for these awesome resources that we used during the development:
 - [Tailwind and React Tutorial](https://www.youtube.com/watch?v=gOQ31Kc8H5E)
 - [Trello](https://trello.com/b/LKlN4SRW)
 
+## Contributors :sparkles:
 
+- Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/chisNaN">
+    <img src="https://avatars.githubusercontent.com/u/2439389?v=4?s=100" width="100px;" alt=""/><br />
+    <sub><b>Arthur Gregoire</b></sub></a><br /> 
+    </td>
+     <td align="center"><a href="https://github.com/AnaisHammouche">
+    <img src="https://avatars.githubusercontent.com/u/72383729?v=4?s=100" width="100px;" alt=""/><br />
+    <sub><b>Anais Hammouche</b></sub></a><br /> 
+    </td>
+      <td align="center"><a href="https://github.com/Hazelle2511">
+    <img src="https://avatars.githubusercontent.com/u/62952538?v=4?s=100" width="100px;" alt=""/><br />
+    <sub><b>Hazelle Camacho</b></sub></a><br /> 
+    </td>
+  </tr>
+</table>
 
 ### Project Status
 The development will slow down after the internship .
