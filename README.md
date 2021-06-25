@@ -21,6 +21,12 @@ List of major frameworks that we used:
 - [yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable) (npm i yarn -g)
 
 
+## Required softwares
+- [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [node](https://nodejs.org/en/download/)
+- [yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable) (npm i yarn -g)
+- [snowpackjs](https://www.snowpack.dev/)(npm i snowpack)
+
 ### Getting Started
 
 To get a local copy up and running follow these simple example steps:
@@ -63,7 +69,7 @@ yarn start
 
 ## Other web technologies
 
-:bulb: To keep it simple this project does not use ~~React Native~~ (nor Redux) but progressive web app
+:bulb: To keep it simple this project does not use ~~React Native~~ (not Redux) but progressive web app
 
 - [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
 

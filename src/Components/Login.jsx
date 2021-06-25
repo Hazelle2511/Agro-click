@@ -120,12 +120,34 @@ const Login = (props) => {
             <div className="w-full h-100">
 
             {/* p-4 */}
-            {error !== '' && <div className="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-0" role="alert"><span className="font-bold">  {login[lang].alert} </span><span> {login[lang].alertPassword} </span></div>}
+       
+
+    {/* <span className="font-bold">  {login[lang].alert} </span><span> {login[lang].alertPassword} </span>	</div>} */}
             {/* -mt-8 my-4*/}
               <h1 className="text-xl md:text-2xl font-bold leading-tight -mt-14 my-4"> {login[lang].title}</h1>
         
               <form onSubmit={handleSubmit} className="mt-6" >
-                <div>
+                     {error !== '' && <div className="alert flex flex-row mb-8 items-center bg-yellow-200 p-5 rounded border-b-2 border-yellow-300">
+			<div className="alert-icon flex items-center bg-yellow-100 border-2 border-yellow-500 justify-center h-10 w-10 flex-shrink-0 rounded-full">
+				<span className="text-yellow-500">
+					<svg fill="currentColor"
+						 viewBox="0 0 20 20"
+						 class="h-6 w-6">
+						<path fill-rule="evenodd"
+							  d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+							  clip-rule="evenodd"></path>
+					</svg>
+				</span>
+			</div>
+			<div className="alert-content ml-4">
+				<div className="alert-title font-semibold text-lg text-yellow-800">
+					Attention
+				</div>
+				<div className="alert-description text-sm text-yellow-600">
+					- Email ou mot de passe incorrect
+				</div>
+			</div>
+	</div> }<div>
                   <label className="block text-gray-700">{login[lang].labelEmail}</label>
                   <input onChange={e => setEmail(e.target.value)} value={email} type="email" name="email" placeholder="E-mail" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-yellow-500 focus:bg-white focus:outline-none" autoFocus autoComplete required></input>
                 </div>
