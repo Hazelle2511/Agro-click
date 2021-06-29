@@ -175,16 +175,17 @@ export default function AgriProfilePublic(props) {
                     <div className="grid grid-cols-2">
                         <div>
                             <div className="flex items-center space-x-2 font-semibold text-gray-900 leading-8 mb-3">
-                                <span clas="text-green-500">
+                                {/* <span clas="text-green-500">
                                     <svg className="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                                             d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                                     </svg>
-                                </span>
+                                </span> */}
                                 <div>
                                     <span className="tracking-wide">Produits</span>
-                                    <div className="image overflow-hidden">
+                                    {/* image overflow-hidden */}
+                                    <div className="flex flex-row flex-wrap justify-content">
                                     {/* h-auto w-full mx-auto */}
                                         <img className="h-2/4 w-2/4 mx-auto"
                                         src={props.produits}

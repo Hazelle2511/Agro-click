@@ -18,7 +18,8 @@ export default ({ location }) => {
         <div className="container my-12 mx-auto px-4 md:px-12 xl: mb-72">
             <div className="flex flex-wrap -mx-1 lg:-mx-4">
             {!location.Agriculteurs ? <h1>Could not find Agriculteur infos</h1> :
-             <AgriProfilePublic
+             <AgriProfilePublic 
+              // { ...location.Agriculteurs}
                 key={location.Agriculteurs.id}
                 FName={location.Agriculteurs.FName}
                 LName={location.Agriculteurs.LName}

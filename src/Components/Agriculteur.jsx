@@ -2,8 +2,7 @@ import React, {Component} from 'react';
 import Firebase from "./firebase/firebase";
 import {auth, db, getDocs,collection} from "./firebase/firebase";
 import {Link} from 'react-router-dom';
-import AgriProfilePublic from "./AgriProfilePublic";
-import AgriculteurDetails from './AgriculteurDetails';
+
 
 
 import accueil from '../../public/locales/components/accueil.json';
